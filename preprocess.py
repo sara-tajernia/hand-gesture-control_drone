@@ -63,7 +63,8 @@ class preprocess:
     def extract_labels(self):
         # df = pd.read_csv('./input/labels_9_classes.csv', header=None)
         # df = pd.read_csv('./input/labels_8_classes.csv', header=None)
-        df = pd.read_csv('./input/video_labels.csv', header=None)
+        df = pd.read_csv('./input/video2_labels.csv', header=None)
+        # df = pd.read_csv('./input/video_labels.csv', header=None)
 
         self.labels = df.values.flatten()
  

@@ -32,6 +32,6 @@ if __name__ == "__main__":
     y = pre_data.labels
     print(len(X))
     print(len(y))
-    # model = HandGestureClassifier(X, y).model
+    model = HandGestureClassifier(X, y).model
     # print(model)
 
