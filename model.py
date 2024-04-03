@@ -14,7 +14,7 @@ class HandGestureClassifier:
         self.test_model()
 
     def load_data(self, X, y):
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         return X_train, X_test, y_train, y_test
 
     def build_model(self):
@@ -35,7 +35,7 @@ class HandGestureClassifier:
         return model
 
     def train_model(self):
-        self.model.fit(self.X_train, self.y_train, epochs=5, batch_size=64, verbose=2, validation_data=(self.X_test, self.y_test))
+        self.model.fit(self.X_train, self.y_train, epochs=5, batch_size=64, verbose=2)
 
 
     def test_model(self):
