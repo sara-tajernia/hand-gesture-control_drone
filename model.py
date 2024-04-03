@@ -19,7 +19,8 @@ class HandGestureClassifier:
 
     def build_model(self):
         model = Sequential([
-            Conv2D(32, (5, 5), activation='relu', input_shape=(384, 216, 3)),
+            Conv2D(32, (5, 5), activation='relu', input_shape=(144, 256, 3)),
+            # Conv2D(32, (5, 5), activation='relu', input_shape=(384, 216, 3)),
             MaxPooling2D((2, 2)),
             Conv2D(64, (3, 3), activation='relu'),
             MaxPooling2D((2, 2)),

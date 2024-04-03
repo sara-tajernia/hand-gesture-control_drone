@@ -1,7 +1,8 @@
 import cv2
 import pandas as pd
 import numpy as np
-
+import os
+from os import listdir
 
 class preprocess:
     def __init__(self, cap):
@@ -9,10 +10,19 @@ class preprocess:
         self.frames = []
         self.labels = []
         self.extract_frames()
+        # self.read_frames()
         self.extract_labels()
 
+
+    def read_frames(self):
+        frame_num = 0
+        while frame_num < 2737:
+            frame_filename = f"output/frame_{frame_num}.png"
+            img = cv2.imread(frame_filename)
+            self.frames.append(img)
+
+
     def extract_frames(self):
-        # frames = []
         if not self.cap.isOpened():
             print("Error: Could not open video.")
             return
@@ -36,9 +46,6 @@ class preprocess:
 
             # Read the frame
             ret, frame = self.cap.read()
-            # print(rat)
-
-            # If the frame was read successfully, save it
             if ret:
                 # frame = cv2.resize(frame, (216, 384))  #video1
                 frame = cv2.resize(frame, (256, 144))   #video2
@@ -49,10 +56,8 @@ class preprocess:
                 print(f"Error reading frame {frame_number}")
                 break
 
-            # Move to the next second
             frame_number += frame_interval
 
-            # Break the loop if we reach the end of the video
             if frame_number >= frame_count:
                 break
 
