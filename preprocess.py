@@ -47,8 +47,8 @@ class preprocess:
             # Read the frame
             ret, frame = self.cap.read()
             if ret:
-                # frame = cv2.resize(frame, (216, 384))  #video1
-                frame = cv2.resize(frame, (256, 144))   #video2
+                frame = cv2.resize(frame, (216, 384))  #video1
+                # frame = cv2.resize(frame, (256, 144))   #video2
                 self.frames.append(frame)
                 frame_filename = f"output/frame_{frame_number}.png"
                 cv2.imwrite(frame_filename, frame)
@@ -68,8 +68,8 @@ class preprocess:
     def extract_labels(self):
         # df = pd.read_csv('./input/labels_9_classes.csv', header=None)
         # df = pd.read_csv('./input/labels_8_classes.csv', header=None)
-        df = pd.read_csv('./input/video2_labels.csv', header=None)
-        # df = pd.read_csv('./input/video_labels.csv', header=None)
+        # df = pd.read_csv('./input/video2_labels.csv', header=None)
+        df = pd.read_csv('./input/video_labels.csv', header=None)
 
-        self.labels = df.values.flatten()
+        self.labels = df.to_numpy()
  
