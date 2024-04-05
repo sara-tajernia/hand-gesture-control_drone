@@ -71,5 +71,16 @@ class preprocess:
         # df = pd.read_csv('./input/video2_labels.csv', header=None)
         df = pd.read_csv('./input/video_labels.csv', header=None)
 
-        self.labels = df.to_numpy()
+        # self.labels = df.to_numpy()
+        temp = df.values.flatten()
+        label =[]
+        for i in temp:
+            arr=[]
+            for j in range(9):
+                if(i == j):
+                    arr.append(1)
+                else:
+                    arr.append(0)
+            label.append(arr)
+        self.labels = label
  

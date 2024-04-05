@@ -14,7 +14,7 @@ import torch.optim as optim
 from torchvision import transforms
 from torch.utils.data import DataLoader
 # from dataset import CustomDataset
-from model import HandGestureClassifierCNN, HandGestureClassifierCNNLSTM
+from model import HandGestureClassifierCNN, HandGestureClassifierCNNLSTM, HandGestureClassifierLSTM
 # from train import Trainer
 
 # up = 0 // down = 1 // back = 2 // stop = 3 // land = 4 // front = 5 // right = 6 // left = 7  // none = 8     video1
@@ -32,7 +32,8 @@ if __name__ == "__main__":
     y = pre_data.labels
     print(len(X))
     print(len(y))
-    # model = HandGestureClassifierCNN(X, y).model
-    model = HandGestureClassifierCNNLSTM(X, y).model
+    model = HandGestureClassifierCNN(X, y).model
+    # model = HandGestureClassifierCNNLSTM(X, y).model
+    # model = HandGestureClassifierLSTM(X,y).model
     # print(model)
 
