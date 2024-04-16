@@ -1,0 +1,40 @@
+\par عنوان\hfill صفحه \par 
+\edef \SavedTocDepth {\the \value {tocdepth}}
+\setcounter {tocdepth}{10}
+\contentsline {chapter}{\numberline {1}مقدمه}{1}{chapter.1}%
+\setcounter {tocdepth}{\SavedTocDepth }
+\contentsline {chapter}{\numberline {2}موسیقی}{3}{chapter.2}%
+\contentsline {section}{\numberline {2-1}تاثیر‌ آن‌ در‌ زندگی}{4}{section.2.1}%
+\contentsline {section}{\numberline {2-2}در‌صنایع ‌مختلف}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2-2-1}تبلیغات}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2-2-2}فیلم سازی}{5}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2-2-3}درمانی}{6}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2-3}خلاصه}{6}{section.2.3}%
+\contentsline {chapter}{\numberline {3}هوش‌مصنوعی}{7}{chapter.3}%
+\contentsline {section}{\numberline {3-1}نگاهی‌برعلم‌هوش‌مصنوعی}{8}{section.3.1}%
+\contentsline {subsection}{\numberline {3-1-1}یادگیری‌ ماشین}{8}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3-1-2}یادگیری‌عمیق }{9}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3-2}خلاصه}{10}{section.3.2}%
+\contentsline {chapter}{\numberline {4}نحوه تبدیل موسیقی به زبان رایانه}{12}{chapter.4}%
+\contentsline {section}{\numberline {4-1}مقاطلاعات پس زمینه موسیقی}{13}{section.4.1}%
+\contentsline {subsection}{\numberline {4-1-1}نوع داده }{14}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4-1-2}شبکه‌های‌عصبی}{15}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4-2}معماری پیشنهادی}{16}{section.4.2}%
+\contentsline {subsection}{\numberline {4-2-1}تبدیل داده ها به نوع آهنگ}{16}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4-2-2}رمزگذاری}{17}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4-2-3}افزایش داده ها}{18}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4-2-4}گام های زمانی}{19}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4-3}خلاصه}{20}{section.4.3}%
+\contentsline {chapter}{\numberline {5}نحوه ساخت موسیقی}{22}{chapter.5}%
+\contentsline {section}{\numberline {5-1}شبکه عصبی}{23}{section.5.1}%
+\contentsline {section}{\numberline {5-2}تولید موسیقی}{23}{section.5.2}%
+\contentsline {section}{\numberline {5-3}داده ها و ابزار ها}{24}{section.5.3}%
+\contentsline {subsection}{\numberline {5-3-1}مجموعه داده ها}{24}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5-3-2}ابزار های استفاده شده}{25}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5-3-3}شبکه عصبی}{27}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5-4}نتایج}{27}{section.5.4}%
+\contentsline {chapter}{\numberline {6} نتيجه‌گيري و پیشنهادات}{29}{chapter.6}%
+\contentsline {section}{\numberline {6-1}نتیجه گیری}{30}{section.6.1}%
+\contentsline {section}{\numberline {6-2}پیشنهادات}{31}{section.6.2}%
+\contentsline {chapter}{کتاب‌نامه}{32}{appendix*.18}%
+\contentsfinish 
