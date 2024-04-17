@@ -12,16 +12,17 @@ import torch.optim as optim
 from torchvision import transforms
 from torch.utils.data import DataLoader
 # from dataset import CustomDataset
-from model import HandGestureClassifierMLP, HandGestureClassifierCNN, HandGestureClassifierCNNLSTM
+from model2 import HandGestureClassifierMLP, HandGestureClassifierCNN, HandGestureClassifierCNNLSTM
 import time
 from sklearn.model_selection import train_test_split
 from test import Test
 from preprocess_data import Preprocess
+from handDetector import HandDetector
 
 
 if __name__ == "__main__":
 
-    #Train
+    # Train
     actions_num = 8
     dataset = "./model/keypoint.csv"
     X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
@@ -31,19 +32,22 @@ if __name__ == "__main__":
     X_train, X_test, y_train, y_test = preprocess.split_data()
 
 
-
-
-
-
-    # X_train, X_test, y_train, y_test = train_test_split(X_dataset, y_dataset, train_size=0.75, random_state=42)
-
-    # model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
-
-    model = HandGestureClassifierCNN(X_train, y_train, actions_num).model
+    model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
+    # model = HandGestureClassifierCNN(X_train, y_train, actions_num).model
     # model = HandGestureClassifierCNNLSTM(X_train, y_train, actions_num).model
 
 
+
+    # print('format', X_test.shape, len(y_test))
+
+    # hand_detector = HandDetector()
+
+    # hand_detector.capture_image()
+
+
     Test(X_test, y_test)
+
+
 
 
 

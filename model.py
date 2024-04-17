@@ -7,6 +7,8 @@ from keras.layers.convolutional import Conv2D, MaxPooling2D,Conv3D,MaxPooling3D
 from keras.layers import Dense, Flatten, LSTM,  ConvLSTM2D
 from keras.layers import TimeDistributed
 import numpy as np
+
+
 class HandGestureClassifierCNN:
     def __init__(self, X, y):
         self.X_train, self.X_test, self.y_train, self.y_test = self.load_data(X, y)
