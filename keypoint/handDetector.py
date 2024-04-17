@@ -1,12 +1,25 @@
 import cv2
 import mediapipe as mp
 import os
+from keras.models import load_model
+import numpy as np
+import csv
+import pandas as pd
 
 class HandDetector:
     def __init__(self):
+
+        self.gestures = []
+        self.read_gesture_file()
         self.mp_hands = mp.solutions.hands
         self.hands = self.mp_hands.Hands()
         self.mp_drawing = mp.solutions.drawing_utils
+        self.capture_image()
+
+        
+        # self.model = model
+
+        
 
     def detect_hand_landmarks(self, image):
         results = self.hands.process(image)
@@ -25,12 +38,15 @@ class HandDetector:
         return image, landmark_coords
 
     def capture_image(self):
-        hand_detector = HandDetector()
+        # hand_detector = HandDetector()
         cap = cv2.VideoCapture(0)
         frame_count = 0
         save_interval = 20  # seconds
         output_folder = "./gestures/test/"
         os.makedirs(output_folder, exist_ok=True)
+
+
+        model=load_model('models/weights_CNN_100.h5')
 
         while cap.isOpened():
             ret, frame = cap.read()
@@ -48,10 +64,26 @@ class HandDetector:
                 detection_result = self.detect_hand_landmarks(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
                 # Draw landmarks on the image and get coordinates
                 annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result)
-                print("Hand Landmark Coordinates:", landmark_coords)
-                # print(landmark_coords.shape)
                 # Save the annotated image
                 cv2.imwrite(f"{output_folder}annotated_frame{frame_count}.jpg", annotated_image)
+
+
+                # savedModel=load_model('model/weights_CNN.h5')
+                print('landmark_coords', landmark_coords)
+                input_model = np.array(landmark_coords)
+                print('input_model',input_model.shape)
+
+                reshaped_input = np.expand_dims(input_model, axis=0)  # ?????????????????
+
+                # Make prediction
+                print('reshaped_input', reshaped_input.shape)
+                prediction = model.predict(reshaped_input)
+                print(prediction)
+                prediction_index = np.argmax(prediction)
+                print("Index of highest value in prediction:", prediction_index, self.gestures[prediction_index])
+
+
+                break
                 
 
             # Exit when 'q' is pressed
@@ -61,7 +93,11 @@ class HandDetector:
         cap.release()
         cv2.destroyAllWindows()
 
-        return(landmark_coords)
+        # return landmark_coords
 
-# if __name__ == "__main__":
-#     main()
+    def read_gesture_file(self):
+        filename = './dataset/keypoint_classifier_label.csv'
+        df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
+        self.gestures = df.values.tolist()
+
+        

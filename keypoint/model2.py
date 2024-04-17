@@ -50,7 +50,7 @@ class HandGestureClassifierMLP:
 
     
     def save_model(self):
-        self.model.save('model/weights_CNN.h5')
+        self.model.save('models/weights_CNN_100.h5')
 
 
 
@@ -89,7 +89,7 @@ class HandGestureClassifierCNN:
             MaxPooling1D(pool_size=2, padding='same'),
             Flatten(),
             Dense(128, activation='relu'),
-            Dense(self.actions_num, activation='sigmoid')
+            Dense(self.actions_num, activation='softmax')
         ])
 
 
@@ -103,32 +103,20 @@ class HandGestureClassifierCNN:
 
         start_train = time.time()
 
-        self.model.fit(self.X_train, self.y_train, epochs=10, batch_size=64, verbose=2)
+        self.model.fit(self.X_train, self.y_train, epochs=500, batch_size=64, verbose=2)
 
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
 
-    # def extract_labels(self, y_train):
-    #     labels = []
-    #     for i in y_train:
-    #         arr=[]
-    #         for j in range(8):
-    #             if(i == j):
-    #                 arr.append(1)
-    #             else:
-    #                 arr.append(0)
-    #         labels.append(arr)
-        
-    #     return labels
     
     def save_model(self):
-        self.model.save('model/weights_CNN.h5')
+        self.model.save('models/weights_CNN_100.h5')
 
 
     def test_model(self):
         test_loss, test_acc = self.model.evaluate(self.X_test, self.y_test)
         print('Test accuracy: {:2.2f}%'.format(test_acc*100))
 
-        savedModel=load_model('model/weights_CNN.h5')
+        savedModel=load_model('models/weights_CNN.h5')
         test_loss, test_acc = savedModel.evaluate(self.X_test, self.y_test)
         print('LOAD Test accuracy: {:2.2f}%'.format(test_acc*100))
 
@@ -192,12 +180,14 @@ class  HandGestureClassifierCNNLSTM:
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
 
     def save_model(self):
-        self.model.save('model/weights_CNNLSTM.h5')
+        self.model.save('models/weights_CNNLSTM.h5')
 
 
     def test_model(self):
         test_loss, test_acc = self.model.evaluate(self.X_test, self.y_test)
         print('Test accuracy: {:2.2f}%'.format(test_acc*100))
+
+
 
 
 
