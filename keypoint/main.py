@@ -20,6 +20,8 @@ from test2 import Test2
 from preprocess_data import Preprocess
 from handDetector import HandDetector
 
+from dataset import Dataset
+
 
 if __name__ == "__main__":
 
@@ -44,7 +46,9 @@ if __name__ == "__main__":
 
 
 
-    Test2()
+    # Test2()
+
+    Dataset()
 
 
 
