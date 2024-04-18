@@ -16,25 +16,27 @@ from model2 import HandGestureClassifierMLP, HandGestureClassifierCNN, HandGestu
 import time
 from sklearn.model_selection import train_test_split
 from test import Test
+from test2 import Test2
 from preprocess_data import Preprocess
 from handDetector import HandDetector
 
 
 if __name__ == "__main__":
 
-    # Train
-    actions_num = 8
-    dataset = "./dataset/keypoint.csv"
-    X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
-    y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
+    # # Train
+    # actions_num = 8
+    # dataset = "./dataset/keypoint.csv"
+    # X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
+    # y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
 
-    preprocess = Preprocess(X_dataset, y_dataset)
-    X_train, X_test, y_train, y_test = preprocess.split_data()
+    # preprocess = Preprocess(X_dataset, y_dataset)
+    
+    # X_train, X_test, y_train, y_test = preprocess.split_data()
 
 
-    # model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
+    # # model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
     # model = HandGestureClassifierCNN(X_train, y_train, actions_num).model
-    # model = HandGestureClassifierCNNLSTM(X_train, y_train, actions_num).model
+    # # model = HandGestureClassifierCNNLSTM(X_train, y_train, actions_num).model
 
 
 
@@ -42,7 +44,7 @@ if __name__ == "__main__":
 
 
 
-    Test(X_test, y_test)
+    Test2()
 
 
 
