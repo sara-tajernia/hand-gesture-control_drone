@@ -25,9 +25,10 @@ from dataset import Dataset
 
 if __name__ == "__main__":
 
-    # # Train
+    # Train
     # actions_num = 8
-    # dataset = "./dataset/keypoint.csv"
+    # dataset = "./dataset/my_dataset.csv"
+    # # dataset = "./dataset/keypoint.csv"
     # X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
     # y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
 
@@ -35,20 +36,23 @@ if __name__ == "__main__":
     
     # X_train, X_test, y_train, y_test = preprocess.split_data()
 
+    # print('ttttt', type(X_train[0]), len(X_train[0]), X_train[0])
 
-    # # model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
+
+
+    # model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
     # model = HandGestureClassifierCNN(X_train, y_train, actions_num).model
-    # # model = HandGestureClassifierCNNLSTM(X_train, y_train, actions_num).model
+    # model = HandGestureClassifierCNNLSTM(X_train, y_train, actions_num).model
 
 
 
-    # hand_detector = HandDetector()
+    hand_detector = HandDetector()
 
 
 
     # Test2()
 
-    Dataset()
+    # Dataset()
 
 
 

@@ -7,6 +7,7 @@ import csv
 import pandas as pd
 import copy
 import itertools
+from preprocess_data import Preprocess
 
 class HandDetector:
     def __init__(self):
@@ -48,7 +49,7 @@ class HandDetector:
         os.makedirs(output_folder, exist_ok=True)
 
 
-        model=load_model('models/weights_CNN_100.h5')
+        model=load_model('models/weights_CNN_my.h5')
 
         while cap.isOpened():
             ret, frame = cap.read()
@@ -70,23 +71,32 @@ class HandDetector:
                 # Save the annotated image
                 cv2.imwrite(f"{output_folder}annotated_frame{frame_count}.jpg", annotated_image)
 
-
-                # savedModel=load_model('model/weights_CNN.h5')
-                print('landmark_coords', landmark_coords)
                 input_model = np.array(landmark_coords)
-                print('input_model',input_model.shape)
+                process_landmark = self.pre_process_landmark(input_model)
 
-                reshaped_input = np.expand_dims(input_model, axis=0)  # ?????????????????
+                print('ttttt', type(process_landmark), len(process_landmark), process_landmark)
+
+                # preprocess = Preprocess()
+                process_landmark = np.reshape(process_landmark, (-1, 2))
+
+                print('ttttt', type(process_landmark), len(process_landmark), process_landmark)
+
+                # break
+
 
                 # Make prediction
-                print('reshaped_input', reshaped_input.shape)
-                prediction = model.predict(reshaped_input)
-                print(prediction)
-                prediction_index = np.argmax(prediction)
-                print("Index of highest value in prediction:", prediction_index, self.gestures[prediction_index])
+                # print('reshaped_input', reshaped_input.shape)
+                if len(process_landmark) != 0:
+                    process_landmark_array = np.array(process_landmark).reshape(1, 21, 2)
+                    print('ttttt', type(process_landmark_array), len(process_landmark_array), process_landmark_array)
+
+                    prediction = model.predict(process_landmark_array)
+                    print(prediction)
+                    prediction_index = np.argmax(prediction)
+                    print("Index of highest value in prediction:", prediction_index, self.gestures[prediction_index])
 
 
-                break
+                # break
                 
 
             # Exit when 'q' is pressed
@@ -104,7 +114,7 @@ class HandDetector:
         self.gestures = df.values.tolist()
 
 
-    def pre_process_landmark(landmark_list):
+    def pre_process_landmark(self, landmark_list):
         temp_landmark_list = copy.deepcopy(landmark_list)
 
         # 相対座標に変換
@@ -120,10 +130,11 @@ class HandDetector:
         temp_landmark_list = list(
             itertools.chain.from_iterable(temp_landmark_list))
         
-        print('temp_landmark_list1', temp_landmark_list)
+        # print('temp_landmark_list1', temp_landmark_list)
 
         # 正規化
-        max_value = max(list(map(abs, temp_landmark_list)))
+        if temp_landmark_list != [] :
+            max_value = max(list(map(abs, temp_landmark_list)))
 
         def normalize_(n):
             return n / max_value
@@ -131,7 +142,7 @@ class HandDetector:
 
         temp_landmark_list = list(map(normalize_, temp_landmark_list))
 
-        print('temp_landmark_list3', temp_landmark_list)
+        # print('temp_landmark_list3', temp_landmark_list)
 
         return temp_landmark_list
             

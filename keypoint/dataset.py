@@ -16,7 +16,8 @@ class Dataset:
 
         self.gestures = []
         self.mp_hands = mp.solutions.hands
-        self.hands = self.mp_hands.Hands()
+        # self.hands = self.mp_hands.Hands()
+        self.hands = self.mp_hands.Hands(max_num_hands=1)  # Set max_num_hands to 1
         self.mp_drawing = mp.solutions.drawing_utils
         self.capture_image()
 
@@ -50,7 +51,7 @@ class Dataset:
         os.makedirs(output_folder, exist_ok=True)
 
 
-        model=load_model('models/weights_CNN_100.h5')
+        # model=load_model('models/weights_CNN_100.h5')
 
         with open('./dataset/my_dataset.csv', 'a', newline='') as csvfile:
             csvwriter = csv.writer(csvfile)
@@ -65,25 +66,20 @@ class Dataset:
                 # Display the frame
                 cv2.imshow("Frame", frame)
 
-                # Capture and save frame every save_interval seconds
                 if frame_count % (save_interval * cap.get(cv2.CAP_PROP_FPS)) == 0:
-                    # Detect hand landmarks
                     detection_result = self.detect_hand_landmarks(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
                     annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result)
-                    cv2.imwrite(f"{output_folder}annotated_frame{frame_count}.jpg", annotated_image)
+                    # cv2.imwrite(f"{output_folder}annotated_frame{frame_count}.jpg", annotated_image)
 
                     input_model = np.array(landmark_coords)
                     process_landmark = self.pre_process_landmark(input_model)
-                    print(2345678, type(process_landmark))
+                    # print(2345678, type(process_landmark))
 
                     # Check for key press
                     key = cv2.waitKey(1)
                     if key != -1:
-                        print('hiiiiiii', key)
-                        # Check if the key is a number between 0 and 9
                         if ord('0') <= key <= ord('9') and len(process_landmark) != 0 :
-                            # Write the key and process_landmark to the CSV file
-                            row_data = [chr(key)] + process_landmark[:40]
+                            row_data = [chr(key)] + process_landmark[:42]
                             csvwriter.writerow(row_data)
                             print(f"save a list for {chr(key)}")
                             # break

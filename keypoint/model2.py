@@ -45,6 +45,7 @@ class HandGestureClassifierMLP:
 
     def train_model(self):
         start_train = time.time()
+        # print('ttttt', type(self.X_train[0]), len(self.X_train[0]), self.X_train[0])
         self.model.fit(self.X_train, self.y_train, epochs=5, batch_size=64, verbose=2)
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
 
@@ -69,7 +70,7 @@ class HandGestureClassifierCNN:
         self.actions_num = actions_num
         self.model = self.build_model()
         self.train_model()
-        self.save_model()
+        # self.save_model()
         # self.test_model()
 
 
@@ -102,14 +103,16 @@ class HandGestureClassifierCNN:
     def train_model(self):
 
         start_train = time.time()
+        print('ttttt', type(self.X_train[0]), len(self.X_train[0]), self.X_train[0])
 
-        self.model.fit(self.X_train, self.y_train, epochs=500, batch_size=64, verbose=2)
+        self.model.fit(self.X_train, self.y_train, epochs=150, batch_size=64, verbose=2)
 
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
 
     
     def save_model(self):
-        self.model.save('models/weights_CNN_100.h5')
+        self.model.save('models/weights_CNN_my.h5')
+        # self.model.save('models/weights_CNN_100.h5')
 
 
     def test_model(self):
@@ -135,7 +138,7 @@ class  HandGestureClassifierCNNLSTM:
     #     self.test_model()
 
     def __init__(self,X_train, y_train, actions_num):
-        self.X_train = X_train = np.array(X_train.reshape(X_train.shape[0], 1, X_train.shape[1], X_train.shape[2], X_train.shape[3]))
+        self.X_train = np.array(X_train.reshape(X_train.shape[0], 1, X_train.shape[1], X_train.shape[2], X_train.shape[3]))
         self.y_train = y_train
         self.actions_num = actions_num
         self.model = self.build_model()
