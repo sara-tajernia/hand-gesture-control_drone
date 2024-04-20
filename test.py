@@ -1,114 +1,68 @@
-from keras.models import load_model
-import numpy as np
-import copy
-import itertools
+# from keras.models import load_model
+# import numpy as np
+# import copy
+# import itertools
 
 
-class Test:
-    def __init__(self):
-        self.test_model()
+# class Test:
+#     def __init__(self):
+#         self.test_model()
 
 
-    def test_model(self):
-        savedModel=load_model('models/keypoint_classifier.hdf5')
+#     def test_model(self):
+#         savedModel=load_model('models/keypoint_classifier.hdf5')
+
+
+#         temp_landmark_list = self.pre_process_landmark()
+
+#         print('temp_landmark_list', temp_landmark_list, '\n\n')
 
 
 
 
-        # t = [[325.4271697998047, 632.1354246139526], 
-        #      [361.7753219604492, 605.8097791671753], 
-        #      [380.9897994995117, 558.6653423309326], 
-        #      [391.45275115966797, 516.4318799972534], 
-        #      [391.8764877319336, 482.70187854766846], 
-        #      [348.37329864501953, 504.16173934936523], 
-        #      [348.1619644165039, 452.87489891052246], 
-        #      [347.19974517822266, 421.7681407928467], 
-        #      [345.6614303588867, 394.561185836792], 
-        #      [320.3530502319336, 503.545560836792], 
-        #      [318.0193328857422, 447.9714775085449], 
-        #      [318.53647232055664, 411.61630153656006], 
-        #      [319.79360580444336, 381.13001346588135], 
-        #      [295.0844955444336, 513.2595777511597], 
-        #      [289.42726135253906, 462.936487197876], 
-        #      [291.29783630371094, 429.303560256958], 
-        #      [295.01338958740234, 400.72108268737793], 
-        #      [270.0077819824219, 531.8777132034302], 
-        #      [262.3675346374512, 492.1101236343384], 
-        #      [261.2149238586426, 465.3214645385742], 
-        #      [262.8464126586914, 440.98601818084717]]
-
-        t =[[0, 0],[-71, -22], [-127, -83],[-159, -144], [-184, -191], [-112, -173], [-142, -242], [-161, -280], [-177, -314], [-77, -188], [-108, -262], [-128, -304], [-146, -337], [-41, -187], [-67, -254], [-86, -291], [-104, -321], [0, -177], [-13, -228], [-24, -260], [-33, -288]]    #0
+#         temp_landmark_list = np.expand_dims(t, axis=0)
+#         prediction = savedModel.predict(temp_landmark_list)
+#         print(prediction)
+#         prediction_index = np.argmax(prediction)
+#         print("Index of highest value in prediction:", prediction_index)
 
 
-        # t = [(325.4271697998047, 632.1354246139526), (361.7753219604492, 605.8097791671753), (380.9897994995117, 558.6653423309326), (391.45275115966797, 516.4318799972534), (391.8764877319336, 482.70187854766846), (348.37329864501953, 504.16173934936523), (348.1619644165039, 452.87489891052246), (347.19974517822266, 421.7681407928467), (345.6614303588867, 394.561185836792), (320.3530502319336, 503.545560836792), (318.0193328857422, 447.9714775085449), (318.53647232055664, 411.61630153656006), (319.79360580444336, 381.13001346588135), (295.0844955444336, 513.2595777511597), (289.42726135253906, 462.936487197876), (291.29783630371094, 429.303560256958), (295.01338958740234, 400.72108268737793), (270.0077819824219, 531.8777132034302), (262.3675346374512, 492.1101236343384), (261.2149238586426, 465.3214645385742), (262.8464126586914, 440.98601818084717)]
+#     def pre_process_landmark(self, landmark_list):
+#         temp_landmark_list = copy.deepcopy(landmark_list)
+
+#         print('temp_landmark_list-1', temp_landmark_list, '\n')
+
+
+#         # 相対座標に変換
+#         base_x, base_y = 0, 0
+#         for index, landmark_point in enumerate(temp_landmark_list):
+#             if index == 0:
+#                 base_x, base_y = landmark_point[0], landmark_point[1]
+
+#             temp_landmark_list[index][0] = temp_landmark_list[index][0] - base_x
+#             temp_landmark_list[index][1] = temp_landmark_list[index][1] - base_y
+
+#         # 1次元リストに変換
+
+#         print('temp_landmark_list0', temp_landmark_list, '\n')
+
+#         temp_landmark_list = list(
+#             itertools.chain.from_iterable(temp_landmark_list))
         
-        # t = [(0.0, 0.0),(-0.2631578947368421,-0.05263157894736842),(-0.45864661654135336,-0.22556390977443608),(-0.518796992481203,-0.45112781954887216),(-0.41353383458646614,-0.6165413533834586),(-0.39097744360902253,-0.6390977443609023),(-0.45112781954887216,-0.9172932330827067),(-0.3684210526315789,-0.9849624060150376),(-0.2932330827067669,-0.8947368421052632),(-0.19548872180451127,-0.6616541353383458),(-0.18796992481203006,-1.0),(-0.09774436090225563,-0.9548872180451128),(-0.05263157894736842,-0.7744360902255639),(-0.022556390977443608,-0.6165413533834586),(0.022556390977443608,-0.8796992481203008),(0.06766917293233082,-0.7593984962406015),(0.07518796992481203,-0.5789473684210527),(0.14285714285714285,-0.5263157894736842),(0.19548872180451127,-0.6541353383458647),(0.18796992481203006,-0.556390977443609),(0.15789473684210525,-0.42105263157894735)] #1
+#         print('temp_landmark_list1', temp_landmark_list, '\n')
 
+#         # 正規化
+#         max_value = max(list(map(abs, temp_landmark_list)))
 
-        # t = [(0.0,0.0),(-0.04371584699453552,-0.22404371584699453),(-0.0273224043715847,-0.45901639344262296),(-0.0273224043715847,-0.6557377049180327),(-0.08743169398907104,-0.7814207650273224),(0.18032786885245902,-0.5136612021857924),(0.4371584699453552,-0.7595628415300546),(0.6010928961748634,-0.8524590163934426),(0.7103825136612022,-0.907103825136612),(0.2786885245901639,-0.4098360655737705),(0.5846994535519126,-0.6612021857923497),(0.7759562841530054,-0.7759562841530054),(0.907103825136612,-0.8415300546448088),(0.3551912568306011,-0.273224043715847),(0.6775956284153005,-0.43169398907103823),(0.8688524590163934,-0.5245901639344263),(1.0,-0.6010928961748634),(0.41530054644808745,-0.11475409836065574),(0.6775956284153005,-0.17486338797814208),(0.825136612021858,-0.20218579234972678),(0.9398907103825137,-0.22950819672131148)]     #0
-
-        print('t before', t, '\n')
-
-        temp_landmark_list = self.pre_process_landmark(t)
-
-        print('temp_landmark_list', temp_landmark_list, '\n\n')
-
-
-
-
-        temp_landmark_list = np.expand_dims(t, axis=0)
-
-        # t = np.array(t)
-        # print(t, type(t))
-
-
-
-        # reshaped_input = np.expand_dims(self.X_test[1000], axis=0)  # ?????????????????
-
-        # Make prediction
-        # prediction = savedModel.predict(reshaped_input)
-        prediction = savedModel.predict(temp_landmark_list)
-        print(prediction)
-        prediction_index = np.argmax(prediction)
-        print("Index of highest value in prediction:", prediction_index)
-
-
-    def pre_process_landmark(self, landmark_list):
-        temp_landmark_list = copy.deepcopy(landmark_list)
-
-        print('temp_landmark_list-1', temp_landmark_list, '\n')
-
-
-        # 相対座標に変換
-        base_x, base_y = 0, 0
-        for index, landmark_point in enumerate(temp_landmark_list):
-            if index == 0:
-                base_x, base_y = landmark_point[0], landmark_point[1]
-
-            temp_landmark_list[index][0] = temp_landmark_list[index][0] - base_x
-            temp_landmark_list[index][1] = temp_landmark_list[index][1] - base_y
-
-        # 1次元リストに変換
-
-        print('temp_landmark_list0', temp_landmark_list, '\n')
-
-        temp_landmark_list = list(
-            itertools.chain.from_iterable(temp_landmark_list))
-        
-        print('temp_landmark_list1', temp_landmark_list, '\n')
-
-        # 正規化
-        max_value = max(list(map(abs, temp_landmark_list)))
-
-        def normalize_(n):
-            return n / max_value
+#         def normalize_(n):
+#             return n / max_value
         
 
-        temp_landmark_list = list(map(normalize_, temp_landmark_list))
+#         temp_landmark_list = list(map(normalize_, temp_landmark_list))
 
-        print('temp_landmark_list3', temp_landmark_list, '\n')
+#         print('temp_landmark_list3', temp_landmark_list, '\n')
 
-        return temp_landmark_list
+#         return temp_landmark_list
             
 
 

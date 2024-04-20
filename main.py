@@ -1,7 +1,7 @@
 import numpy as np
-from model2 import HandGestureClassifierMLP, HandGestureClassifierCNN, HandGestureClassifierCNNLSTM
+from model import HandGestureClassifierMLP, HandGestureClassifierCNN, HandGestureClassifierCNNLSTM
 import time
-from test import Test
+from test_model import TestModel
 from preprocess_data import Preprocess
 from handDetector import HandDetector
 
@@ -26,19 +26,24 @@ if __name__ == "__main__":
 
 
 
-    # # model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
+    # # # # model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
     # model = HandGestureClassifierCNN(X_train, y_train, actions_num).model
-    # # model = HandGestureClassifierCNNLSTM(X_train, y_train, actions_num).model
+    # # # # model = HandGestureClassifierCNNLSTM(X_train, y_train, actions_num).model
 
 
 
+    # Uncomment if you want het orders for drone
     hand_detector = HandDetector()
 
 
 
-    Test()
 
-    Dataset()
+    #Uncomment if if you want to see the accuracy of 20% of data
+    # TestModel(X_test, y_test)
+
+
+    #Uncomment if you want to collect data to add to dataset
+    # Dataset()
 
 
 

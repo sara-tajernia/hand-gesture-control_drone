@@ -8,7 +8,7 @@ import pandas as pd
 import copy
 import itertools
 # import msvcrt
-import keyboard
+# import keyboard
 
 
 class Dataset:
@@ -69,7 +69,7 @@ class Dataset:
                 if frame_count % (save_interval * cap.get(cv2.CAP_PROP_FPS)) == 0:
                     detection_result = self.detect_hand_landmarks(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
                     annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result)
-                    # cv2.imwrite(f"{output_folder}annotated_frame{frame_count}.jpg", annotated_image)
+                    cv2.imwrite(f"{output_folder}annotated_frame{frame_count}.jpg", annotated_image)
 
                     input_model = np.array(landmark_coords)
                     process_landmark = self.pre_process_landmark(input_model)
