@@ -1,39 +1,66 @@
-
-import cv2
-from preprocess import preprocess
-import pandas as pd
-import train
 import numpy as np
+from model2 import HandGestureClassifierMLP, HandGestureClassifierCNN, HandGestureClassifierCNNLSTM
+import time
+from test import Test
+from preprocess_data import Preprocess
+from handDetector import HandDetector
 
+from dataset import Dataset
 
-import cv2
-import numpy as np
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from torchvision import transforms
-from torch.utils.data import DataLoader
-# from dataset import CustomDataset
-from model import HandGestureClassifierCNN, HandGestureClassifierCNNLSTM, HandGestureClassifierLSTM
-# from train import Trainer
-
-# up = 0 // down = 1 // back = 2 // stop = 3 // land = 4 // front = 5 // right = 6 // left = 7  // none = 8     video1
-
-# up = 0 // down = 1 // back = 2 // forward = 3 // land = 4 // stop = 5 // left = 6 // right = 7  // none = 8     video2
 
 
 
 if __name__ == "__main__":
-    cap = cv2.VideoCapture('./input/video.mp4')
-    # cap = cv2.VideoCapture('./input/video2.mp4')
 
-    pre_data = preprocess(cap=cap)
-    X = pre_data.frames
-    y = pre_data.labels
-    print(len(X))
-    print(len(y))
-    model = HandGestureClassifierCNN(X, y).model
-    # model = HandGestureClassifierCNNLSTM(X, y).model
-    # model = HandGestureClassifierLSTM(X,y).model
-    # print(model)
+    # # Train
+    # actions_num = 8
+    # dataset = "./dataset/my_dataset.csv"
+    # # dataset = "./dataset/keypoint.csv"
+    # X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
+    # y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
+
+    # preprocess = Preprocess(X_dataset, y_dataset)
+    
+    # X_train, X_test, y_train, y_test = preprocess.split_data()
+
+
+
+
+    # # model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
+    # model = HandGestureClassifierCNN(X_train, y_train, actions_num).model
+    # # model = HandGestureClassifierCNNLSTM(X_train, y_train, actions_num).model
+
+
+
+    hand_detector = HandDetector()
+
+
+
+    Test()
+
+    Dataset()
+
+
+
+
+
+
+    # #Test Window
+    # start_reading_test = time.time()
+    # X_test = np.array(data_test.frames)
+    # X_test = np.array(X_test.reshape(X_test.shape[0], 1, X_test.shape[1], X_test.shape[2], X_test.shape[3]))
+    # y_test = np.array(data_test.labels)
+
+    # print('reading data: {:2.2f} s'.format(time.time() - start_reading_test))
+
+    # print('test shape', X_test.shape)
+    # print('test y shape', y_test.shape)
+
+    # TestWindow(X_test, y_test)
+    
+
+
+
+    
+
 

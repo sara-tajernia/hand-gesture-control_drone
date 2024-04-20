@@ -15,7 +15,7 @@ class HandDetector:
         self.gestures = []
         self.read_gesture_file()
         self.mp_hands = mp.solutions.hands
-        self.hands = self.mp_hands.Hands()
+        self.hands = self.mp_hands.Hands(max_num_hands=1)
         self.mp_drawing = mp.solutions.drawing_utils
         self.capture_image()
 
@@ -74,7 +74,6 @@ class HandDetector:
                 input_model = np.array(landmark_coords)
                 process_landmark = self.pre_process_landmark(input_model)
 
-                print('ttttt', type(process_landmark), len(process_landmark), process_landmark)
 
                 # preprocess = Preprocess()
                 process_landmark = np.reshape(process_landmark, (-1, 2))
