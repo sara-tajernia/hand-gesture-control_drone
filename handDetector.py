@@ -8,10 +8,18 @@ import pandas as pd
 import copy
 import itertools
 from preprocess_data import Preprocess
+from collections import Counter
+from colorama import Fore, Back, Style
+
+
+"""
+
+"""
 
 class HandDetector:
     def __init__(self):
-
+        self.save_interval = 1  # frame
+        self.output_folder = "./gestures/test/"
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
@@ -47,10 +55,12 @@ class HandDetector:
         # hand_detector = HandDetector()
         cap = cv2.VideoCapture(0)
         frame_count = 0
-        save_interval = 20  # seconds
-        output_folder = "./gestures/test/"
-        os.makedirs(output_folder, exist_ok=True)
+        
+        os.makedirs(self.output_folder, exist_ok=True)
 
+        # y_pred_final = []
+        # test_Xs = self.X_test[100:120]
+        ten_y = []
 
 
         while cap.isOpened():
@@ -63,8 +73,10 @@ class HandDetector:
             # Display the frame
             cv2.imshow("Frame", frame)
 
+            
+
             # Capture and save frame every save_interval seconds
-            if frame_count % (save_interval * cap.get(cv2.CAP_PROP_FPS)) == 0:
+            if frame_count % (self.save_interval * cap.get(cv2.CAP_PROP_FPS)) == 0:
                 # Detect hand landmarks
                 detection_result = self.detect_hand_landmarks(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
                 
@@ -72,7 +84,7 @@ class HandDetector:
                 # Draw landmarks on the image and get coordinates
                 annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result)
                 # # Save the annotated image
-                # cv2.imwrite(f"{output_folder}annotated_frame{frame_count}.jpg", annotated_image)
+                cv2.imwrite(f"{self.output_folder}annotated_frame{frame_count}.jpg", annotated_image)
 
                 input_model = np.array(landmark_coords)
                 process_landmark = self.pre_process_landmark(input_model)
@@ -83,9 +95,22 @@ class HandDetector:
                 if len(process_landmark) != 0:
                     process_landmark_array = np.array(process_landmark).reshape(1, 21, 2)
                     prediction = self.model.predict(process_landmark_array)
-                    print('prediction:', frame_count, prediction)
+                    # print('prediction:', frame_count, prediction)
                     prediction_index = np.argmax(prediction)
-                    print("Index of highest value in prediction:", prediction_index, self.gestures[prediction_index])
+                    # print("Index of highest value in prediction:", prediction_index, self.gestures[prediction_index])
+
+                    ten_y.append(prediction_index)
+                    # print(ten_y)
+                    if len(ten_y) == self.windows:
+                        most_action = max(set(ten_y), key = ten_y.count)
+                        action = ten_y.count(most_action)
+                        
+                        # print(2,ten_y, self.vote, action/self.windows, frame_count)
+                        if self.vote <= action/self.windows:
+                            # print('*********',ten_y, action)
+                            print(Fore.RED + f"DO THE ACTION {self.gestures[most_action]}")
+                            print(Style.RESET_ALL)
+                        ten_y.pop(0)
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
