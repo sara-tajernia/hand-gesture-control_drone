@@ -13,12 +13,12 @@ from colorama import Fore, Back, Style
 
 
 """
-
+In 
 """
 
 class HandDetector:
     def __init__(self):
-        self.save_interval = 1  # frame
+        self.save_interval = 3  # frame
         self.output_folder = "./gestures/test/"
         self.gestures = []
         self.windows = 10
@@ -29,10 +29,6 @@ class HandDetector:
         self.mp_drawing = mp.solutions.drawing_utils
         self.read_gesture_file()
         self.capture_image()
-
-        
-        
-
         
 
     def detect_hand_landmarks(self, image):
@@ -52,14 +48,9 @@ class HandDetector:
         return image, landmark_coords
 
     def capture_image(self):
-        # hand_detector = HandDetector()
         cap = cv2.VideoCapture(0)
         frame_count = 0
-        
         os.makedirs(self.output_folder, exist_ok=True)
-
-        # y_pred_final = []
-        # test_Xs = self.X_test[100:120]
         ten_y = []
 
 
@@ -73,10 +64,13 @@ class HandDetector:
             # Display the frame
             cv2.imshow("Frame", frame)
 
+            # print('byyy',frame_count,  self.save_interval, cap.get(cv2.CAP_PROP_FPS))
+
             
 
             # Capture and save frame every save_interval seconds
-            if frame_count % (self.save_interval * cap.get(cv2.CAP_PROP_FPS)) == 0:
+            # if frame_count % (self.save_interval * int(cap.get(cv2.CAP_PROP_FPS))) == 0:
+            if frame_count % self.save_interval == 0:
                 # Detect hand landmarks
                 detection_result = self.detect_hand_landmarks(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
                 
@@ -91,13 +85,14 @@ class HandDetector:
                 process_landmark = np.reshape(process_landmark, (-1, 2))
 
 
+
                 # Make prediction
                 if len(process_landmark) != 0:
                     process_landmark_array = np.array(process_landmark).reshape(1, 21, 2)
                     prediction = self.model.predict(process_landmark_array)
                     # print('prediction:', frame_count, prediction)
                     prediction_index = np.argmax(prediction)
-                    # print("Index of highest value in prediction:", prediction_index, self.gestures[prediction_index])
+                    print("Index of highest value in prediction:", prediction_index, self.gestures[prediction_index])
 
                     ten_y.append(prediction_index)
                     # print(ten_y)

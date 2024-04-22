@@ -130,13 +130,6 @@ class HandGestureClassifierCNN:
 
 
 class  HandGestureClassifierCNNLSTM:
-    # def __init__(self, X, y, actions_num):
-    #     self.X_train, self.X_test, self.y_train, self.y_test = self.load_data(X, y)
-    #     self.actions_num = actions_num
-    #     self.model = self.build_model()
-    #     self.train_model()
-    #     self.test_model()
-
     def __init__(self,X_train, y_train, actions_num):
         self.X_train = np.array(X_train.reshape(X_train.shape[0], 1, X_train.shape[1], X_train.shape[2], X_train.shape[3]))
         self.y_train = y_train
