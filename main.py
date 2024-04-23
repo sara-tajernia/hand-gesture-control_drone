@@ -12,28 +12,29 @@ from dataset import Dataset
 
 if __name__ == "__main__":
 
-    # # Train
-    # actions_num = 8
+    # Train
+    actions_num = 9
     # dataset = "./dataset/my_dataset.csv"
-    # # dataset = "./dataset/keypoint.csv"
-    # X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
-    # y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
+    dataset = "./dataset/keypoint.csv"
+    X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
+    y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
 
-    # preprocess = Preprocess(X_dataset, y_dataset)
+    preprocess = Preprocess(X_dataset, y_dataset, actions_num)
     
-    # X_train, X_test, y_train, y_test = preprocess.split_data()
+    X_train, X_test, y_train, y_test = preprocess.split_data()
+    print(X_train[0])
 
 
 
 
-    # # # # model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
+    # model = HandGestureClassifierMLP(X_train, y_train, actions_num).model
     # model = HandGestureClassifierCNN(X_train, y_train, actions_num).model
     # model = HandGestureClassifierCNNLSTM(X_train, y_train, actions_num).model
 
 
 
     # Uncomment if you want het orders for drone
-    hand_detector = HandDetector()
+    # hand_detector = HandDetector()
 
 
     #Uncomment if if you want to see the accuracy of 20% of data

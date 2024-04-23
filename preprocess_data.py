@@ -2,9 +2,10 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 
 class Preprocess:
-    def __init__(self, X, y):
+    def __init__(self, X, y, actions_num):
         self.X = []
         self.y = []
+        self.actions_num = actions_num
         self.coordination(X)
         self.extract_labels(y)
         
@@ -15,7 +16,7 @@ class Preprocess:
         labels = []
         for i in y:
             arr=[]
-            for j in range(8):
+            for j in range(self.actions_num):
                 if(i == j):
                     arr.append(1)
                 else:

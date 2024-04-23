@@ -45,13 +45,12 @@ class HandGestureClassifierMLP:
 
     def train_model(self):
         start_train = time.time()
-        # print('ttttt', type(self.X_train[0]), len(self.X_train[0]), self.X_train[0])
-        self.model.fit(self.X_train, self.y_train, epochs=5, batch_size=64, verbose=2)
+        self.model.fit(self.X_train, self.y_train, epochs=100, batch_size=64, verbose=2)
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
 
     
     def save_model(self):
-        self.model.save('models/weights_CNN_100.h5')
+        self.model.save('models/weights_MLP_1100.h5')
 
 
 
@@ -106,7 +105,7 @@ class HandGestureClassifierCNN:
 
     
     def save_model(self):
-        self.model.save('models/weights_CNN_my800.h5')
+        self.model.save('models/weights_CNN_my1100.h5')
         # self.model.save('models/weights_CNN_100.h5')
 
 

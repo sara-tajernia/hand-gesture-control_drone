@@ -23,7 +23,8 @@ class HandDetector:
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/weights_CNN_my800.h5')
+        self.model = load_model('models/weights_CNN_my1100.h5')
+        # self.model = load_model('models/weights_MLP_1100.h5')
         self.mp_hands = mp.solutions.hands
         self.hands = self.mp_hands.Hands(max_num_hands=1)
         self.mp_drawing = mp.solutions.drawing_utils
@@ -123,6 +124,7 @@ class HandDetector:
 
 
     def pre_process_landmark(self, landmark_list):
+        print('land,ark', landmark_list)
         temp_landmark_list = copy.deepcopy(landmark_list)
         base_x, base_y = 0, 0
         for index, landmark_point in enumerate(temp_landmark_list):

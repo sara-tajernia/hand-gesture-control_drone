@@ -9,7 +9,7 @@ class TestModel:
 
 
     def test_model(self):
-        savedModel=load_model('models/weights_CNN_my800.h5')
+        savedModel=load_model('models/weights_CNN_my1100.h5')
         test_loss, test_acc = savedModel.evaluate(self.X_test, self.y_test)
         print('Test accuracy: {:2.2f}%'.format(test_acc*100))
         print('Test loss: {:2.2f}%'.format(test_loss*100))
