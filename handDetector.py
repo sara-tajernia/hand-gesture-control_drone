@@ -46,6 +46,8 @@ class HandDetector:
                     landmark_x = landmark.x * image.shape[1]
                     landmark_y = landmark.y * image.shape[0]
                     landmark_coords.append((landmark_x, landmark_y))
+
+        print('12345678', landmark_coords)
         return image, landmark_coords
 
     def capture_image(self):

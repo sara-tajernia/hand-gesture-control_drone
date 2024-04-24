@@ -11,7 +11,11 @@ from preprocess_data import Preprocess
 from collections import Counter
 from colorama import Fore, Back, Style
 import urllib
-
+import cv2
+import mediapipe as mp
+import numpy as np
+import os
+import csv
 import cv2
 # from google.colab.patches import cv2_imshow
 
@@ -39,23 +43,72 @@ FONT_THICKNESS = 1
 HANDEDNESS_TEXT_COLOR = (88, 205, 54) # vibrant green
 
 
-def pre_process_landmark(landmark_list):
-    landmark_list = [[mp_normalized_landmark.x, mp_normalized_landmark.y,  mp_normalized_landmark.z] for mp_normalized_landmark in landmark_list]
-    temp_landmark_list = copy.deepcopy(landmark_list)
-    base_x, base_y = 0.0, 0.0 
-    final_list = []
-    for index in range(len(landmark_list)):
-        if index == 0:
-            base_x, base_y = landmark_list[index][0], landmark_list[index][1]
+# def pre_process_landmark(landmark_list):
+#     landmark_list = [[mp_normalized_landmark.x, mp_normalized_landmark.y,  mp_normalized_landmark.z] for mp_normalized_landmark in landmark_list]
+#     temp_landmark_list = copy.deepcopy(landmark_list)
+#     base_x, base_y = 0.0, 0.0 
+#     final_list = []
+#     for index in range(len(landmark_list)):
+#         if index == 0:
+#             base_x, base_y = landmark_list[index][0], landmark_list[index][1]
 
-        x = temp_landmark_list[index][0] - base_x
-        y = temp_landmark_list[index][1] - base_y
-        final_list.append([x,y])
+#         x = temp_landmark_list[index][0] - base_x
+#         y = temp_landmark_list[index][1] - base_y
+#         final_list.append([x,y])
 
-    return final_list
-            
+#     return final_list
+
+
+
+def pre_process_landmark(landmark):
+    print(landmark, len(landmark[0]),len(landmark), '\n\n')
+    hands = []
+    if len(landmark) > 21:
+        hands.append(landmark[0:21])
+        hands.append(landmark[21:])
+    else:
+        hands.append(landmark[0:21])
+
+    # print(12345678,hands)
+    landmark_list = np.array(hands)
+
+
+    final = []
+    print('12345678,', landmark_list)
+
+    for landmark_list_hand in landmark_list:
+
+
+        temp_landmark_list = copy.deepcopy(landmark_list_hand)
+
+
+        base_x, base_y = 0, 0
+        for index, landmark_point in enumerate(temp_landmark_list):
+            if index == 0:
+                base_x, base_y = landmark_point[0], landmark_point[1]
+
+            temp_landmark_list[index][0] = temp_landmark_list[index][0] - base_x
+            temp_landmark_list[index][1] = temp_landmark_list[index][1] - base_y
+
+
+        temp_landmark_list = list(
+            itertools.chain.from_iterable(temp_landmark_list))
+        
+        if temp_landmark_list != [] :
+            max_value = max(list(map(abs, temp_landmark_list)))
+
+        def normalize_(n):
+            return n / max_value
+        
+        temp_landmark_list = list(map(normalize_, temp_landmark_list))
+        final.append(temp_landmark_list)
+
+    print('\n\n\n\n final', final)
+    return final
+        
 
 def extract_coordinates(rgb_image, detection_result):
+    point_info = []
     hand_landmarks_list = detection_result.hand_landmarks
     # print('\n\n\n', 'hand_landmarks_list', hand_landmarks_list) ###### whole thing both hands
     handedness_list = detection_result.handedness
@@ -70,71 +123,137 @@ def extract_coordinates(rgb_image, detection_result):
         # print('\n hand_landmarks', hand_landmarks)
         hand_landmarks_flat = np.array(pre_process_landmark(hand_landmarks))
         print('\n ', hand_landmarks_flat)
+        point_info.append(hand_landmarks_flat)
         
         for category in handedness:
             print(category.display_name)
 
-    return annotated_image
+    return point_info
 
+
+def draw_landmarks_on_image(image, results):
+        mp_drawing = mp.solutions.drawing_utils
+        mp_hands = mp.solutions.hands
+        landmark_coords = []
+        if results.multi_hand_landmarks:
+            for hand_landmarks in results.multi_hand_landmarks:
+                mp_drawing.draw_landmarks(
+                    image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+                for landmark in hand_landmarks.landmark:
+                    landmark_x = landmark.x * image.shape[1]
+                    landmark_y = landmark.y * image.shape[0]
+                    landmark_coords.append((landmark_x, landmark_y))
+        # print('landmark_coords' ,landmark_coords)
+        cv2.imwrite('./lol.jpg', image)
+        return image, landmark_coords
   
   
 
-def draw_landmarks_on_image(rgb_image, detection_result):
-  hand_landmarks_list = detection_result.hand_landmarks
-  handedness_list = detection_result.handedness
-  annotated_image = np.copy(rgb_image)
+def capture_image():
+    # Initialize MediaPipe Hand Landmarker
+    mp_hands = mp.solutions.hands
+    mp_drawing = mp.solutions.drawing_utils
 
-  # Loop through the detected hands to visualize.
-  for idx in range(len(hand_landmarks_list)):
-    hand_landmarks = hand_landmarks_list[idx]
-    handedness = handedness_list[idx]
+    # Initialize VideoCapture
+    cap = cv2.VideoCapture(0)
+    frame_count = 0
+    save_interval = 20  # seconds
+    output_folder = "./gestures/test/"
+    os.makedirs(output_folder, exist_ok=True)
 
-    # Draw the hand landmarks.
-    hand_landmarks_proto = landmark_pb2.NormalizedLandmarkList()
-    hand_landmarks_proto.landmark.extend([
-      landmark_pb2.NormalizedLandmark(x=landmark.x, y=landmark.y) for landmark in hand_landmarks
-    ])
-    solutions.drawing_utils.draw_landmarks(
-      annotated_image,
-      hand_landmarks_proto,
-      solutions.hands.HAND_CONNECTIONS,
-      solutions.drawing_styles.get_default_hand_landmarks_style(),
-      solutions.drawing_styles.get_default_hand_connections_style())
-
-    # Get the top left corner of the detected hand's bounding box.
-    height, width, _ = annotated_image.shape
-    x_coordinates = [landmark.x for landmark in hand_landmarks]
-    y_coordinates = [landmark.y for landmark in hand_landmarks]
-    text_x = int(min(x_coordinates) * width)
-    text_y = int(min(y_coordinates) * height) - MARGIN
-
-    # Draw handedness (left or right hand) on the image.
-    cv2.putText(annotated_image, f"{handedness[0].category_name}",
-                (text_x, text_y), cv2.FONT_HERSHEY_DUPLEX,
-                FONT_SIZE, HANDEDNESS_TEXT_COLOR, FONT_THICKNESS, cv2.LINE_AA)
-
-  return annotated_image
+    # Initialize MediaPipe Hands Detector
+    options = {
+        "min_detection_confidence": 0.5,
+        "min_tracking_confidence": 0.5
+    }
+    detector = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
 
+    # Open CSV file
+    with open('./dataset/my_dataset_new.csv', 'a', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if not ret:
+                break
+
+            frame_count += 1
+            cv2.imshow("Frame", frame)
+
+            if frame_count % save_interval == 0:
+                # Convert the frame to RGB format
+                frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+                # Convert the RGB frame to MediaPipe's image format
+                image = cv2.cvtColor(frame_rgb, cv2.COLOR_RGB2BGR)  # BGR format for MediaPipe
+                image.flags.writeable = False  # Set writable flag to False
+                image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # Convert back to RGB
+
+                # Detect hand landmarks in the image
+                detection_result = detector.process(image)
+
+                if detection_result.multi_hand_landmarks:
+                    # Draw landmarks on the image
+                    # print('detection_result', detection_result)
+                    annotated_image, landmark_coords = draw_landmarks_on_image(frame, detection_result)
+                    # print('landmark_coords', landmark_coords)
+
+                    # Save the annotated image
+                    cv2.imwrite(os.path.join(output_folder, f"annotated_frame_{frame_count}.jpg"), annotated_image)
+
+                    # Extract coordinates from detection result
+                    # annotated_point_info = extract_coordinates(frame, landmark_coords)
+                    # input_model = np.array(landmark_coords)
+                    process_landmark = pre_process_landmark(np.array(landmark_coords))
+                    # print(process_landmark)
+                    print(len(process_landmark))
+
+                    for point in process_landmark:
+                        # input_model = np.array(point)
+                        # process_landmark = pre_process_landmark(input_model)
+                        
+
+                        # Check for key press
+                        key = cv2.waitKey(1)
+                        if key != -1:
+                            if ord('0') <= key <= ord('9') and len(process_landmark) != 0:
+                                row_data = [chr(key)] + point[:42]
+                                csvwriter.writerow(row_data)
+                                print(f"Saved a list for {chr(key)}")
+                                # break
+
+            # Exit when 'q' is pressed
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+
+    # Release the camera and close the CSV file
+    cap.release()
+    cv2.destroyAllWindows()
+
+def main():
+    # STEP 2: Create an HandLandmarker object.
+    base_options = python.BaseOptions(model_asset_path='hand_landmarker.task')
+    options = vision.HandLandmarkerOptions(base_options=base_options,
+                                        num_hands=2)
+    detector = vision.HandLandmarker.create_from_options(options)
+
+    # STEP 3: Load the input image.
+    # image = mp.Image.create_from_file("./gestures/annotated_frame21.jpg")
+    image = mp.Image.create_from_file("./gestures/2peace.jpg")
+    detection_result = detector.detect(image)
+    annotated_image = draw_landmarks_on_image(image.numpy_view(), detection_result)
+    print(detection_result)
+    cv2.imwrite('./gestures/lol.jpg', cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
 
 
-# STEP 2: Create an HandLandmarker object.
-base_options = python.BaseOptions(model_asset_path='hand_landmarker.task')
-options = vision.HandLandmarkerOptions(base_options=base_options,
-                                       num_hands=2)
-detector = vision.HandLandmarker.create_from_options(options)
-
-# STEP 3: Load the input image.
-# image = mp.Image.create_from_file("./gestures/annotated_frame21.jpg")
-image = mp.Image.create_from_file("./gestures/2peace.jpg")
-detection_result = detector.detect(image)
-annotated_image = draw_landmarks_on_image(image.numpy_view(), detection_result)
-print(detection_result)
-cv2.imwrite('./gestures/lol.jpg', cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
+    ##this foe model intry
+    annotated_image = extract_coordinates(image.numpy_view(), detection_result)
 
 
-##this foe model intry
-annotated_image = extract_coordinates(image.numpy_view(), detection_result)
+if __name__ == "__main__":
+    # main()
+    capture_image()
 
 
 

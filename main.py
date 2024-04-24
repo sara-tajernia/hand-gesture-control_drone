@@ -12,17 +12,17 @@ from dataset import Dataset
 
 if __name__ == "__main__":
 
-    # Train
-    actions_num = 9
-    # dataset = "./dataset/my_dataset.csv"
-    dataset = "./dataset/keypoint.csv"
-    X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
-    y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
+    # # Train
+    # actions_num = 9
+    # # dataset = "./dataset/my_dataset.csv"
+    # dataset = "./dataset/keypoint.csv"
+    # X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
+    # y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
 
-    preprocess = Preprocess(X_dataset, y_dataset, actions_num)
+    # preprocess = Preprocess(X_dataset, y_dataset, actions_num)
     
-    X_train, X_test, y_train, y_test = preprocess.split_data()
-    print(X_train[0])
+    # X_train, X_test, y_train, y_test = preprocess.split_data()
+    # print(X_train[0])
 
 
 
@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
 
     #Uncomment if you want to collect data to add to dataset
-    # Dataset()
+    Dataset()
 
 
 

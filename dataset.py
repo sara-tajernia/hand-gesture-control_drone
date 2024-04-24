@@ -40,6 +40,7 @@ class Dataset:
                     landmark_x = landmark.x * image.shape[1]
                     landmark_y = landmark.y * image.shape[0]
                     landmark_coords.append((landmark_x, landmark_y))
+        print('landmark_coords' ,landmark_coords)
         return image, landmark_coords
 
     def capture_image(self):
@@ -53,7 +54,7 @@ class Dataset:
 
         # model=load_model('models/weights_CNN_100.h5')
 
-        with open('./dataset/my_dataset.csv', 'a', newline='') as csvfile:
+        with open('./dataset/my_dataset_new.csv', 'a', newline='') as csvfile:
             csvwriter = csv.writer(csvfile)
 
             while cap.isOpened():
@@ -66,7 +67,7 @@ class Dataset:
                 # Display the frame
                 cv2.imshow("Frame", frame)
 
-                if frame_count % (save_interval * cap.get(cv2.CAP_PROP_FPS)) == 0:
+                if frame_count % save_interval == 0:
                     detection_result = self.detect_hand_landmarks(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
                     annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result)
                     cv2.imwrite(f"{output_folder}annotated_frame{frame_count}.jpg", annotated_image)
