@@ -61,7 +61,7 @@ HANDEDNESS_TEXT_COLOR = (88, 205, 54) # vibrant green
 
 
 def pre_process_landmark(landmark):
-    print(landmark, len(landmark[0]),len(landmark), '\n\n')
+    # print(landmark, len(landmark[0]),len(landmark), '\n\n')
     hands = []
     if len(landmark) > 21:
         hands.append(landmark[0:21])
@@ -74,7 +74,7 @@ def pre_process_landmark(landmark):
 
 
     final = []
-    print('12345678,', landmark_list)
+    # print('12345678,', landmark_list)
 
     for landmark_list_hand in landmark_list:
 
@@ -103,7 +103,7 @@ def pre_process_landmark(landmark):
         temp_landmark_list = list(map(normalize_, temp_landmark_list))
         final.append(temp_landmark_list)
 
-    print('\n\n\n\n final', final)
+    # print('\n\n\n\n final', final)
     return final
         
 
@@ -157,7 +157,7 @@ def capture_image():
     # Initialize VideoCapture
     cap = cv2.VideoCapture(0)
     frame_count = 0
-    save_interval = 20  # seconds
+    save_interval = 5  # seconds
     output_folder = "./gestures/test/"
     os.makedirs(output_folder, exist_ok=True)
 
@@ -206,21 +206,20 @@ def capture_image():
                     # annotated_point_info = extract_coordinates(frame, landmark_coords)
                     # input_model = np.array(landmark_coords)
                     process_landmark = pre_process_landmark(np.array(landmark_coords))
-                    # print(process_landmark)
-                    print(len(process_landmark))
+                    print(process_landmark)
+                    # print(len(process_landmark))
 
-                    for point in process_landmark:
-                        # input_model = np.array(point)
-                        # process_landmark = pre_process_landmark(input_model)
+                    
                         
 
-                        # Check for key press
-                        key = cv2.waitKey(1)
-                        if key != -1:
-                            if ord('0') <= key <= ord('9') and len(process_landmark) != 0:
+                    # Check for key press
+                    key = cv2.waitKey(1)
+                    if key != -1:
+                        if ord('0') <= key <= ord('9') and len(process_landmark) != 0:
+                            for point in process_landmark:
                                 row_data = [chr(key)] + point[:42]
                                 csvwriter.writerow(row_data)
-                                print(f"Saved a list for {chr(key)}")
+                                print(f"Saved a list for {chr(key)}\n\n")
                                 # break
 
             # Exit when 'q' is pressed
