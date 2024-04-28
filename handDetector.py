@@ -23,7 +23,7 @@ class HandDetector:
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/weights_CNN_new.h5')
+        self.model = load_model('models/1hand(10).h5')
         # self.model = load_model('models/weights_MLP_1100.h5')
         self.mp_hands = mp.solutions.hands
         self.hands = self.mp_hands.Hands(max_num_hands=1)
@@ -126,28 +126,6 @@ class HandDetector:
 
                 # Detect hand landmarks in the image
                 detection_result = detector.process(image)
-                # print(detection_result.multi_hand_landmarks)
-                # print(detection_result.multi_handedness)
-
-                # if detection_result.multi_hand_landmarks:
-                #     classification_list = detection_result.multi_handedness[0]
-                #     if len(classification_list.classification) == 1:
-                #         classification = classification_list.classification[0]
-                #         print(classification.label)
-
-                        # if classification.label == "Right":
-                        #     print('right')
-                        #     annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result)
-                        #     cv2.imwrite(os.path.join(f"./gestures/test/annotated_frame_{frame_count}.jpg"), annotated_image)
-                        #     process_landmark = self.pre_process_landmark(np.array(landmark_coords))   
-                        #     print(process_landmark, '\n')  
-
-                        # else:
-                        #     print('left', detection_result)
-                        #     annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result)
-                        #     cv2.imwrite(os.path.join(f"./gestures/test/annotated_frame_{frame_count}.jpg"), annotated_image)
-                        #     process_landmark = self.pre_process_landmark(np.array(landmark_coords))   
-                        #     print(process_landmark, '\n')  
 
                 if detection_result.multi_hand_landmarks:                
                     annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result)
@@ -163,13 +141,13 @@ class HandDetector:
                         process_landmark_array = np.array(point).reshape(1, 21, 2)
                         prediction = self.model.predict(process_landmark_array)
                         prediction_index = np.argmax(prediction)
-                        # print("Index of highest value in prediction:",prediction, prediction_index, self.gestures[prediction_index])
+                        print(self.gestures[prediction_index], prediction_index)
                         ten_y.append(prediction_index)
                         if len(ten_y) == self.windows:
                             most_action = max(set(ten_y), key = ten_y.count)
                             action = ten_y.count(most_action)
                             
-                            if self.vote <= action/self.windows:
+                            if self.vote <= action/self.windows and most_action != 9: 
                                 # print('*********',ten_y, action)
                                 print(Fore.RED + f"DO THE ACTION {self.gestures[most_action]}", len(process_landmark))
                                 print(Style.RESET_ALL)
