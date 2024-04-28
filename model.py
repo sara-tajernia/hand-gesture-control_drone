@@ -105,7 +105,7 @@ class HandGestureClassifierCNN:
 
     
     def save_model(self):
-        self.model.save('models/weights_CNN_my1100.h5')
+        self.model.save('models/weights_CNN_new.h5')
         # self.model.save('models/weights_CNN_100.h5')
 
 
@@ -117,7 +117,7 @@ class HandGestureClassifierCNN:
         # test_loss, test_acc = savedModel.evaluate(self.X_test, self.y_test)
         # print('LOAD Test accuracy: {:2.2f}%'.format(test_acc*100))
 
-        Model=load_model('models/weights_CNN_my.h5')
+        Model=load_model('models/weights_CNN_new.h5')
         test_loss, test_acc = Model.evaluate(self.X_test, self.y_test)
         print('Test accuracy: {:2.2f}%'.format(test_acc*100))
         print('Test loss: {:2.2f}%'.format(test_loss*100))

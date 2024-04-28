@@ -203,14 +203,8 @@ def capture_image():
                     cv2.imwrite(os.path.join(output_folder, f"annotated_frame_{frame_count}.jpg"), annotated_image)
 
                     # Extract coordinates from detection result
-                    # annotated_point_info = extract_coordinates(frame, landmark_coords)
-                    # input_model = np.array(landmark_coords)
                     process_landmark = pre_process_landmark(np.array(landmark_coords))
-                    print(process_landmark)
-                    # print(len(process_landmark))
-
-                    
-                        
+                    print(process_landmark, '\n\n')
 
                     # Check for key press
                     key = cv2.waitKey(1)
@@ -250,9 +244,9 @@ def main():
     annotated_image = extract_coordinates(image.numpy_view(), detection_result)
 
 
-if __name__ == "__main__":
-    # main()
-    capture_image()
+# if __name__ == "__main__":
+#     # main()
+#     capture_image()
 
 
 
