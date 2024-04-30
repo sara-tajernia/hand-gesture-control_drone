@@ -12,28 +12,30 @@ import cv2
 import tensorflow as tf
 # from keras.models import Model
 from keras.models import load_model
-
+import matplotlib.pyplot as plt
+from sklearn.metrics import classification_report
 
 
 class HandGestureClassifierMLP:
-    def __init__(self,X_train, y_train, actions_num):
+    def __init__(self, X_train, y_train, X_test, y_test, actions_num):
         self.X_train = np.array(X_train)
         self.y_train = np.array(y_train)
+        self.X_test = np.array(X_test)
+        self.y_test = np.array(y_test)
 
-        self.input_shape = (self.X_train.shape[1:3])  #(21, 2)
+        self.input_shape = self.X_train.shape[1:3]  #(21, 2)
         self.actions_num = actions_num
         self.model = self.build_model()
         self.train_model()
         self.save_model()
+        self.test_model()
 
 
     def build_model(self):
         model = Sequential([
             Flatten(input_shape=self.input_shape),  # Flatten the input to make it compatible with Dense layers
             Dense(64, activation='relu'),
-            # Dropout(0.0),
             Dense(32, activation='relu'),
-            # Dropout(0.0),
             Dense(16, activation='relu'),
             Dense(self.actions_num, activation='sigmoid')  
         ])
@@ -45,38 +47,61 @@ class HandGestureClassifierMLP:
 
     def train_model(self):
         start_train = time.time()
-        self.model.fit(self.X_train, self.y_train, epochs=100, batch_size=64, verbose=2)
+        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=200, batch_size=64, verbose=2)
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
-
+        self.plot_training_progress()
     
+    def plot_training_progress(self):
+        # Plot training and validation accuracy
+        plt.plot(self.history.history['accuracy'], label='train_accuracy')
+        plt.plot(self.history.history['val_accuracy'], label='test_accuracy')
+        plt.xlabel('Epoch')
+        plt.ylabel('Accuracy')
+        plt.title('Training and Test Accuracy MLP')
+        plt.legend()
+        plt.show()
+
+        # Plot training and validation loss
+        plt.plot(self.history.history['loss'], label='train_loss')
+        plt.plot(self.history.history['val_loss'], label='test_loss')
+        plt.xlabel('Epoch')
+        plt.ylabel('Loss')
+        plt.title('Training and Test Loss MLP')
+        plt.legend()
+        plt.show()
+
     def save_model(self):
-        self.model.save('models/weights_MLP_1100.h5')
+        self.model.save('models/MLP_1hand(10).h5')
 
-
+    def test_model(self):
+        test_loss, test_acc = self.model.evaluate(self.X_test, self.y_test)
+        print('Test accuracy: {:2.2f}%'.format(test_acc*100))
+        print('Test loss: {:2.2f}%'.format(test_loss*100))
 
 
 
 
 class HandGestureClassifierCNN:
-    def __init__(self,X_train, y_train, actions_num):
+    def __init__(self,X_train, y_train, X_test, y_test, actions_num):
         self.X_train = np.array(X_train)
         self.y_train = np.array(y_train)
+        self.X_test = np.array(X_test)
+        self.y_test = np.array(y_test)
+
+        self.input_shape = (self.X_train.shape[1:3])  #(21, 2)
         self.actions_num = actions_num
         self.model = self.build_model()
         self.train_model()
-        self.save_model()
-        # self.test_model()
+        # self.save_model()
+        self.test_model()
 
 
     def build_model(self):
 
-
-        # self.X_train = np.reshape(self.X_train, (self.X_train.shape[0], -1, 2))
-
-        input_shape = (21, 2)
+        # input_shape = (21, 2)
 
         model = Sequential([
-            Conv1D(32, kernel_size=3, activation='relu', input_shape=input_shape),
+            Conv1D(32, kernel_size=3, activation='relu', input_shape=self.input_shape),
             MaxPooling1D(pool_size=2, padding='same'),
             Conv1D(64, kernel_size=3, activation='relu'),
             MaxPooling1D(pool_size=2, padding='same'),
@@ -97,28 +122,36 @@ class HandGestureClassifierCNN:
     def train_model(self):
 
         start_train = time.time()
-        # print('ttttt', type(self.X_train[0]), len(self.X_train[0]), self.X_train[0])
-
-        self.model.fit(self.X_train, self.y_train, epochs=200, batch_size=64, verbose=2)
-
+        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=10, batch_size=64, verbose=2)
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
+        self.plot_training_progress()
+    
+    def plot_training_progress(self):
+        # Plot training and validation accuracy
+        plt.plot(self.history.history['accuracy'], label='train_accuracy')
+        plt.plot(self.history.history['val_accuracy'], label='test_accuracy')
+        plt.xlabel('Epoch')
+        plt.ylabel('Accuracy')
+        plt.title('Training and Test Accuracy CNN')
+        plt.legend()
+        plt.show()
+
+        # Plot training and validation loss
+        plt.plot(self.history.history['loss'], label='train_loss')
+        plt.plot(self.history.history['val_loss'], label='test_loss')
+        plt.xlabel('Epoch')
+        plt.ylabel('Loss')
+        plt.title('Training and Test Loss CNN')
+        plt.legend()
+        plt.show()
 
     
     def save_model(self):
-        self.model.save('models/1hand(10).h5')
+        self.model.save('models/CNN_1hand(10).h5')
         # self.model.save('models/weights_CNN_100.h5')
 
-
     def test_model(self):
-        # test_loss, test_acc = self.model.evaluate(self.X_test, self.y_test)
-        # print('Test accuracy: {:2.2f}%'.format(test_acc*100))
-
-        # savedModel=load_model('models/weights_CNN.h5')
-        # test_loss, test_acc = savedModel.evaluate(self.X_test, self.y_test)
-        # print('LOAD Test accuracy: {:2.2f}%'.format(test_acc*100))
-
-        Model=load_model('models/weights_CNN_new.h5')
-        test_loss, test_acc = Model.evaluate(self.X_test, self.y_test)
+        test_loss, test_acc = self.model.evaluate(self.X_test, self.y_test)
         print('Test accuracy: {:2.2f}%'.format(test_acc*100))
         print('Test loss: {:2.2f}%'.format(test_loss*100))
 
@@ -126,6 +159,99 @@ class HandGestureClassifierCNN:
 
 
 
+class HandGestureClassifierLSTM:
+    def __init__(self,X_train, y_train, X_test, y_test, actions_num):
+        self.X_train = np.array(X_train)
+        self.y_train = np.array(y_train)
+        self.X_test = np.array(X_test)
+        self.y_test = np.array(y_test)
+
+        self.input_shape = (self.X_train.shape[1:3])  #(21, 2)
+        self.actions_num = actions_num
+        self.model = self.build_model()
+        self.train_model()
+        self.save_model()
+        self.test_model()
+
+
+
+    def build_model(self):
+
+        model = Sequential([
+            LSTM(32, return_sequences=True, input_shape=self.input_shape),
+            LSTM(64, return_sequences=True),
+            LSTM(32, return_sequences=False),
+            Dense(128, activation='relu'),
+            Dense(self.actions_num, activation='softmax')
+        ])
+
+
+        model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+        model.summary()
+        return model
+    
+    def train_model(self):
+
+        start_train = time.time()
+        # self.model.fit(self.X_train, self.y_train, epochs=50, batch_size=64, verbose=2)
+        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=200, batch_size=64, verbose=2)
+        print('Training model: {:2.2f} s'.format(time.time() - start_train))
+        self.plot_training_progress()
+    
+    def plot_training_progress(self):
+        # Plot training and validation accuracy
+        plt.plot(self.history.history['accuracy'], label='train_accuracy')
+        plt.plot(self.history.history['val_accuracy'], label='test_accuracy')
+        plt.xlabel('Epoch')
+        plt.ylabel('Accuracy')
+        plt.title('Training and Test Accuracy LSTM')
+        plt.legend()
+        plt.show()
+
+        # Plot training and validation loss
+        plt.plot(self.history.history['loss'], label='train_loss')
+        plt.plot(self.history.history['val_loss'], label='test_loss')
+        plt.xlabel('Epoch')
+        plt.ylabel('Loss')
+        plt.title('Training and Test Loss LSTM')
+        plt.legend()
+        plt.show()
+
+    
+    def save_model(self):
+        self.model.save('models/LSTM_1hand(10).h5')
+        # self.model.save('models/weights_CNN_100.h5')
+
+    def test_model(self):
+        test_loss, test_acc = self.model.evaluate(self.X_test, self.y_test)
+        print('Test accuracy: {:2.2f}%'.format(test_acc*100))
+        print('Test loss: {:2.2f}%'.format(test_loss*100))
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
 
 
 class  HandGestureClassifierCNNLSTM:

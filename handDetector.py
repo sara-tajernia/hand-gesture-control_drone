@@ -23,7 +23,7 @@ class HandDetector:
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/1hand(10).h5')
+        self.model = load_model('models/CNN_1hand(10).h5')
         # self.model = load_model('models/weights_MLP_1100.h5')
         self.mp_hands = mp.solutions.hands
         self.hands = self.mp_hands.Hands(max_num_hands=1)
@@ -135,9 +135,9 @@ class HandDetector:
 
                     for point in process_landmark:
                         # print(point)
-                        if len(process_landmark) >1:
-                            print(Fore.BLUE + "2 HANDS")
-                            print(Style.RESET_ALL)
+                        # if len(process_landmark) >1:
+                        #     print(Fore.BLUE + "2 HANDS")
+                        #     print(Style.RESET_ALL)
                         process_landmark_array = np.array(point).reshape(1, 21, 2)
                         prediction = self.model.predict(process_landmark_array)
                         prediction_index = np.argmax(prediction)
