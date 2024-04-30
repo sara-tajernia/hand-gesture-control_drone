@@ -1,0 +1,10 @@
+\par عنوان\hfill صفحه \par 
+\edef \SavedTocDepth {\the \value {tocdepth}}
+\setcounter {tocdepth}{10}
+\contentsline {chapter}{\numberline {1}مقدمه}{1}{chapter.1}%
+\contentsline {section}{\numberline {1-1}چالش‌های استفاده از پهپاد}{3}{section.1.1}%
+\contentsline {section}{\numberline {1-2}اهمیت استفاده از بینایی ماشین در پهپاد}{3}{section.1.2}%
+\setcounter {tocdepth}{\SavedTocDepth }
+\contentsline {chapter}{\numberline {2}موسیقی}{5}{chapter.2}%
+\contentsline {chapter}{کتاب‌نامه}{6}{appendix*.4}%
+\contentsfinish 

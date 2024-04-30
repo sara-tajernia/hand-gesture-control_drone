@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: AUTthesis.aux
+A level-1 auxiliary file: chapter0.aux
+A level-1 auxiliary file: chapter1.aux
+The style file: unsrt-fa.bst
+Database file #1: references.bib
+-- unsrt-fa.bst version 0.9 (2015/05/09) 
+-- This is a BibTeX style for XePersian: http://www.parsilatex.com
+Warning--empty journal in waltergesture
+Warning--empty year in waltergesture
+Warning--empty journal in hadri2018hand
+
+Done.
+You've used 7 entries,
+            2198 wiz_defined-function locations,
+            613 strings with 5896 characters,
+and the built_in function-call counts, 1626 in all, are:
+= -- 117
+> -- 91
+< -- 0
++ -- 33
+- -- 26
+* -- 125
+:= -- 263
+add.period$ -- 20
+call.type$ -- 7
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 10
+duplicate$ -- 60
+empty$ -- 132
+format.name$ -- 26
+if$ -- 350
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 27
+newline$ -- 68
+num.names$ -- 7
+pop$ -- 18
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 23
+stack$ -- 0
+substring$ -- 78
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 4
+type$ -- 0
+warning$ -- 3
+while$ -- 14
+width$ -- 8
+write$ -- 96
+(There were 3 warnings)
