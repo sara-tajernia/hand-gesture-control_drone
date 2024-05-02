@@ -14,7 +14,8 @@ import tensorflow as tf
 from keras.models import load_model
 import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report
-
+from keras.models import Model
+from keras.optimizers import Adam
 
 class HandGestureClassifierMLP:
     def __init__(self, X_train, y_train, X_test, y_test, actions_num):
@@ -22,6 +23,7 @@ class HandGestureClassifierMLP:
         self.y_train = np.array(y_train)
         self.X_test = np.array(X_test)
         self.y_test = np.array(y_test)
+        self.learning_rate = 0.01
 
         self.input_shape = self.X_train.shape[1:3]  #(21, 2)
         self.actions_num = actions_num
@@ -32,15 +34,26 @@ class HandGestureClassifierMLP:
 
 
     def build_model(self):
-        model = Sequential([
-            Flatten(input_shape=self.input_shape),  # Flatten the input to make it compatible with Dense layers
-            Dense(64, activation='relu'),
-            Dense(32, activation='relu'),
-            Dense(16, activation='relu'),
-            Dense(self.actions_num, activation='sigmoid')  
-        ])
+        # Define input layer
+        input_layer = Input(shape=self.input_shape)
 
-        model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+        # Flatten input
+        flattened_input = Flatten()(input_layer)
+
+        # Dense layers
+        dense_1 = Dense(64, activation='relu')(flattened_input)
+        dense_2 = Dense(32, activation='relu')(dense_1)
+        dense_3 = Dense(16, activation='relu')(dense_2)
+
+        # Output layer
+        output_layer = Dense(self.actions_num, activation='sigmoid')(dense_3)
+
+        # Create model
+        model = Model(inputs=input_layer, outputs=output_layer)
+
+        # Compile model
+        optimizer = Adam(lr=self.learning_rate)
+        model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
 
         model.summary()
         return model
