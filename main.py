@@ -27,9 +27,9 @@ if __name__ == "__main__":
 
 
 
-    model = HandGestureClassifierMLP(X_train, y_train, X_test, y_test, actions_num).model
+    # model = HandGestureClassifierMLP(X_train, y_train, X_test, y_test, actions_num).model
     # model = HandGestureClassifierCNN(X_train, y_train, X_test, y_test, actions_num).model
-    # model = HandGestureClassifierLSTM(X_train, y_train, X_test, y_test, actions_num).model
+    model = HandGestureClassifierLSTM(X_train, y_train, X_test, y_test, actions_num).model
     # model = HandGestureClassifierCNNLSTM(X_train, y_train, actions_num).model
 
 

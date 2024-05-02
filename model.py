@@ -23,7 +23,7 @@ class HandGestureClassifierMLP:
         self.y_train = np.array(y_train)
         self.X_test = np.array(X_test)
         self.y_test = np.array(y_test)
-        self.learning_rate = 0.01
+        self.learning_rate = 0.001
 
         self.input_shape = self.X_train.shape[1:3]  #(21, 2)
         self.actions_num = actions_num
@@ -105,6 +105,7 @@ class HandGestureClassifierCNN:
         self.y_train = np.array(y_train)
         self.X_test = np.array(X_test)
         self.y_test = np.array(y_test)
+        self.learning_rate = 0.001
 
         self.input_shape = (self.X_train.shape[1:3])  #(21, 2)
         self.actions_num = actions_num
@@ -115,9 +116,6 @@ class HandGestureClassifierCNN:
 
 
     def build_model(self):
-
-        # input_shape = (21, 2)
-
         model = Sequential([
             Conv1D(32, kernel_size=3, activation='relu', input_shape=self.input_shape),
             MaxPooling1D(pool_size=2, padding='same'),
@@ -130,17 +128,16 @@ class HandGestureClassifierCNN:
             Dense(self.actions_num, activation='softmax')
         ])
 
-
-        model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+        optimizer = Adam(lr=self.learning_rate)
+        model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
         model.summary()
         return model
-    
 
 
     def train_model(self):
 
         start_train = time.time()
-        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=10, batch_size=64, verbose=2)
+        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=100, batch_size=64, verbose=2)
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
         self.plot_training_progress()
     
@@ -183,6 +180,8 @@ class HandGestureClassifierLSTM:
         self.y_train = np.array(y_train)
         self.X_test = np.array(X_test)
         self.y_test = np.array(y_test)
+        self.learning_rate = 0.001
+
 
         self.input_shape = (self.X_train.shape[1:3])  #(21, 2)
         self.actions_num = actions_num
@@ -203,8 +202,11 @@ class HandGestureClassifierLSTM:
             Dense(self.actions_num, activation='softmax')
         ])
 
+        optimizer = Adam(lr=self.learning_rate)
+        model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
 
-        model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+        # model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
         model.summary()
         return model
     
@@ -212,7 +214,7 @@ class HandGestureClassifierLSTM:
 
         start_train = time.time()
         # self.model.fit(self.X_train, self.y_train, epochs=50, batch_size=64, verbose=2)
-        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=200, batch_size=64, verbose=2)
+        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=100, batch_size=64, verbose=2)
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
         self.plot_training_progress()
     
