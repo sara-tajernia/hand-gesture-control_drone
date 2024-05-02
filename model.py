@@ -47,7 +47,7 @@ class HandGestureClassifierMLP:
 
     def train_model(self):
         start_train = time.time()
-        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=200, batch_size=64, verbose=2)
+        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=50, batch_size=64, verbose=2)
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
         self.plot_training_progress()
     
@@ -77,7 +77,12 @@ class HandGestureClassifierMLP:
         test_loss, test_acc = self.model.evaluate(self.X_test, self.y_test)
         print('Test accuracy: {:2.2f}%'.format(test_acc*100))
         print('Test loss: {:2.2f}%'.format(test_loss*100))
+        predictions = self.model.predict(self.X_test)
+        y_pred = (predictions > 0.5).astype(int)
+        report = classification_report(self.y_test, y_pred)
+        print(report)
 
+    
 
 
 
@@ -324,6 +329,57 @@ class  HandGestureClassifierCNNLSTM:
 
 
 
+
+########    VGG-16
+
+
+# def build_model(self):
+
+#     model = Sequential()
+
+#     # Block 1
+#     model.add(Conv2D(64, (3, 3), activation='relu', padding='same', input_shape=(224, 224, 3)))
+#     model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
+#     model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+#     # Block 2
+#     model.add(Conv2D(128, (3, 3), activation='relu', padding='same'))
+#     model.add(Conv2D(128, (3, 3), activation='relu', padding='same'))
+#     model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+#     # Block 3
+#     model.add(Conv2D(256, (3, 3), activation='relu', padding='same'))
+#     model.add(Conv2D(256, (3, 3), activation='relu', padding='same'))
+#     model.add(Conv2D(256, (3, 3), activation='relu', padding='same'))
+#     model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+#     # Block 4
+#     model.add(Conv2D(512, (3, 3), activation='relu', padding='same'))
+#     model.add(Conv2D(512, (3, 3), activation='relu', padding='same'))
+#     model.add(Conv2D(512, (3, 3), activation='relu', padding='same'))
+#     model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+#     # Block 5
+#     model.add(Conv2D(512, (3, 3), activation='relu', padding='same'))
+#     model.add(Conv2D(512, (3, 3), activation='relu', padding='same'))
+#     model.add(Conv2D(512, (3, 3), activation='relu', padding='same'))
+#     model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+#     # Flatten
+#     model.add(Flatten())
+
+#     # Fully connected layers
+#     model.add(Dense(4096, activation='relu'))
+#     model.add(Dropout(0.5))
+#     model.add(Dense(4096, activation='relu'))
+#     model.add(Dropout(0.5))
+#     model.add(Dense(self.actions_num, activation='sigmoid'))
+
+#     # Compile the model
+#     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+#     # Print model summary
+#     model.summary()
 
 
 

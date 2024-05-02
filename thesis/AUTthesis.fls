@@ -1,8 +1,8 @@
-PWD /Users/sara/Desktop/project/thesis
+PWD /Users/sara/Desktop/project/hand-gesture-control/thesis
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt
-INPUT /Users/sara/Desktop/project/thesis/AUTthesis.tex
+INPUT /Users/sara/Desktop/project/hand-gesture-control/thesis/AUTthesis.tex
 OUTPUT AUTthesis.log
 INPUT ./AUTthesis.cls
 INPUT AUTthesis.cls
@@ -525,6 +525,9 @@ OUTPUT chapter1.aux
 INPUT ./chapter1.tex
 INPUT ./chapter1.tex
 INPUT chapter1.tex
+INPUT ./hand-landmarks.png
+INPUT ./hand-landmarks.png
+INPUT ./hand-landmarks.png
 INPUT ./AUTthesis.bbl
 INPUT ./AUTthesis.bbl
 INPUT AUTthesis.bbl
