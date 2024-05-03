@@ -2,17 +2,35 @@
 \edef \SavedTocDepth {\the \value {tocdepth}}
 \setcounter {tocdepth}{10}
 \contentsline {chapter}{\numberline {1}مقدمه}{1}{chapter.1}%
-\contentsline {section}{\numberline {1-1}چالش‌های استفاده از پهپاد}{3}{section.1.1}%
-\contentsline {section}{\numberline {1-2}اهمیت استفاده از بینایی ماشین در پهپاد}{3}{section.1.2}%
-\contentsline {section}{\numberline {1-3}هدف پروژه}{5}{section.1.3}%
-\contentsline {section}{\numberline {1-4}مراحل انجام پروژه}{5}{section.1.4}%
-\contentsline {section}{\numberline {1-5}چالش‌های اجرای پروژه}{5}{section.1.5}%
+\contentsline {section}{\numberline {1-1}مقدمه}{2}{section.1.1}%
+\contentsline {section}{\numberline {1-2}چالش‌های استفاده از پهپاد}{3}{section.1.2}%
+\contentsline {section}{\numberline {1-3}اهمیت استفاده از بینایی ماشین در پهپاد}{3}{section.1.3}%
+\contentsline {section}{\numberline {1-4}تعریف مسئله}{5}{section.1.4}%
+\contentsline {section}{\numberline {1-5}مراحل انجام پروژه}{5}{section.1.5}%
+\contentsline {section}{\numberline {1-6}چالش‌های اجرای پروژه}{5}{section.1.6}%
+\contentsline {section}{\numberline {1-7}ابزار ها و نرم افزار های مورد استفاده}{6}{section.1.7}%
+\contentsline {subsection}{\numberline {1-7-1}\lr {TensorFlow}}{6}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1-7-2}\lr {MediaPipe}}{6}{subsection.1.7.2}%
+\contentsline {section}{\numberline {1-8}جمع بندی}{6}{section.1.8}%
 \setcounter {tocdepth}{\SavedTocDepth }
-\contentsline {chapter}{\numberline {2}موسیقی}{7}{chapter.2}%
-\contentsline {section}{\numberline {2-1}مدیاپایپ}{8}{section.2.1}%
-\contentsline {subsection}{\numberline {2-1-1}مدل تشخیص کف دست}{8}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2-1-2}مدل تشخیص نقاط عطف دست}{9}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2-2}اهمیت ژست دست}{9}{section.2.2}%
-\contentsline {section}{\numberline {2-3}کنترل پهپاد}{10}{section.2.3}%
-\contentsline {chapter}{کتاب‌نامه}{11}{appendix*.5}%
+\contentsline {chapter}{\numberline {2}کار‌های مشابه}{7}{chapter.2}%
+\contentsline {section}{\numberline {2-1}مقدمه}{8}{section.2.1}%
+\contentsline {section}{\numberline {2-2}کارهای مشابه}{8}{section.2.2}%
+\contentsline {section}{\numberline {2-3}جمع‌بندی}{8}{section.2.3}%
+\contentsline {chapter}{\numberline {3}روش انجام پروژه}{9}{chapter.3}%
+\contentsline {section}{\numberline {3-1}مقدمه}{10}{section.3.1}%
+\contentsline {section}{\numberline {3-2}مدیاپایپ}{10}{section.3.2}%
+\contentsline {subsection}{\numberline {3-2-1}مدل تشخیص کف دست}{10}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3-2-2}مدل تشخیص نقاط عطف دست}{11}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3-3}اهمیت ژست دست}{11}{section.3.3}%
+\contentsline {section}{\numberline {3-4}کنترل پهپاد}{12}{section.3.4}%
+\contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{13}{chapter.4}%
+\contentsline {section}{\numberline {4-1}مقدمه}{14}{section.4.1}%
+\contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{14}{section.4.2}%
+\contentsline {section}{\numberline {4-3}جمع‌بندی}{14}{section.4.3}%
+\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{15}{chapter.5}%
+\contentsline {section}{\numberline {5-1}مقدمه}{16}{section.5.1}%
+\contentsline {section}{\numberline {5-2}نتیجه گیری و پیشنهادات}{16}{section.5.2}%
+\contentsline {section}{\numberline {5-3}جمع‌بندی}{16}{section.5.3}%
+\contentsline {chapter}{کتاب‌نامه}{17}{appendix*.4}%
 \contentsfinish 
