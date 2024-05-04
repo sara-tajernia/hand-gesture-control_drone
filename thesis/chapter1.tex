@@ -1,6 +1,31 @@
 \chapter{کار‌های مشابه}
 \section{مقدمه}
+در این فصل هدف ما بررسی پروژه های مشابه است تا بتوان از آنها در روند پروژه کمک گرفت. همچنین در این راه می‌توان با توجه به نتایج و ارزیابی پروژه‌های دیگر بستری را فراهم کرد تا نتیجه پروژه را با دیگر کارهای مشابه مقایسه کرد.
+\\
+به صورت کلی پروژه‌هایی با هدف کنترل پهپاد با ژست دست در 2 دسته قرار می‌گیرند.
+\begin{itemize}
+    \item کنترل پهپاد با کمک بینایی ماشین که شامل شبکه‌هایی برای پردازش تصویر است. 
+    \item کنترل پهپاد با دستکش‌های سنسور دار از جمله سنسور \lr{IMU} که نیازمند سخت‌افزار خاص برای پیدا کردن موقعیت نقاط دست است. مانند پروژه‌های \lr{Motion Estimation and Hand Gesture Recognition-Based Human–UAV Interaction Approach in Real Time} \cite{yoo2022motion} و \lr{Hand gesture recognition with convolutional neural networks for the multimodal UAV control} \cite{ma2017hand}.
+    \item وجود دستگاه کنترل کننده حرکت جهشی\lr{Leap Motion Controller} که با توجه آن ویژگی‌های دست با دقت بالا اندازه گیری شده و با کمک شبکه‌های عصبی ژست دست تشخیص داده میشود. پروژه‌ی
+    \lr{Deep Learning Based Hand Gesture Recognition and UAV Flight Controls} \cite{hu2020deep} و \lr{Gesture control of drone using a motion controller} \cite{sarkar2016gesture} نمونه‌ای از این جمله پروژه‌ها هستند. 
+\end{itemize}
 
-\section{کارهای مشابه}
+از بین این موارد پروژه ما مربوط به اولین گزینه است که تنها سخت‌افزار مورد نیاز به جز پهپاد دوربین نصب شده روی پهپاد است. که به بررسی نمونه‌ی این پروژه‌ها می‌پردازیم.
+
+% \section{کارهای مشابه}
+
+% \subsection{مقاله \lr{Deep Learning Based Hand Gesture Recognition and UAV Flight Controls}}
+\section{مقاله \lr{Hand Gesture Controlled Drones: An Open Source Library}}
+
+
+\cite{natarajan2018hand}
+
 
 \section{جمع‌بندی}
+پرژه های مشابه با کار ما که با کمک پینایی ماشین پهپاد را کنترل می‌‌کنند به 4 دسته کلی تفکیک می‌شوند.
+\begin{enumerate}
+    \item  پیاده‌سازی با کمک کلاس \lr{MediaPipe} برای تشخیص نقاط عطف دست و شبکه‌ای برای تشخیص ژست دست با کمک نقاط عطف دست.
+    \item استفاده از ویژگی‌های \lr{Haar} و پیدا کردن ژست دست توسط آنها.
+    \item استخراج ویژگی‌های تصویر از جمله پارامترهایی مانند زاویه انحراف، مختصات، قدرت گرفتن دست و استفاده آنها در شبکه برای رسیدن به کلاس ژست دست.
+    \item تشخیص دست\LTRfootnote{Hand detection} برای پیدا کردن موقعیت دست در هر فریم تصویر و استفاده از آن به هر پیکسل \lr{RGB} و کلاس‌بندی ژست دست با توجه به تصویر.
+\end{enumerate}

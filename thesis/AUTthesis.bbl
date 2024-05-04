@@ -103,6 +103,33 @@ Harris, Moh, Agoes, Ali~Suryaperdana, et~al.
 
 \begin{LTRbibitems}
 \resetlatinfont
+\bibitem{ma2017hand}
+Ma, Yuntao, Liu, Yuxuan, Jin, Ruiyang, Yuan, Xingyang, Sekha, Raza, Wilson, Samuel, and Vaidyanathan, Ravi.
+\newblock Hand gesture recognition with convolutional neural networks for the multimodal uav control.
+\newblock  in {\em 2017 Workshop on Research, Education and Development of Unmanned Aerial Systems (RED-UAS)},  pp. 198--203. IEEE, 2017.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{hu2020deep}
+Hu, Bin and Wang, Jiacun.
+\newblock Deep learning based hand gesture recognition and uav flight controls.
+\newblock {\em International Journal of Automation and Computing}, 17(1):17--29, 2020.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{sarkar2016gesture}
+Sarkar, Ayanava, Patel, Ketul~Arvindbhai, Ram, RK~Ganesh, and Capoor, Geet~Krishna.
+\newblock Gesture control of drone using a motion controller.
+\newblock  in {\em 2016 international conference on industrial informatics and computer systems (ciics)},  pp. 1--5. IEEE, 2016.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
 \bibitem{zhang2020mediapipe}
 Zhang, Fan, Bazarevsky, Valentin, Vakunov, Andrey, Tkachenka, Andrei, Sung, George, Chang, Chuo-Ling, and Grundmann, Matthias.
 \newblock Mediapipe hands: On-device real-time hand tracking.

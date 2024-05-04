@@ -15,45 +15,45 @@ Warning--empty year in waltergesture
 Warning--empty journal in hadri2018hand
 
 Done.
-You've used 14 entries,
+You've used 17 entries,
             2198 wiz_defined-function locations,
-            658 strings with 7475 characters,
-and the built_in function-call counts, 3710 in all, are:
-= -- 301
-> -- 179
-< -- 4
-+ -- 65
-- -- 51
-* -- 241
-:= -- 557
-add.period$ -- 44
-call.type$ -- 14
-change.case$ -- 14
+            674 strings with 8193 characters,
+and the built_in function-call counts, 4751 in all, are:
+= -- 395
+> -- 224
+< -- 6
++ -- 81
+- -- 64
+* -- 306
+:= -- 699
+add.period$ -- 55
+call.type$ -- 17
+change.case$ -- 17
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 157
-empty$ -- 313
-format.name$ -- 51
-if$ -- 861
+cite$ -- 20
+duplicate$ -- 204
+empty$ -- 405
+format.name$ -- 64
+if$ -- 1119
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 61
-newline$ -- 131
-num.names$ -- 14
-pop$ -- 43
+int.to.str$ -- 17
+missing$ -- 77
+newline$ -- 158
+num.names$ -- 17
+pop$ -- 56
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 79
+skip$ -- 105
 stack$ -- 0
-substring$ -- 199
-swap$ -- 43
-text.length$ -- 4
+substring$ -- 266
+swap$ -- 62
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 4
 type$ -- 0
 warning$ -- 3
-while$ -- 33
-width$ -- 16
-write$ -- 196
+while$ -- 44
+width$ -- 19
+write$ -- 240
 (There were 3 warnings)
