@@ -398,3 +398,28 @@ class  HandGestureClassifierCNNLSTM:
 
 
 
+
+
+##### yolo
+
+# def build_model(self):
+#     model = Sequential([
+#         Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=self.input_shape),
+#         MaxPooling2D(pool_size=(2, 2)),
+#         Conv2D(64, kernel_size=(3, 3), activation='relu'),
+#         MaxPooling2D(pool_size=(2, 2)),
+#         Conv2D(128, kernel_size=(3, 3), activation='relu'),
+#         MaxPooling2D(pool_size=(2, 2)),
+#         Conv2D(64, kernel_size=(3, 3), activation='relu'),
+#         MaxPooling2D(pool_size=(2, 2)),
+#         Conv2D(32, kernel_size=(3, 3), activation='relu'),
+#         MaxPooling2D(pool_size=(2, 2)),
+#         Flatten(),
+#         Dense(256, activation='relu'),
+#         Dense(128, activation='relu'),
+#         Dense(self.actions_num, activation='softmax')
+#     ])
+
+#     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+#     model.summary()
+#     return model
