@@ -10,7 +10,7 @@ import itertools
 from preprocess_data import Preprocess
 from collections import Counter
 from colorama import Fore, Back, Style
-
+import time
 
 """
 In 
@@ -23,7 +23,7 @@ class HandDetector:
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/CNN_1hand(10).h5')
+        self.model = load_model('models/CNN(200).h5')
         # self.model = load_model('models/weights_MLP_1100.h5')
         self.mp_hands = mp.solutions.hands
         self.hands = self.mp_hands.Hands(max_num_hands=1)
@@ -104,6 +104,7 @@ class HandDetector:
             frame_count += 1
             # cv2.imshow("Frame", frame)
             if frame_count % self.save_interval == 0:
+                time1 = time.time()
 
                 # Convert the frame to RGB format
                 frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -127,7 +128,9 @@ class HandDetector:
                     # Predict gesture
                     for point in process_landmark:
                         process_landmark_array = np.array(point).reshape(1, 21, 2)
+                        time2 = time.time()
                         prediction = self.model.predict(process_landmark_array, verbose=0)
+                        # print('only predict: {:2.2f} s'.format(time.time() - time2))
                         prediction_index = np.argmax(prediction)
                         print(self.gestures[prediction_index], prediction_index)
                         ten_y.append(prediction_index)
@@ -141,6 +144,7 @@ class HandDetector:
 
                 # Display the original frame
                 cv2.imshow("Frame", frame)
+                # print('all things: {:2.2f} s'.format(time.time() - time1))
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
