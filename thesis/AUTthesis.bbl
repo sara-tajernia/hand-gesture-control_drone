@@ -139,6 +139,15 @@ Zhang, Fan, Bazarevsky, Valentin, Vakunov, Andrey, Tkachenka, Andrei, Sung, Geor
 
 \begin{LTRbibitems}
 \resetlatinfont
+\bibitem{perera2018uav}
+Perera, Asanka~G, Wei~Law, Yee, and Chahl, Javaan.
+\newblock Uav-gesture: A dataset for uav control and gesture recognition.
+\newblock  in {\em Proceedings of the European Conference on Computer Vision (ECCV) Workshops},  pp. 0--0, 2018.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
 \bibitem{clough2020role}
 Clough, Sharice and Duff, Melissa~C.
 \newblock The role of gesture in communication and cognition: Implications for understanding and treating neurogenic communication disorders.
