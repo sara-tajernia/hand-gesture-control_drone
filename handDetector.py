@@ -25,8 +25,10 @@ class HandDetector:
         self.vote = 0.7
         self.model = load_model('models/CNN(200).h5')
         # self.model = load_model('models/weights_MLP_1100.h5')
+        # self.mp_hands = mp.solutions.hands
+        # self.hands = self.mp_hands.Hands(max_num_hands=1)
         self.mp_hands = mp.solutions.hands
-        self.hands = self.mp_hands.Hands(max_num_hands=1)
+        self.detector = self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=1)
         self.mp_drawing = mp.solutions.drawing_utils
         self.read_gesture_file()
         self.capture_image()
@@ -89,8 +91,8 @@ class HandDetector:
     
 
     def capture_image(self):
-        mp_hands = mp.solutions.hands
-        detector = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5)
+        # mp_hands = mp.solutions.hands
+        # detector = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=1)
         cap = cv2.VideoCapture(0)
         frame_count = 0
         os.makedirs(self.output_folder, exist_ok=True)
@@ -110,7 +112,7 @@ class HandDetector:
                 frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
                 # Detect hand landmarks in the image
-                detection_result = detector.process(frame_rgb)
+                detection_result = self.detector.process(frame_rgb)
 
                 if detection_result.multi_hand_landmarks:
                     # Draw landmarks on the frame
