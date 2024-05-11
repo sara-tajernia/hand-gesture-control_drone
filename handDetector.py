@@ -209,7 +209,7 @@ class HandDetector:
 
                 if detection_result.multi_hand_landmarks:
                     # Draw landmarks on the frame
-                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Left')
+                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Right')
                     # self.draw_landmarks_on_image(frame, detection_result, 'Right')
                     # print(landmark_coords)
 
@@ -226,7 +226,7 @@ class HandDetector:
 
                     # Predict gesture
                     # for point in process_landmark:
-                    print(process_landmark)
+                    # print(process_landmark)
                     if process_landmark != []:
 
                         process_landmark_array = np.array(process_landmark).reshape(1, 21, 2)
@@ -239,6 +239,7 @@ class HandDetector:
                         if len(ten_y) == self.windows:
                             most_action = max(set(ten_y), key=ten_y.count)
                             action = ten_y.count(most_action)
+                            print(prediction_index)
                             if self.vote <= action / self.windows and most_action != 9:
                                 print(Fore.LIGHTCYAN_EX + f"DO THE ACTION {self.gestures[most_action]}")
                                 print(Style.RESET_ALL)
