@@ -1,6 +1,9 @@
 \hspace *{.5cm}شکل\hfill صفحه \par 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2-1}{\ignorespaces چارچوب کنترل پهپاد مبتنی بر ژست}}{10}{figure.caption.5}%
+\contentsline {figure}{\numberline {2-2}{\ignorespaces ویژگی های \lr {Haar} برای استفاده از آستانه رنگ پوست برای تشخیص دست}}{10}{figure.caption.6}%
+\contentsline {figure}{\numberline {2-3}{\ignorespaces معماری \lr {VGG-16}}}{11}{figure.caption.9}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

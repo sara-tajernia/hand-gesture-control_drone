@@ -534,6 +534,15 @@ OUTPUT chapter1.aux
 INPUT ./chapter1.tex
 INPUT ./chapter1.tex
 INPUT chapter1.tex
+INPUT ./Haar2.png
+INPUT ./Haar2.png
+INPUT ./Haar2.png
+INPUT ./Haar3.png
+INPUT ./Haar3.png
+INPUT ./Haar3.png
+INPUT ./VGG16.png
+INPUT ./VGG16.png
+INPUT ./VGG16.png
 INPUT ./chapter2.tex
 INPUT ./chapter2.tex
 OUTPUT chapter2.aux

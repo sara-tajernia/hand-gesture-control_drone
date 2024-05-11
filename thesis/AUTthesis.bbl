@@ -94,15 +94,6 @@ Yoo, Minjeong, Na, Yuseung, Song, Hamin, Kim, Gamin, Yun, Junseong, Kim, Sangho,
 
 \begin{LTRbibitems}
 \resetlatinfont
-\bibitem{harris2021applying}
-Harris, Moh, Agoes, Ali~Suryaperdana, et~al.
-\newblock Applying hand gesture recognition for user guide application using mediapipe.
-\newblock  in {\em 2nd International Seminar of Science and Applied Technology (ISSAT 2021)},  pp. 101--108. Atlantis Press, 2021.
-
-\end{LTRbibitems}
-
-\begin{LTRbibitems}
-\resetlatinfont
 \bibitem{ma2017hand}
 Ma, Yuntao, Liu, Yuxuan, Jin, Ruiyang, Yuan, Xingyang, Sekha, Raza, Wilson, Samuel, and Vaidyanathan, Ravi.
 \newblock Hand gesture recognition with convolutional neural networks for the multimodal uav control.
@@ -130,6 +121,15 @@ Sarkar, Ayanava, Patel, Ketul~Arvindbhai, Ram, RK~Ganesh, and Capoor, Geet~Krish
 
 \begin{LTRbibitems}
 \resetlatinfont
+\bibitem{perera2018uav}
+Perera, Asanka~G, Wei~Law, Yee, and Chahl, Javaan.
+\newblock Uav-gesture: A dataset for uav control and gesture recognition.
+\newblock  in {\em Proceedings of the European Conference on Computer Vision (ECCV) Workshops},  pp. 0--0, 2018.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
 \bibitem{zhang2020mediapipe}
 Zhang, Fan, Bazarevsky, Valentin, Vakunov, Andrey, Tkachenka, Andrei, Sung, George, Chang, Chuo-Ling, and Grundmann, Matthias.
 \newblock Mediapipe hands: On-device real-time hand tracking.
@@ -139,10 +139,10 @@ Zhang, Fan, Bazarevsky, Valentin, Vakunov, Andrey, Tkachenka, Andrei, Sung, Geor
 
 \begin{LTRbibitems}
 \resetlatinfont
-\bibitem{perera2018uav}
-Perera, Asanka~G, Wei~Law, Yee, and Chahl, Javaan.
-\newblock Uav-gesture: A dataset for uav control and gesture recognition.
-\newblock  in {\em Proceedings of the European Conference on Computer Vision (ECCV) Workshops},  pp. 0--0, 2018.
+\bibitem{harris2021applying}
+Harris, Moh, Agoes, Ali~Suryaperdana, et~al.
+\newblock Applying hand gesture recognition for user guide application using mediapipe.
+\newblock  in {\em 2nd International Seminar of Science and Applied Technology (ISSAT 2021)},  pp. 101--108. Atlantis Press, 2021.
 
 \end{LTRbibitems}
 
