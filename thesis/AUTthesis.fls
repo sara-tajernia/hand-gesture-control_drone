@@ -555,6 +555,9 @@ INPUT ./gestures.png
 INPUT ./hand_detector.png
 INPUT ./hand_detector.png
 INPUT ./hand_detector.png
+INPUT ./mediapipe.png
+INPUT ./mediapipe.png
+INPUT ./mediapipe.png
 INPUT ./landmark.png
 INPUT ./landmark.png
 INPUT ./landmark.png

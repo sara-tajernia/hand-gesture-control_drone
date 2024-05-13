@@ -35,21 +35,23 @@
 \contentsline {chapter}{\numberline {3}روش انجام پروژه}{15}{chapter.3}%
 \contentsline {section}{\numberline {3-1}مقدمه}{16}{section.3.1}%
 \contentsline {section}{\numberline {3-2}دیتاست}{16}{section.3.2}%
-\contentsline {section}{\numberline {3-3}مدیاپایپ}{16}{section.3.3}%
-\contentsline {subsection}{\numberline {3-3-1}مدل تشخیص کف دست}{17}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3-3-2}مدل تشخیص نقاط عطف دست}{18}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3-4}اهمیت ژست دست}{19}{section.3.4}%
-\contentsline {section}{\numberline {3-5}کنترل پهپاد}{20}{section.3.5}%
-\contentsline {section}{\numberline {3-6}ابزار ها و نرم افزار های مورد استفاده}{21}{section.3.6}%
-\contentsline {subsection}{\numberline {3-6-1}\lr {TensorFlow}}{21}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3-6-2}\lr {MediaPipe}}{21}{subsection.3.6.2}%
-\contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{22}{chapter.4}%
-\contentsline {section}{\numberline {4-1}مقدمه}{23}{section.4.1}%
-\contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{23}{section.4.2}%
-\contentsline {section}{\numberline {4-3}جمع‌بندی}{23}{section.4.3}%
-\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{24}{chapter.5}%
-\contentsline {section}{\numberline {5-1}مقدمه}{25}{section.5.1}%
-\contentsline {section}{\numberline {5-2}نتیجه گیری و پیشنهادات}{25}{section.5.2}%
-\contentsline {section}{\numberline {5-3}جمع‌بندی}{25}{section.5.3}%
-\contentsline {chapter}{کتاب‌نامه}{26}{appendix*.22}%
+\contentsline {section}{\numberline {3-3}اهمیت ژست دست}{16}{section.3.3}%
+\contentsline {section}{\numberline {3-4}کنترل پهپاد}{18}{section.3.4}%
+\contentsline {section}{\numberline {3-5}ابزار ها و نرم افزار های مورد استفاده}{18}{section.3.5}%
+\contentsline {subsection}{\numberline {3-5-1}\lr {TensorFlow}}{18}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3-5-2}\lr {MediaPipe}}{18}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3-6}مدیاپایپ}{19}{section.3.6}%
+\contentsline {subsection}{\numberline {3-6-1}مدل تشخیص کف دست}{19}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3-6-2}مدل تشخیص نقاط عطف دست}{21}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3-7}پیش‌پردازش}{22}{section.3.7}%
+\contentsline {section}{\numberline {3-8}رأی‌گیری پنجره‌ای}{22}{section.3.8}%
+\contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{24}{chapter.4}%
+\contentsline {section}{\numberline {4-1}مقدمه}{25}{section.4.1}%
+\contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{25}{section.4.2}%
+\contentsline {section}{\numberline {4-3}جمع‌بندی}{25}{section.4.3}%
+\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{26}{chapter.5}%
+\contentsline {section}{\numberline {5-1}مقدمه}{27}{section.5.1}%
+\contentsline {section}{\numberline {5-2}نتیجه گیری و پیشنهادات}{27}{section.5.2}%
+\contentsline {section}{\numberline {5-3}جمع‌بندی}{27}{section.5.3}%
+\contentsline {chapter}{کتاب‌نامه}{28}{appendix*.23}%
 \contentsfinish 
