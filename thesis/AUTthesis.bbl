@@ -164,4 +164,13 @@ Kang, Seokmin and Tversky, Barbara.
 
 \end{LTRbibitems}
 
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{lugaresi2019mediapipe}
+Lugaresi, Camillo, Tang, Jiuqiang, Nash, Hadon, McClanahan, Chris, Uboweja, Esha, Hays, Michael, Zhang, Fan, Chang, Chuo-Ling, Yong, Ming, Lee, Juhyun, et~al.
+\newblock Mediapipe: A framework for perceiving and processing reality.
+\newblock  in {\em Third workshop on computer vision for AR/VR at IEEE computer vision and pattern recognition (CVPR)},  vol. 2019, 2019.
+
+\end{LTRbibitems}
+
 \end{thebibliography}

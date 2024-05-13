@@ -425,6 +425,9 @@ INPUT chapter2.aux
 INPUT ./chapter3.aux
 INPUT ./chapter3.aux
 INPUT chapter3.aux
+INPUT ./chapter4.aux
+INPUT ./chapter4.aux
+INPUT chapter4.aux
 OUTPUT AUTthesis.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
@@ -564,6 +567,15 @@ OUTPUT chapter3.aux
 INPUT ./chapter3.tex
 INPUT ./chapter3.tex
 INPUT chapter3.tex
+INPUT ./chapter4.tex
+INPUT ./chapter4.tex
+OUTPUT chapter4.aux
+INPUT ./chapter4.tex
+INPUT ./chapter4.tex
+INPUT chapter4.tex
+INPUT ./AUTthesis.bbl
+INPUT ./AUTthesis.bbl
+INPUT AUTthesis.bbl
 INPUT AUTthesis.aux
 INPUT ./chapter0.aux
 INPUT ./chapter0.aux
@@ -577,5 +589,8 @@ INPUT chapter2.aux
 INPUT ./chapter3.aux
 INPUT ./chapter3.aux
 INPUT chapter3.aux
+INPUT ./chapter4.aux
+INPUT ./chapter4.aux
+INPUT chapter4.aux
 INPUT ./AUTthesis.out
 INPUT ./AUTthesis.out

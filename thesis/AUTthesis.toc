@@ -43,4 +43,13 @@
 \contentsline {section}{\numberline {3-6}ابزار ها و نرم افزار های مورد استفاده}{21}{section.3.6}%
 \contentsline {subsection}{\numberline {3-6-1}\lr {TensorFlow}}{21}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3-6-2}\lr {MediaPipe}}{21}{subsection.3.6.2}%
+\contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{22}{chapter.4}%
+\contentsline {section}{\numberline {4-1}مقدمه}{23}{section.4.1}%
+\contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{23}{section.4.2}%
+\contentsline {section}{\numberline {4-3}جمع‌بندی}{23}{section.4.3}%
+\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{24}{chapter.5}%
+\contentsline {section}{\numberline {5-1}مقدمه}{25}{section.5.1}%
+\contentsline {section}{\numberline {5-2}نتیجه گیری و پیشنهادات}{25}{section.5.2}%
+\contentsline {section}{\numberline {5-3}جمع‌بندی}{25}{section.5.3}%
+\contentsline {chapter}{کتاب‌نامه}{26}{appendix*.22}%
 \contentsfinish 

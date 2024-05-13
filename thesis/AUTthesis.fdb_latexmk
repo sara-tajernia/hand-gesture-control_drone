@@ -1,16 +1,29 @@
 # Fdb version 4
-["makeindex AUTthesis.idx"] 1715603746.64175 "AUTthesis.idx" "AUTthesis.ind" "AUTthesis" 1715604017.12034 0
-  "AUTthesis.idx" 1715604008.10582 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+["bibtex AUTthesis"] 1715618896.9482 "AUTthesis.aux" "AUTthesis.bbl" "AUTthesis" 1715618952.61209 0
+  "./references.bib" 1715618715.55081 6020 8e52ae7752e726b288ba54101bea074c ""
+  "/usr/local/texlive/2024/texmf-dist/bibtex/bst/persian-bib/unsrt-fa.bst" 1431209930 21216 93f4679cd54a82641c568d3fdf495918 ""
+  "AUTthesis.aux" 1715618944.59348 2484 b2146bd197b049cc68e6eadeb7fa143d "xelatex"
+  "chapter0.aux" 1715618944.44658 3337 02e6561f1120f43fa9ac769c2bfd2fb1 "xelatex"
+  "chapter1.aux" 1715618944.50477 5411 3180527d75900239f1e9661121ed4b4e "xelatex"
+  "chapter2.aux" 1715618944.55738 5118 864563ce62b46d720015945271b8f332 "xelatex"
+  "chapter3.aux" 1715618944.56684 1822 3c147082bb6ee556091ff733023d2131 "xelatex"
+  "chapter4.aux" 1715618944.5747 1538 24274b3e5bd58762637b0024911db2dd "xelatex"
+  (generated)
+  "AUTthesis.bbl"
+  "AUTthesis.blg"
+  (rewritten before read)
+["makeindex AUTthesis.idx"] 1715618890.773 "AUTthesis.idx" "AUTthesis.ind" "AUTthesis" 1715618952.61199 0
+  "AUTthesis.idx" 1715618943.46534 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   (generated)
   "AUTthesis.ilg"
   "AUTthesis.ind"
   (rewritten before read)
-["xdvipdfmx"] 1715604009.36718 "AUTthesis.xdv" "AUTthesis.pdf" "AUTthesis" 1715604017.12546 0
-  "AUTthesis.xdv" 1715604009.16306 351412 876f4ff5a08a9d6fd7d4e75ea4daa797 "xelatex"
+["xdvipdfmx"] 1715618945.12703 "AUTthesis.xdv" "AUTthesis.pdf" "AUTthesis" 1715618952.61734 0
+  "AUTthesis.xdv" 1715618944.59933 423312 99f79ad1d5c9d7d7c52168e683dd4346 "xelatex"
   (generated)
   "AUTthesis.pdf"
   (rewritten before read)
-["xelatex"] 1715604007.24561 "/Users/sara/Desktop/project/hand-gesture-control/thesis/AUTthesis.tex" "AUTthesis.xdv" "AUTthesis" 1715604017.12045 0
+["xelatex"] 1715618942.60138 "/Users/sara/Desktop/project/hand-gesture-control/thesis/AUTthesis.tex" "AUTthesis.xdv" "AUTthesis" 1715618952.6123 0
   "/Users/sara/Desktop/project/hand-gesture-control/thesis/AUTthesis.tex" 1714731272.91285 4056 263972ff7aa21e0ba9708d123a1a576e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -233,14 +246,15 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1712998569 10850194 002fa2dc231b06b8e30b79bc467149ee ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "AUTthesis.aux" 1715604009.15807 1433 9f2a49d14bdb49e6984442eb76e92627 "xelatex"
+  "AUTthesis.aux" 1715618944.59348 2484 b2146bd197b049cc68e6eadeb7fa143d "xelatex"
+  "AUTthesis.bbl" 1715618897.13686 6103 d6c6ff228ce07ee53297d54be08778f5 "bibtex AUTthesis"
   "AUTthesis.cls" 1712513182 10388 ceee7e42a8ed26d30f8bda6125df63b9 ""
-  "AUTthesis.ind" 1715603746.81042 0 d41d8cd98f00b204e9800998ecf8427e "makeindex AUTthesis.idx"
-  "AUTthesis.lof" 1715604009.16296 1411 43fe8211b5190a1f73f4178ae497f423 "xelatex"
-  "AUTthesis.lot" 1715604009.163 122 e788923d0b12814fc44de984d5a6b220 "xelatex"
-  "AUTthesis.out" 1715604009.16219 7794 98af2bba09af4736da167b01fb446a04 "xelatex"
+  "AUTthesis.ind" 1715618890.94448 0 d41d8cd98f00b204e9800998ecf8427e "makeindex AUTthesis.idx"
+  "AUTthesis.lof" 1715618944.59921 1451 833b0b3e6d65ff93dbce443cc553921e "xelatex"
+  "AUTthesis.lot" 1715618944.59926 250 31b898298074899b0d007dea4a2a34a0 "xelatex"
+  "AUTthesis.out" 1715618944.59853 8872 b58b1242895eb564d166b74976ed2471 "xelatex"
   "AUTthesis.tex" 1714731272.91285 4056 263972ff7aa21e0ba9708d123a1a576e ""
-  "AUTthesis.toc" 1715604009.16288 4120 39f2c5a96fc8c09cfde9a610c6bd0ede "xelatex"
+  "AUTthesis.toc" 1715618944.59913 4856 a4458e6e9fea62dbe79ef8b0b01dd072 "xelatex"
   "Chant.tex" 1713288006.1167 334 a2b21fff0dbc1256adffb0ca2dd3231c ""
   "Haar2.png" 1715454475.38163 123466 ee7864b72a3c9974c6d98b3bf6c8dbd4 ""
   "Haar3.png" 1715454698.11881 288644 1859deecb390b8198e63f585ea93cfbf ""
@@ -248,14 +262,16 @@
   "VGG16.png" 1715454902.16152 306910 64bb1a6363876e6a1a2e23a9ffdd3cb1 ""
   "acknowledgement.tex" 1714400056.30883 1432 728e3bfd8a128b92001010ba9e18c4a8 ""
   "besm.jpg" 1712508652 21507 e802b407cec6c01fea9dba8a77b82187 ""
-  "chapter0.aux" 1715604009.04116 3337 02e6561f1120f43fa9ac769c2bfd2fb1 "xelatex"
+  "chapter0.aux" 1715618944.44658 3337 02e6561f1120f43fa9ac769c2bfd2fb1 "xelatex"
   "chapter0.tex" 1715439777.26586 15630 e6e3ff77719d80354c612e6ace5ebcc5 ""
-  "chapter1.aux" 1715604009.099 5411 3180527d75900239f1e9661121ed4b4e "xelatex"
+  "chapter1.aux" 1715618944.50477 5411 3180527d75900239f1e9661121ed4b4e "xelatex"
   "chapter1.tex" 1715524420.15239 16609 5c6f6d3246b3cec56029caa2d2258b68 ""
-  "chapter2.aux" 1715604009.15085 5085 dc29f7257fe1a0445703705e9e5e111c "xelatex"
-  "chapter2.tex" 1715603746.00303 11829 77a3d0423cfc1beb87232115f69916f5 ""
-  "chapter3.aux" 1715604009.16283 732 3d239bc730f2a086a4b1a248aa96434d "xelatex"
-  "chapter3.tex" 1715604006.37455 513 fdca858e3a1264b9ded02aee7199394a ""
+  "chapter2.aux" 1715618944.55738 5118 864563ce62b46d720015945271b8f332 "xelatex"
+  "chapter2.tex" 1715618941.69108 13200 70192f97a954c8479bc5142c13e84b66 ""
+  "chapter3.aux" 1715618944.56684 1822 3c147082bb6ee556091ff733023d2131 "xelatex"
+  "chapter3.tex" 1715604800.74583 494 71be7f623241dcd78f26116c3ddfed09 ""
+  "chapter4.aux" 1715618944.5747 1538 24274b3e5bd58762637b0024911db2dd "xelatex"
+  "chapter4.tex" 1714731395.78662 154 f7f9ed16e5ee4ea6f466d32a77c3cc07 ""
   "commands.tex" 1712512746 9757 02674c7d244ca75a2cd57b0e713665e4 ""
   "fa-logo.png" 1712508652 19138 26e71b3761b8aeee91c8735baf4e0aa4 ""
   "fa_title.tex" 1714738036.83746 4450 756f8cb957e17cca535c7c20d9bc5f9f ""
@@ -278,4 +294,5 @@
   "chapter1.aux"
   "chapter2.aux"
   "chapter3.aux"
+  "chapter4.aux"
   (rewritten before read)
