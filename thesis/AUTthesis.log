@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  11 MAY 2024 23:37
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  13 MAY 2024 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1597,12 +1597,12 @@ Package rerunfilecheck Info: File `AUTthesis.out' has not changed.
 (rerunfilecheck)             Checksum: 3280D2E1924E83DB143A5C83A86BE764;8769.
  ) 
 Here is how much of TeX's memory you used:
- 32451 strings out of 474773
- 658328 string characters out of 5757724
+ 32453 strings out of 474773
+ 658352 string characters out of 5757724
  1938839 words of memory out of 5000000
- 53860 multiletter control sequences out of 15000+600000
+ 53862 multiletter control sequences out of 15000+600000
  565946 words of font info for 130 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,11n,121p,2462b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on AUTthesis.xdv (39 pages, 383084 bytes).
+Output written on AUTthesis.xdv (39 pages, 396728 bytes).
