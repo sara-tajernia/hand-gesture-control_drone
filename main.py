@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
 
     # Uncomment if you want het orders for drone
-    # hand_detector = HandDetector()
+    hand_detector = HandDetector()
 
 
     #Uncomment if if you want to see the accuracy of 20% of data
@@ -42,6 +42,6 @@ if __name__ == "__main__":
 
 
     #Uncomment if you want to collect data to add to dataset
-    Dataset()
+    # Dataset()
 
 

@@ -209,7 +209,7 @@ class HandDetector:
 
                 if detection_result.multi_hand_landmarks:
                     # Draw landmarks on the frame
-                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Right')
+                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Left')
                     # self.draw_landmarks_on_image(frame, detection_result, 'Right')
                     # print(landmark_coords)
 

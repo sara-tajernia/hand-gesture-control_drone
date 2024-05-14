@@ -52,17 +52,18 @@
 \contentsline {subsubsection}{نتیجه}{16}{section*.29}%
 \contentsline {chapter}{\numberline {3}روش انجام پروژه}{18}{chapter.3}%
 \contentsline {section}{\numberline {3-1}مقدمه}{19}{section.3.1}%
-\contentsline {section}{\numberline {3-2}دیتاست}{19}{section.3.2}%
-\contentsline {section}{\numberline {3-3}اهمیت ژست دست}{19}{section.3.3}%
-\contentsline {section}{\numberline {3-4}کنترل پهپاد}{21}{section.3.4}%
-\contentsline {section}{\numberline {3-5}ابزار ها و نرم افزار های مورد استفاده}{21}{section.3.5}%
-\contentsline {subsection}{\numberline {3-5-1}\lr {TensorFlow}}{21}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3-5-2}\lr {MediaPipe}}{21}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3-6}مدیاپایپ}{22}{section.3.6}%
-\contentsline {subsection}{\numberline {3-6-1}مدل تشخیص کف دست}{22}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3-6-2}مدل تشخیص نقاط عطف دست}{24}{subsection.3.6.2}%
-\contentsline {section}{\numberline {3-7}پیش‌پردازش}{25}{section.3.7}%
-\contentsline {section}{\numberline {3-8}رأی‌گیری پنجره‌ای}{25}{section.3.8}%
+\contentsline {section}{\numberline {3-2}انتخاب ژست‌های دست متناسب با حرکت پهپاد}{19}{section.3.2}%
+\contentsline {section}{\numberline {3-3}دیتاست}{19}{section.3.3}%
+\contentsline {section}{\numberline {3-4}اهمیت ژست دست}{21}{section.3.4}%
+\contentsline {section}{\numberline {3-5}کنترل پهپاد}{21}{section.3.5}%
+\contentsline {section}{\numberline {3-6}ابزار ها و نرم افزار های مورد استفاده}{22}{section.3.6}%
+\contentsline {subsection}{\numberline {3-6-1}\lr {TensorFlow}}{22}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3-6-2}\lr {MediaPipe}}{22}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3-7}مدیاپایپ}{23}{section.3.7}%
+\contentsline {subsection}{\numberline {3-7-1}مدل تشخیص کف دست}{23}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3-7-2}مدل تشخیص نقاط عطف دست}{24}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3-8}پیش‌پردازش}{25}{section.3.8}%
+\contentsline {section}{\numberline {3-9}رأی‌گیری پنجره‌ای}{26}{section.3.9}%
 \contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{27}{chapter.4}%
 \contentsline {section}{\numberline {4-1}مقدمه}{28}{section.4.1}%
 \contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{28}{section.4.2}%

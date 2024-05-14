@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  14 MAY 2024 20:16
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  15 MAY 2024 00:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1299,7 +1299,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4] (./AUTthesis.lof)
+[4]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5] (./AUTthesis.lof)
 \tf@lof=\write7
 \openout7 = `AUTthesis.lof'.
 
@@ -1311,7 +1319,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5
+[6
 
 ] (./AUTthesis.lot)
 \tf@lot=\write8
@@ -1325,7 +1333,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6
+[7
 
 ])
 \openout2 = `chapter0.aux'.
@@ -1549,8 +1557,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [22]
 File: hand_detector.png Graphic file (type bmp)
 <hand_detector.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: mediapipe.png Graphic file (type bmp)
 <mediapipe.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1562,8 +1576,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [23]
 File: landmark.png Graphic file (type bmp)
 <landmark.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: hand-landmarks.png Graphic file (type bmp)
 <hand-landmarks.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 Missing character: There is no x (U+0078) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no y (U+0079) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
@@ -1575,9 +1595,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
-LaTeX Font Info:    Font shape `TU/BNazanin(0)/m/n' will be
-(Font)              scaled to size 7.19998pt on input line 126.
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1586,6 +1603,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
+LaTeX Font Info:    Font shape `TU/BNazanin(0)/m/n' will be
+(Font)              scaled to size 7.19998pt on input line 134.
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1603,7 +1623,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
-])
+]
+
+LaTeX Warning: Reference `footdir@93' on page 28 undefined on input line 10.
+
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1669,16 +1693,19 @@ L3 programming layer <2024-02-20>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `AUTthesis.out' has not changed.
-(rerunfilecheck)             Checksum: 55E061B251B375CA5AB090E8449E25E0;11297.
+(rerunfilecheck)             Checksum: 5B7FE71DD8788C306A88AED94AAB6988;11664.
  ) 
 Here is how much of TeX's memory you used:
- 32554 strings out of 474773
- 660631 string characters out of 5757724
+ 32556 strings out of 474773
+ 660659 string characters out of 5757724
  1939839 words of memory out of 5000000
- 53954 multiletter control sequences out of 15000+600000
+ 53956 multiletter control sequences out of 15000+600000
  565970 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,11n,121p,2462b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,18n,121p,2462b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on AUTthesis.xdv (47 pages, 522564 bytes).
+Output written on AUTthesis.xdv (48 pages, 541636 bytes).
