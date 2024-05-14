@@ -8,52 +8,54 @@ A level-1 auxiliary file: chapter3.aux
 A level-1 auxiliary file: chapter4.aux
 The style file: unsrt-fa.bst
 Database file #1: references.bib
+Warning--I didn't find a database entry for ""
 -- unsrt-fa.bst version 0.9 (2015/05/09) 
 -- This is a BibTeX style for XePersian: http://www.parsilatex.com
 Warning--empty journal in waltergesture
 Warning--empty year in waltergesture
 Warning--empty journal in hadri2018hand
+Warning--can't use both volume and number fields in chen2021visual
 
 Done.
-You've used 19 entries,
+You've used 25 entries,
             2198 wiz_defined-function locations,
-            684 strings with 8768 characters,
-and the built_in function-call counts, 5396 in all, are:
-= -- 434
-> -- 270
-< -- 8
-+ -- 97
-- -- 78
-* -- 349
-:= -- 794
-add.period$ -- 61
-call.type$ -- 19
-change.case$ -- 19
+            721 strings with 10143 characters,
+and the built_in function-call counts, 7547 in all, are:
+= -- 621
+> -- 372
+< -- 12
++ -- 133
+- -- 108
+* -- 488
+:= -- 1091
+add.period$ -- 82
+call.type$ -- 25
+change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 233
-empty$ -- 462
-format.name$ -- 78
-if$ -- 1274
+cite$ -- 29
+duplicate$ -- 329
+empty$ -- 641
+format.name$ -- 108
+if$ -- 1799
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 89
-newline$ -- 176
-num.names$ -- 19
-pop$ -- 68
+int.to.str$ -- 25
+missing$ -- 120
+newline$ -- 230
+num.names$ -- 25
+pop$ -- 88
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 119
+skip$ -- 180
 stack$ -- 0
-substring$ -- 282
-swap$ -- 72
-text.length$ -- 8
+substring$ -- 430
+swap$ -- 116
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 4
 type$ -- 0
-warning$ -- 3
-while$ -- 49
-width$ -- 21
-write$ -- 268
-(There were 3 warnings)
+warning$ -- 4
+while$ -- 66
+width$ -- 27
+write$ -- 356
+(There were 5 warnings)
