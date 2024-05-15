@@ -29,48 +29,46 @@
 \contentsline {subsection}{\numberline {2-3-2}مقاله \lr {UAV-GESTURE: A Dataset for UAV Control and Gesture Recognition}}{13}{subsection.2.3.2}%
 \contentsline {subsubsection}{روش‌شناسی}{14}{section*.16}%
 \contentsline {subsubsection}{نتیجه}{14}{section*.17}%
-\contentsline {section}{\numberline {2-4}مقالات مربوط به نقاط کلیدی دست}{14}{section.2.4}%
+\contentsline {section}{\numberline {2-4}مقالات مربوط به نقاط کلیدی دست}{15}{section.2.4}%
 \contentsline {subsection}{\numberline {2-4-1}مقاله \lr {Hand Gesture Recognition system for Real-Time Application}}{15}{subsection.2.4.1}%
-\contentsline {subsubsection}{روش‌شناسی}{15}{section*.18}%
-\contentsline {subsubsection}{نتیجه}{15}{section*.19}%
 \contentsline {subsection}{\numberline {2-4-2}مقاله \lr {An improved hand gesture recognition system using keypoints and hand bounding boxes}}{15}{subsection.2.4.2}%
-\contentsline {subsubsection}{روش‌شناسی}{15}{section*.20}%
-\contentsline {subsubsection}{نتیجه}{15}{section*.21}%
-\contentsline {subsection}{\numberline {2-4-3}مقاله \lr {Visual gesture recognition based on hand key points}}{15}{subsection.2.4.3}%
-\contentsline {subsubsection}{روش‌شناسی}{15}{section*.22}%
-\contentsline {subsubsection}{نتیجه}{15}{section*.23}%
-\contentsline {subsection}{\numberline {2-4-4}مقاله \lr {MediaPipe Hands: On-device Real-time Hand Tracking}}{15}{subsection.2.4.4}%
-\contentsline {subsubsection}{روش‌شناسی}{15}{section*.24}%
-\contentsline {subsubsection}{نتیجه}{16}{section*.25}%
-\contentsline {section}{\numberline {2-5}مقالات مربوط به اجرای مدل‌های بینایی کامپیوتر روی پهپاد}{16}{section.2.5}%
-\contentsline {subsection}{\numberline {2-5-1}مقاله \lr {Modeling relation among implementing AI-based drones and sustainable construction project success}}{16}{subsection.2.5.1}%
-\contentsline {subsubsection}{روش‌شناسی}{16}{section*.26}%
-\contentsline {subsubsection}{نتیجه}{16}{section*.27}%
-\contentsline {section}{\numberline {2-6}جمع‌بندی}{16}{section.2.6}%
-\contentsline {subsection}{\numberline {2-6-1}مقاله \lr {}}{16}{subsection.2.6.1}%
-\contentsline {subsubsection}{روش‌شناسی}{16}{section*.28}%
-\contentsline {subsubsection}{نتیجه}{16}{section*.29}%
-\contentsline {chapter}{\numberline {3}روش انجام پروژه}{18}{chapter.3}%
-\contentsline {section}{\numberline {3-1}مقدمه}{19}{section.3.1}%
-\contentsline {section}{\numberline {3-2}انتخاب ژست‌های دست متناسب با حرکت پهپاد}{19}{section.3.2}%
-\contentsline {section}{\numberline {3-3}دیتاست}{19}{section.3.3}%
-\contentsline {section}{\numberline {3-4}اهمیت ژست دست}{21}{section.3.4}%
-\contentsline {section}{\numberline {3-5}کنترل پهپاد}{21}{section.3.5}%
-\contentsline {section}{\numberline {3-6}ابزار ها و نرم افزار های مورد استفاده}{22}{section.3.6}%
-\contentsline {subsection}{\numberline {3-6-1}\lr {TensorFlow}}{22}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3-6-2}\lr {MediaPipe}}{22}{subsection.3.6.2}%
-\contentsline {section}{\numberline {3-7}مدیاپایپ}{23}{section.3.7}%
-\contentsline {subsection}{\numberline {3-7-1}مدل تشخیص کف دست}{23}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3-7-2}مدل تشخیص نقاط عطف دست}{24}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3-8}پیش‌پردازش}{25}{section.3.8}%
-\contentsline {section}{\numberline {3-9}رأی‌گیری پنجره‌ای}{26}{section.3.9}%
-\contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{27}{chapter.4}%
-\contentsline {section}{\numberline {4-1}مقدمه}{28}{section.4.1}%
-\contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{28}{section.4.2}%
-\contentsline {section}{\numberline {4-3}جمع‌بندی}{28}{section.4.3}%
-\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{29}{chapter.5}%
-\contentsline {section}{\numberline {5-1}مقدمه}{30}{section.5.1}%
-\contentsline {section}{\numberline {5-2}نتیجه گیری و پیشنهادات}{30}{section.5.2}%
-\contentsline {section}{\numberline {5-3}جمع‌بندی}{30}{section.5.3}%
-\contentsline {chapter}{کتاب‌نامه}{31}{appendix*.36}%
+\contentsline {subsubsection}{روش‌شناسی}{15}{section*.18}%
+\contentsline {subsubsection}{نتیجه}{16}{section*.20}%
+\contentsline {subsection}{\numberline {2-4-3}مقاله \lr {Visual gesture recognition based on hand key points}}{16}{subsection.2.4.3}%
+\contentsline {subsubsection}{روش‌شناسی}{16}{section*.21}%
+\contentsline {subsubsection}{نتیجه}{16}{section*.22}%
+\contentsline {subsection}{\numberline {2-4-4}مقاله \lr {MediaPipe Hands: On-device Real-time Hand Tracking}}{16}{subsection.2.4.4}%
+\contentsline {subsubsection}{روش‌شناسی}{17}{section*.23}%
+\contentsline {subsubsection}{نتیجه}{17}{section*.24}%
+\contentsline {section}{\numberline {2-5}مقالات مربوط به اجرای مدل‌های بینایی کامپیوتر روی پهپاد}{17}{section.2.5}%
+\contentsline {subsection}{\numberline {2-5-1}مقاله \lr {Modeling relation among implementing AI-based drones and sustainable construction project success}}{17}{subsection.2.5.1}%
+\contentsline {subsubsection}{روش‌شناسی}{17}{section*.25}%
+\contentsline {subsubsection}{نتیجه}{17}{section*.26}%
+\contentsline {section}{\numberline {2-6}جمع‌بندی}{17}{section.2.6}%
+\contentsline {subsection}{\numberline {2-6-1}مقاله \lr {}}{18}{subsection.2.6.1}%
+\contentsline {subsubsection}{روش‌شناسی}{18}{section*.27}%
+\contentsline {subsubsection}{نتیجه}{18}{section*.28}%
+\contentsline {chapter}{\numberline {3}روش انجام پروژه}{19}{chapter.3}%
+\contentsline {section}{\numberline {3-1}مقدمه}{20}{section.3.1}%
+\contentsline {section}{\numberline {3-2}انتخاب ژست‌های دست متناسب با حرکت پهپاد}{20}{section.3.2}%
+\contentsline {section}{\numberline {3-3}دیتاست}{20}{section.3.3}%
+\contentsline {section}{\numberline {3-4}اهمیت ژست دست}{22}{section.3.4}%
+\contentsline {section}{\numberline {3-5}کنترل پهپاد}{22}{section.3.5}%
+\contentsline {section}{\numberline {3-6}ابزار ها و نرم افزار های مورد استفاده}{23}{section.3.6}%
+\contentsline {subsection}{\numberline {3-6-1}\lr {TensorFlow}}{23}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3-6-2}\lr {MediaPipe}}{23}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3-7}مدیاپایپ}{24}{section.3.7}%
+\contentsline {subsection}{\numberline {3-7-1}مدل تشخیص کف دست}{24}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3-7-2}مدل تشخیص نقاط عطف دست}{25}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3-8}پیش‌پردازش}{26}{section.3.8}%
+\contentsline {section}{\numberline {3-9}رأی‌گیری پنجره‌ای}{27}{section.3.9}%
+\contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{28}{chapter.4}%
+\contentsline {section}{\numberline {4-1}مقدمه}{29}{section.4.1}%
+\contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{29}{section.4.2}%
+\contentsline {section}{\numberline {4-3}جمع‌بندی}{29}{section.4.3}%
+\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{30}{chapter.5}%
+\contentsline {section}{\numberline {5-1}مقدمه}{31}{section.5.1}%
+\contentsline {section}{\numberline {5-2}نتیجه گیری و پیشنهادات}{31}{section.5.2}%
+\contentsline {section}{\numberline {5-3}جمع‌بندی}{31}{section.5.3}%
+\contentsline {chapter}{کتاب‌نامه}{32}{appendix*.35}%
 \contentsfinish 

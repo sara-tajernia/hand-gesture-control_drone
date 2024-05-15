@@ -546,6 +546,9 @@ INPUT ./hand_gesture_feature.png
 INPUT ./VGG16.png
 INPUT ./VGG16.png
 INPUT ./VGG16.png
+INPUT ./keypoints_boundingBox.png
+INPUT ./keypoints_boundingBox.png
+INPUT ./keypoints_boundingBox.png
 INPUT ./chapter2.tex
 INPUT ./chapter2.tex
 OUTPUT chapter2.aux

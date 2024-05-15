@@ -5,12 +5,13 @@
 \contentsline {figure}{\numberline {2-2}{\ignorespaces ویژگی های \lr {Haar} برای استفاده از آستانه رنگ پوست برای تشخیص دست}}{10}{figure.caption.6}%
 \contentsline {figure}{\numberline {2-3}{\ignorespaces تشخیص کف دست و انگشتان}}{11}{figure.caption.9}%
 \contentsline {figure}{\numberline {2-4}{\ignorespaces معماری \lr {VGG-16}}}{13}{figure.caption.14}%
+\contentsline {figure}{\numberline {2-5}{\ignorespaces معماری ساختار شبکه‌های عصبی دو خط لوله}}{16}{figure.caption.19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces نمونه‌ای از ژست‌های انتخاب‌شده در مجموعه داده‌ها}}{20}{figure.caption.30}%
-\contentsline {figure}{\numberline {3-2}{\ignorespaces معماری مدل آشکارساز کف دست}}{24}{figure.caption.31}%
-\contentsline {figure}{\numberline {3-3}{\ignorespaces خط لوله تشخیص دست}}{24}{figure.caption.32}%
-\contentsline {figure}{\numberline {3-4}{\ignorespaces معماری مدل نقطه عطف دست. این مدل دارای سه خروجی است که یک استخراج کننده ویژگی را به اشتراک می گذارند. هر سر توسط مجموعه داده های مربوطه که با همان رنگ مشخص شده اند آموزش داده می شود.}}{25}{figure.caption.33}%
-\contentsline {figure}{\numberline {3-5}{\ignorespaces موقعیت ۲۱ نقطه کلیدی در ناحیه دست}}{25}{figure.caption.34}%
+\contentsline {figure}{\numberline {3-1}{\ignorespaces نمونه‌ای از ژست‌های انتخاب‌شده در مجموعه داده‌ها}}{21}{figure.caption.29}%
+\contentsline {figure}{\numberline {3-2}{\ignorespaces معماری مدل آشکارساز کف دست}}{25}{figure.caption.30}%
+\contentsline {figure}{\numberline {3-3}{\ignorespaces خط لوله تشخیص دست}}{25}{figure.caption.31}%
+\contentsline {figure}{\numberline {3-4}{\ignorespaces معماری مدل نقطه عطف دست. این مدل دارای سه خروجی است که یک استخراج کننده ویژگی را به اشتراک می گذارند. هر سر توسط مجموعه داده های مربوطه که با همان رنگ مشخص شده اند آموزش داده می شود.}}{26}{figure.caption.32}%
+\contentsline {figure}{\numberline {3-5}{\ignorespaces موقعیت ۲۱ نقطه کلیدی در ناحیه دست}}{26}{figure.caption.33}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 
