@@ -32,45 +32,51 @@
 \contentsline {section}{\numberline {2-4}مقالات مربوط به نقاط کلیدی دست}{15}{section.2.4}%
 \contentsline {subsection}{\numberline {2-4-1}مقاله \lr {Hand Gesture Recognition system for Real-Time Application}}{15}{subsection.2.4.1}%
 \contentsline {subsubsection}{روش‌شناسی}{15}{section*.18}%
-\contentsline {subsubsection}{نتیجه}{15}{section*.19}%
+\contentsline {subsubsection}{نتیجه}{16}{section*.20}%
 \contentsline {subsection}{\numberline {2-4-2}مقاله \lr {An improved hand gesture recognition system using keypoints and hand bounding boxes}}{16}{subsection.2.4.2}%
-\contentsline {subsubsection}{روش‌شناسی}{16}{section*.20}%
-\contentsline {subsubsection}{نتیجه}{17}{section*.22}%
+\contentsline {subsubsection}{روش‌شناسی}{16}{section*.21}%
+\contentsline {subsubsection}{نتیجه}{16}{section*.23}%
 \contentsline {subsection}{\numberline {2-4-3}مقاله \lr {Visual gesture recognition based on hand key points}}{17}{subsection.2.4.3}%
-\contentsline {subsubsection}{روش‌شناسی}{17}{section*.23}%
-\contentsline {subsubsection}{نتیجه}{17}{section*.25}%
+\contentsline {subsubsection}{روش‌شناسی}{17}{section*.24}%
+\contentsline {subsubsection}{نتیجه}{18}{section*.26}%
 \contentsline {subsection}{\numberline {2-4-4}مقاله \lr {MediaPipe Hands: On-device Real-time Hand Tracking}}{18}{subsection.2.4.4}%
-\contentsline {subsubsection}{روش‌شناسی}{18}{section*.26}%
-\contentsline {subsubsection}{نتیجه}{18}{section*.27}%
+\contentsline {subsubsection}{روش‌شناسی}{18}{section*.27}%
+\contentsline {subsubsection}{نتیجه}{19}{section*.28}%
 \contentsline {section}{\numberline {2-5}مقالات مربوط به اجرای مدل‌های بینایی کامپیوتر روی پهپاد}{19}{section.2.5}%
 \contentsline {subsection}{\numberline {2-5-1}مقاله \lr {Modeling relation among implementing AI-based drones and sustainable construction project success}}{19}{subsection.2.5.1}%
-\contentsline {subsubsection}{روش‌شناسی}{19}{section*.28}%
-\contentsline {subsubsection}{نتیجه}{20}{section*.29}%
+\contentsline {subsubsection}{روش‌شناسی}{19}{section*.29}%
+\contentsline {subsubsection}{نتیجه}{20}{section*.30}%
 \contentsline {subsection}{\numberline {2-5-2}مقاله \lr {Use of a DJI Tello Drone as an Educational Platform in the Field of Control Engineering}}{20}{subsection.2.5.2}%
-\contentsline {subsubsection}{روش‌شناسی}{20}{section*.30}%
-\contentsline {subsubsection}{نتیجه}{21}{section*.31}%
-\contentsline {section}{\numberline {2-6}جمع‌بندی}{21}{section.2.6}%
-\contentsline {chapter}{\numberline {3}روش انجام پروژه}{22}{chapter.3}%
-\contentsline {section}{\numberline {3-1}مقدمه}{23}{section.3.1}%
-\contentsline {section}{\numberline {3-2}انتخاب ژست‌های دست متناسب با حرکت پهپاد}{23}{section.3.2}%
-\contentsline {section}{\numberline {3-3}دیتاست}{23}{section.3.3}%
-\contentsline {section}{\numberline {3-4}اهمیت ژست دست}{25}{section.3.4}%
-\contentsline {section}{\numberline {3-5}کنترل پهپاد}{25}{section.3.5}%
-\contentsline {section}{\numberline {3-6}ابزار ها و نرم افزار های مورد استفاده}{26}{section.3.6}%
-\contentsline {subsection}{\numberline {3-6-1}\lr {TensorFlow}}{26}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3-6-2}\lr {MediaPipe}}{26}{subsection.3.6.2}%
-\contentsline {section}{\numberline {3-7}مدیاپایپ}{27}{section.3.7}%
-\contentsline {subsection}{\numberline {3-7-1}مدل تشخیص کف دست}{27}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3-7-2}مدل تشخیص نقاط عطف دست}{28}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3-8}پیش‌پردازش}{29}{section.3.8}%
-\contentsline {section}{\numberline {3-9}رأی‌گیری پنجره‌ای}{30}{section.3.9}%
-\contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{31}{chapter.4}%
-\contentsline {section}{\numberline {4-1}مقدمه}{32}{section.4.1}%
-\contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{32}{section.4.2}%
-\contentsline {section}{\numberline {4-3}جمع‌بندی}{32}{section.4.3}%
-\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{33}{chapter.5}%
-\contentsline {section}{\numberline {5-1}مقدمه}{34}{section.5.1}%
-\contentsline {section}{\numberline {5-2}نتیجه گیری و پیشنهادات}{34}{section.5.2}%
-\contentsline {section}{\numberline {5-3}جمع‌بندی}{34}{section.5.3}%
-\contentsline {chapter}{کتاب‌نامه}{35}{appendix*.38}%
+\contentsline {subsubsection}{روش‌شناسی}{21}{section*.31}%
+\contentsline {subsubsection}{نتیجه}{21}{section*.33}%
+\contentsline {section}{\numberline {2-6}جمع‌بندی}{22}{section.2.6}%
+\contentsline {chapter}{\numberline {3}روش انجام پروژه}{23}{chapter.3}%
+\contentsline {section}{\numberline {3-1}مقدمه}{24}{section.3.1}%
+\contentsline {section}{\numberline {3-2}انتخاب ژست‌های دست متناسب با حرکت پهپاد}{24}{section.3.2}%
+\contentsline {section}{\numberline {3-3}دیتاست}{24}{section.3.3}%
+\contentsline {section}{\numberline {3-4}اهمیت ژست دست}{26}{section.3.4}%
+\contentsline {section}{\numberline {3-5}کنترل پهپاد}{26}{section.3.5}%
+\contentsline {section}{\numberline {3-6}ابزار ها و نرم افزار های مورد استفاده}{27}{section.3.6}%
+\contentsline {subsection}{\numberline {3-6-1}زبان برنامه‌نویسی پایتون}{27}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3-6-2}کتابخانه \lr {Scikit-learn}}{28}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3-6-3}رابط برنامه‌نویسی \lr {Keras}}{28}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3-6-4}کتابخانه‌های\lr {MediaPipe}}{28}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3-6-5}کتابخانه \lr {NumPy}}{29}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3-6-6}کتابخانه \lr {Matplotlib}}{29}{subsection.3.6.6}%
+\contentsline {subsection}{\numberline {3-6-7}کتابخانه \lr {OpenCV}}{30}{subsection.3.6.7}%
+\contentsline {subsection}{\numberline {3-6-8}پهپاد \lr {DJI Tello}}{30}{subsection.3.6.8}%
+\contentsline {section}{\numberline {3-7}مدیاپایپ}{30}{section.3.7}%
+\contentsline {subsection}{\numberline {3-7-1}مدل تشخیص کف دست}{31}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3-7-2}مدل تشخیص نقاط عطف دست}{32}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3-8}پیش‌پردازش}{33}{section.3.8}%
+\contentsline {section}{\numberline {3-9}رأی‌گیری پنجره‌ای}{34}{section.3.9}%
+\contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{35}{chapter.4}%
+\contentsline {section}{\numberline {4-1}مقدمه}{36}{section.4.1}%
+\contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{36}{section.4.2}%
+\contentsline {section}{\numberline {4-3}جمع‌بندی}{36}{section.4.3}%
+\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{37}{chapter.5}%
+\contentsline {section}{\numberline {5-1}مقدمه}{38}{section.5.1}%
+\contentsline {section}{\numberline {5-2}نتیجه گیری و پیشنهادات}{38}{section.5.2}%
+\contentsline {section}{\numberline {5-3}جمع‌بندی}{38}{section.5.3}%
+\contentsline {chapter}{کتاب‌نامه}{39}{appendix*.40}%
 \contentsfinish 
