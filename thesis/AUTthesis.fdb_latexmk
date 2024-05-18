@@ -1,29 +1,29 @@
 # Fdb version 4
-["bibtex AUTthesis"] 1715798612.65229 "AUTthesis.aux" "AUTthesis.bbl" "AUTthesis" 1715798626.24652 0
-  "./references.bib" 1715704402.49253 8099 3372c5e7fe4cb6bcbb00f276dd77003d ""
+["bibtex AUTthesis"] 1716043722.42111 "AUTthesis.aux" "AUTthesis.bbl" "AUTthesis" 1716043912.27695 0
+  "./references.bib" 1716043442.29145 8364 57409d1cef16ce8d17411973f2da9789 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/persian-bib/unsrt-fa.bst" 1431209930 21216 93f4679cd54a82641c568d3fdf495918 ""
-  "AUTthesis.aux" 1715798617.78626 2738 9aacc3bd6880c2810b51cebd1a686363 "xelatex"
-  "chapter0.aux" 1715798617.58279 3460 81ed1e4d9872130c3869382878b86be2 "xelatex"
-  "chapter1.aux" 1715798617.67318 8149 891c710833048c3ea416f245c6f27da4 "xelatex"
-  "chapter2.aux" 1715798617.74349 5656 5096bb2dedb067077538ee7850a1c58e "xelatex"
-  "chapter3.aux" 1715798617.75365 1864 bfde3abdee84b0f7e76bead7563d424b "xelatex"
-  "chapter4.aux" 1715798617.76215 1539 074cb5ce84b0f3e381662b40a62d3a70 "xelatex"
+  "AUTthesis.aux" 1716043903.7467 2777 3deece3f3eabcaa87b6ac4117b9170e2 "xelatex"
+  "chapter0.aux" 1716043903.52198 3460 81ed1e4d9872130c3869382878b86be2 "xelatex"
+  "chapter1.aux" 1716043903.63032 8663 bffcaf079d81640f0e1d426b5eed024f "xelatex"
+  "chapter2.aux" 1716043903.70335 5656 3a31890037c1fb4e4fea9e797bf015d5 "xelatex"
+  "chapter3.aux" 1716043903.71392 1864 0e6b51e4eb4b52f97ff229233254eebc "xelatex"
+  "chapter4.aux" 1716043903.72182 1539 a7b0e7d68126034258c9767ac42567f0 "xelatex"
   (generated)
   "AUTthesis.bbl"
   "AUTthesis.blg"
   (rewritten before read)
-["makeindex AUTthesis.idx"] 1715798136.47906 "AUTthesis.idx" "AUTthesis.ind" "AUTthesis" 1715798626.24641 0
-  "AUTthesis.idx" 1715798616.62878 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+["makeindex AUTthesis.idx"] 1716043719.25653 "AUTthesis.idx" "AUTthesis.ind" "AUTthesis" 1716043912.27686 0
+  "AUTthesis.idx" 1716043902.57744 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   (generated)
   "AUTthesis.ilg"
   "AUTthesis.ind"
   (rewritten before read)
-["xdvipdfmx"] 1715798618.29861 "AUTthesis.xdv" "AUTthesis.pdf" "AUTthesis" 1715798626.25176 0
-  "AUTthesis.xdv" 1715798617.7921 561824 e7fa685f3c14b7fe845c426da1e9fd61 "xelatex"
+["xdvipdfmx"] 1716043904.26482 "AUTthesis.xdv" "AUTthesis.pdf" "AUTthesis" 1716043912.28207 0
+  "AUTthesis.xdv" 1716043903.75242 628804 54fbe9946a939c95b360513f92e5ad30 "xelatex"
   (generated)
   "AUTthesis.pdf"
   (rewritten before read)
-["xelatex"] 1715798615.68726 "/Users/sara/Desktop/project/hand-gesture-control/thesis/AUTthesis.tex" "AUTthesis.xdv" "AUTthesis" 1715798626.2468 0
+["xelatex"] 1716043901.73487 "/Users/sara/Desktop/project/hand-gesture-control/thesis/AUTthesis.tex" "AUTthesis.xdv" "AUTthesis" 1716043912.27715 0
   "/Users/sara/Desktop/project/hand-gesture-control/thesis/AUTthesis.tex" 1714731272.91285 4056 263972ff7aa21e0ba9708d123a1a576e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -246,15 +246,15 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1712998569 10850194 002fa2dc231b06b8e30b79bc467149ee ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "AUTthesis.aux" 1715798617.78626 2738 9aacc3bd6880c2810b51cebd1a686363 "xelatex"
-  "AUTthesis.bbl" 1715798612.84332 8109 6c1e7bd35ba56a8b665a896974fc40a7 "bibtex AUTthesis"
+  "AUTthesis.aux" 1716043903.7467 2777 3deece3f3eabcaa87b6ac4117b9170e2 "xelatex"
+  "AUTthesis.bbl" 1716043722.58898 8413 46afbe03537077a385dd79d10777b7a8 "bibtex AUTthesis"
   "AUTthesis.cls" 1712513182 10388 ceee7e42a8ed26d30f8bda6125df63b9 ""
-  "AUTthesis.ind" 1715798136.65266 0 d41d8cd98f00b204e9800998ecf8427e "makeindex AUTthesis.idx"
-  "AUTthesis.lof" 1715798617.79198 1839 925d9f2e977e0e1a5a6525a79bfba33b "xelatex"
-  "AUTthesis.lot" 1715798617.79203 250 163787d7d0d8ac7e23e943608cdc457d "xelatex"
-  "AUTthesis.out" 1715798617.79134 11664 07d66780e314eaa1a6a64fdd68d49f22 "xelatex"
+  "AUTthesis.ind" 1716043719.43874 0 d41d8cd98f00b204e9800998ecf8427e "makeindex AUTthesis.idx"
+  "AUTthesis.lof" 1716043903.75231 2002 c3f2fd8db41b4d8872929997937c0ad7 "xelatex"
+  "AUTthesis.lot" 1716043903.75235 250 227489112e8857e278dccdb7c98d15f6 "xelatex"
+  "AUTthesis.out" 1716043903.7517 12144 353db9b024b35dc4a8caeed173d5f2cf "xelatex"
   "AUTthesis.tex" 1714731272.91285 4056 263972ff7aa21e0ba9708d123a1a576e ""
-  "AUTthesis.toc" 1715798617.79192 6608 233972870a600d9ba438ea0c5a3f82f3 "xelatex"
+  "AUTthesis.toc" 1716043903.75224 6824 e27ea7ebd5bff544eab7f2ff9fde7331 "xelatex"
   "Chant.tex" 1713288006.1167 334 a2b21fff0dbc1256adffb0ca2dd3231c ""
   "Haar2.png" 1715454475.38163 123466 ee7864b72a3c9974c6d98b3bf6c8dbd4 ""
   "Haar3.png" 1715454698.11881 288644 1859deecb390b8198e63f585ea93cfbf ""
@@ -262,15 +262,15 @@
   "VGG16.png" 1715454902.16152 306910 64bb1a6363876e6a1a2e23a9ffdd3cb1 ""
   "acknowledgement.tex" 1714400056.30883 1432 728e3bfd8a128b92001010ba9e18c4a8 ""
   "besm.jpg" 1712508652 21507 e802b407cec6c01fea9dba8a77b82187 ""
-  "chapter0.aux" 1715798617.58279 3460 81ed1e4d9872130c3869382878b86be2 "xelatex"
+  "chapter0.aux" 1716043903.52198 3460 81ed1e4d9872130c3869382878b86be2 "xelatex"
   "chapter0.tex" 1715715336.68056 15922 fff3992b72a8bd13c3b0db5586d11f27 ""
-  "chapter1.aux" 1715798617.67318 8149 891c710833048c3ea416f245c6f27da4 "xelatex"
-  "chapter1.tex" 1715798612.86754 27059 325d7d91b88557fb7c839a3ef54fe20c ""
-  "chapter2.aux" 1715798617.74349 5656 5096bb2dedb067077538ee7850a1c58e "xelatex"
+  "chapter1.aux" 1716043903.63032 8663 bffcaf079d81640f0e1d426b5eed024f "xelatex"
+  "chapter1.tex" 1716043895.38678 36708 beb53c2d38b16c9f74c3e07f1381a0cc ""
+  "chapter2.aux" 1716043903.70335 5656 3a31890037c1fb4e4fea9e797bf015d5 "xelatex"
   "chapter2.tex" 1715714796.13082 21187 d872d2b4f927c7d430157bf6947653ed ""
-  "chapter3.aux" 1715798617.75365 1864 bfde3abdee84b0f7e76bead7563d424b "xelatex"
+  "chapter3.aux" 1716043903.71392 1864 0e6b51e4eb4b52f97ff229233254eebc "xelatex"
   "chapter3.tex" 1715719891.32532 855 adc4fa62734aa424e555cb1a2ae508c1 ""
-  "chapter4.aux" 1715798617.76215 1539 074cb5ce84b0f3e381662b40a62d3a70 "xelatex"
+  "chapter4.aux" 1716043903.72182 1539 a7b0e7d68126034258c9767ac42567f0 "xelatex"
   "chapter4.tex" 1714731395.78662 154 f7f9ed16e5ee4ea6f466d32a77c3cc07 ""
   "commands.tex" 1712512746 9757 02674c7d244ca75a2cd57b0e713665e4 ""
   "fa-logo.png" 1712508652 19138 26e71b3761b8aeee91c8735baf4e0aa4 ""
@@ -279,6 +279,7 @@
   "hand-landmarks.png" 1714494644.76636 1000514 c70e99381a43a92c44f0984ff1226a07 ""
   "hand_detector.png" 1715600051.94475 356432 ed44dc1b0a6ced43036687685ac42f17 ""
   "hand_gesture_feature.png" 1715696792.1757 297793 02fa6e387cbae7feadc0a1eacbfaec22 ""
+  "keypoint.png" 1715802216.3312 387682 687373b18324a95eef1828bdec16f57e ""
   "keypoints_boundingBox.png" 1715798360.49446 201967 983693a778628bc7d16e8d47a740d9d7 ""
   "landmark.png" 1715600019.45949 123993 e67818672d48e604471442686470e567 ""
   "mediapipe.png" 1715634070.80495 201696 a71ab45161a23372b83e1d366ff7164e ""

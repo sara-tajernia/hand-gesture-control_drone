@@ -193,6 +193,15 @@ Waqar, Ahsan, Othman, Idris, Hamah~Sor, Nadhim, Alshehri, Abdullah~Mohammed, Alm
 
 \begin{LTRbibitems}
 \resetlatinfont
+\bibitem{ghazi2023use}
+Ghazi, Georges and Voyer, Julien.
+\newblock Use of a dji tello drone as an educational platform in the field of control engineering.
+\newblock {\em Proceedings of the Canadian Engineering Education Association (CEEA)}, 2023.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
 \bibitem{clough2020role}
 Clough, Sharice and Duff, Melissa~C.
 \newblock The role of gesture in communication and cognition: Implications for understanding and treating neurogenic communication disorders.
