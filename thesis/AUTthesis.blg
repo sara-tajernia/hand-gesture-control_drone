@@ -16,45 +16,45 @@ Warning--empty journal in hadri2018hand
 Warning--can't use both volume and number fields in chen2021visual
 
 Done.
-You've used 26 entries,
+You've used 27 entries,
             2198 wiz_defined-function locations,
-            725 strings with 10342 characters,
-and the built_in function-call counts, 7710 in all, are:
-= -- 633
-> -- 380
+            729 strings with 10600 characters,
+and the built_in function-call counts, 7908 in all, are:
+= -- 645
+> -- 388
 < -- 12
-+ -- 136
-- -- 110
-* -- 493
-:= -- 1118
-add.period$ -- 85
-call.type$ -- 26
-change.case$ -- 26
++ -- 139
+- -- 112
+* -- 499
+:= -- 1145
+add.period$ -- 88
+call.type$ -- 27
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 337
-empty$ -- 655
-format.name$ -- 110
-if$ -- 1837
+cite$ -- 31
+duplicate$ -- 349
+empty$ -- 680
+format.name$ -- 112
+if$ -- 1888
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 124
-newline$ -- 239
-num.names$ -- 26
-pop$ -- 91
+int.to.str$ -- 27
+missing$ -- 129
+newline$ -- 248
+num.names$ -- 27
+pop$ -- 98
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 184
+skip$ -- 188
 stack$ -- 0
 substring$ -- 430
-swap$ -- 117
+swap$ -- 119
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 4
 type$ -- 0
 warning$ -- 4
-while$ -- 67
-width$ -- 28
-write$ -- 369
+while$ -- 68
+width$ -- 29
+write$ -- 382
 (There were 4 warnings)

@@ -52,31 +52,45 @@
 \contentsline {section}{\numberline {2-6}جمع‌بندی}{22}{section.2.6}%
 \contentsline {chapter}{\numberline {3}روش انجام پروژه}{23}{chapter.3}%
 \contentsline {section}{\numberline {3-1}مقدمه}{24}{section.3.1}%
-\contentsline {section}{\numberline {3-2}انتخاب ژست‌های دست متناسب با حرکت پهپاد}{24}{section.3.2}%
-\contentsline {section}{\numberline {3-3}دیتاست}{24}{section.3.3}%
+\contentsline {section}{\numberline {3-2}انتخاب ژست‌های دست متناسب با حرکت پهپاد}{25}{section.3.2}%
+\contentsline {section}{\numberline {3-3}دیتاست}{26}{section.3.3}%
 \contentsline {section}{\numberline {3-4}اهمیت ژست دست}{26}{section.3.4}%
-\contentsline {section}{\numberline {3-5}کنترل پهپاد}{26}{section.3.5}%
+\contentsline {section}{\numberline {3-5}کنترل پهپاد}{27}{section.3.5}%
 \contentsline {section}{\numberline {3-6}ابزار ها و نرم افزار های مورد استفاده}{27}{section.3.6}%
-\contentsline {subsection}{\numberline {3-6-1}زبان برنامه‌نویسی پایتون}{27}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3-6-1}زبان برنامه‌نویسی پایتون}{28}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3-6-2}کتابخانه \lr {Scikit-learn}}{28}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3-6-3}رابط برنامه‌نویسی \lr {Keras}}{28}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3-6-4}کتابخانه‌های\lr {MediaPipe}}{28}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3-6-5}کتابخانه \lr {NumPy}}{29}{subsection.3.6.5}%
-\contentsline {subsection}{\numberline {3-6-6}کتابخانه \lr {Matplotlib}}{29}{subsection.3.6.6}%
-\contentsline {subsection}{\numberline {3-6-7}کتابخانه \lr {OpenCV}}{30}{subsection.3.6.7}%
-\contentsline {subsection}{\numberline {3-6-8}پهپاد \lr {DJI Tello}}{30}{subsection.3.6.8}%
-\contentsline {section}{\numberline {3-7}مدیاپایپ}{30}{section.3.7}%
-\contentsline {subsection}{\numberline {3-7-1}مدل تشخیص کف دست}{31}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3-7-2}مدل تشخیص نقاط عطف دست}{32}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3-8}پیش‌پردازش}{33}{section.3.8}%
-\contentsline {section}{\numberline {3-9}رأی‌گیری پنجره‌ای}{34}{section.3.9}%
-\contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{35}{chapter.4}%
-\contentsline {section}{\numberline {4-1}مقدمه}{36}{section.4.1}%
-\contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{36}{section.4.2}%
-\contentsline {section}{\numberline {4-3}جمع‌بندی}{36}{section.4.3}%
-\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{37}{chapter.5}%
-\contentsline {section}{\numberline {5-1}مقدمه}{38}{section.5.1}%
-\contentsline {section}{\numberline {5-2}نتیجه گیری و پیشنهادات}{38}{section.5.2}%
-\contentsline {section}{\numberline {5-3}جمع‌بندی}{38}{section.5.3}%
-\contentsline {chapter}{کتاب‌نامه}{39}{appendix*.40}%
+\contentsline {subsection}{\numberline {3-6-3}رابط برنامه‌نویسی \lr {Keras}}{29}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3-6-4}کتابخانه‌های\lr {MediaPipe}}{29}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3-6-5}کتابخانه \lr {NumPy}}{30}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3-6-6}کتابخانه \lr {Matplotlib}}{30}{subsection.3.6.6}%
+\contentsline {subsection}{\numberline {3-6-7}کتابخانه \lr {OpenCV}}{31}{subsection.3.6.7}%
+\contentsline {subsection}{\numberline {3-6-8}پهپاد \lr {DJI Tello}}{31}{subsection.3.6.8}%
+\contentsline {section}{\numberline {3-7}مدیاپایپ}{32}{section.3.7}%
+\contentsline {subsection}{\numberline {3-7-1}محدود کننده جریان زمان واقعی \LTRfootnote {Real Time Flow Limiter}}{33}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3-7-2}تشخیص دست \LTRfootnote {Hand Detection}}{34}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3-7-3}تشخیص به مستطیل \LTRfootnote {Detection To Rectangle}}{36}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3-7-4}برش تصویر \LTRfootnote {Image Cropping}}{36}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3-7-5}تشخیص نقاط عطف دست \LTRfootnote {Hand Landmark}}{37}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3-7-6}نقاط عطف یه مستطیل \LTRfootnote {Landmarks To Rectangle}}{37}{subsection.3.7.6}%
+\contentsline {subsection}{\numberline {3-7-7}ارائه کننده حاشیه نویسی \LTRfootnote {AnnotationRenderer}}{38}{subsection.3.7.7}%
+\contentsline {subsection}{\numberline {3-7-8}مزیت‌های استفاده از کتابخانه \lr {MediaPipe}}{39}{subsection.3.7.8}%
+\contentsline {section}{\numberline {3-8}پیش‌پردازش}{39}{section.3.8}%
+\contentsline {section}{\numberline {3-9}رأی‌گیری پنجره‌ای}{40}{section.3.9}%
+\contentsline {chapter}{\numberline {4}نتایج و ارزیابی}{41}{chapter.4}%
+\contentsline {section}{\numberline {4-1}مقدمه}{42}{section.4.1}%
+\contentsline {section}{\numberline {4-2}نتایج و ارزیابی}{42}{section.4.2}%
+\contentsline {section}{\numberline {4-3}جمع‌بندی}{42}{section.4.3}%
+\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{43}{chapter.5}%
+\contentsline {section}{\numberline {5-1}مقدمه}{44}{section.5.1}%
+\contentsline {section}{\numberline {5-2}محدودیت وجود پهپاد‌های منبع‌باز}{44}{section.5.2}%
+\contentsline {section}{\numberline {5-3}وجود چندین دست در تصویر}{45}{section.5.3}%
+\contentsline {section}{\numberline {5-4}شناسایی یک دست در دو مستطیل در نتیجه دو خروجی دست}{45}{section.5.4}%
+\contentsline {section}{\numberline {5-5}اجرا روی کارت گرافیکی \LTRfootnote {GPU}}{46}{section.5.5}%
+\contentsline {section}{\numberline {5-6}اجرای پروژه با برنامه \lr {C++}}{47}{section.5.6}%
+\contentsline {section}{\numberline {5-7}استفاده از مدل‌های موازی برای تشخیص ژست دست}{48}{section.5.7}%
+\contentsline {section}{\numberline {5-8}توسعه برنامه با استفاده از سایر قسمت‌های بدن انسان}{48}{section.5.8}%
+\contentsline {subsection}{\numberline {5-8-1}کنترل پهپاد با حرکات چشم}{48}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5-8-2}کنترل پهپاد با حرکات سر}{49}{subsection.5.8.2}%
+\contentsline {section}{\numberline {5-9}جمع‌بندی}{49}{section.5.9}%
+\contentsline {chapter}{کتاب‌نامه}{50}{appendix*.46}%
 \contentsfinish 

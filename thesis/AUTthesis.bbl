@@ -236,4 +236,13 @@ Harris, Moh, Agoes, Ali~Suryaperdana, et~al.
 
 \end{LTRbibitems}
 
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{bhujbal2022custom}
+Bhujbal, Kunal and Barahate, Sachin.
+\newblock Custom object detection based on regional convolutional neural network \& yolov3 with dji tello programmable drone.
+\newblock  in {\em 7th International Conference on Innovation \& Research in Technology \& Engineering (ICIRTE)}, 2022.
+
+\end{LTRbibitems}
+
 \end{thebibliography}
