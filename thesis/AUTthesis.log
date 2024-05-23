@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  22 MAY 2024 17:02
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  23 MAY 2024 11:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1295,11 +1295,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4])
-\tf@toc=\write6
-\openout6 = `AUTthesis.toc'.
-
-
+[4]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1307,7 +1303,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5]
+[5])
+\tf@toc=\write6
+\openout6 = `AUTthesis.toc'.
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1799,8 +1799,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
+Missing character: There is no C (U+0043) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no N (U+004E) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no N (U+004E) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no L (U+004C) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no S (U+0053) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no T (U+0054) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no M (U+004D) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no M (U+004D) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no L (U+004C) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no P (U+0050) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
 
-LaTeX Warning: Reference `footdir@159' on page 42 undefined on input line 13.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42]
+
+LaTeX Warning: Reference `footdir@159' on page 43 undefined on input line 60.
 
 )
 
@@ -1810,21 +1828,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[42]
-\openout2 = `chapter4.aux'.
-
- (./chapter4.tex
-فصل 5.
-[43
-
-
-
-
-]
-Overfull \hbox (12.04762pt too wide) in paragraph at lines 9--17
-[]\TU/BNazanin(0)/m/n/12 در مورد پهپادهای منبع‌باز، محدودیت‌های متفاوتی وجود دارد. این پهپادها ممکن است دارای سخت‌افزارهای[]
- []
-
+[43]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1833,20 +1837,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [44]
+\openout2 = `chapter4.aux'.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[45]
-File: multi_boxes.png Graphic file (type bmp)
-<multi_boxes.png>
+ (./chapter4.tex
+فصل 5.
+[45
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 44.
+
+
+]
+Overfull \hbox (12.04762pt too wide) in paragraph at lines 9--17
+[]\TU/BNazanin(0)/m/n/12 در مورد پهپادهای منبع‌باز، محدودیت‌های متفاوتی وجود دارد. این پهپادها ممکن است دارای سخت‌افزارهای[]
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1864,6 +1867,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [47]
+File: multi_boxes.png Graphic file (type bmp)
+<multi_boxes.png>
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 44.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[48]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[49]
 Underfull \hbox (badness 10000) in paragraph at lines 72--74
 [][]
  []
@@ -1875,7 +1901,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[48])
+[50])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1883,10 +1909,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[49] (./AUTthesis.bbl
+[51] (./AUTthesis.bbl
 LaTeX Font Info:    Font shape `TU/BNazanin(0)/m/n' will be
 (Font)              scaled to size 29.85593pt on input line 4.
- [50
+ [52
 
 
 
@@ -1898,7 +1924,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
+[53]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1906,7 +1932,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[52])
+[54])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1914,7 +1940,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[53] (./AUTthesis.aux (./chapter0.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux))
+[55] (./AUTthesis.aux (./chapter0.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1927,15 +1953,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `AUTthesis.out' has not changed.
-(rerunfilecheck)             Checksum: 74BCB9B9D63A08496992CC22787B661E;18092.
+(rerunfilecheck)             Checksum: 22A0D2883C89CD9D3ECA071533B871C6;19158.
  ) 
 Here is how much of TeX's memory you used:
- 32762 strings out of 474773
- 664106 string characters out of 5757724
+ 32764 strings out of 474773
+ 664131 string characters out of 5757724
  1939839 words of memory out of 5000000
- 54150 multiletter control sequences out of 15000+600000
+ 54152 multiletter control sequences out of 15000+600000
  569069 words of font info for 146 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,18n,121p,2462b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on AUTthesis.xdv (68 pages, 910636 bytes).
+Output written on AUTthesis.xdv (70 pages, 937244 bytes).
