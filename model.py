@@ -16,6 +16,13 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report
 from keras.models import Model
 from keras.optimizers import Adam
+import numpy as np
+import time
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Dense, LSTM, TimeDistributed
+from tensorflow.keras.optimizers import Adam
+import matplotlib.pyplot as plt
+from sklearn.metrics import classification_report
 
 class HandGestureClassifierMLP:
     def __init__(self, X_train, y_train, X_test, y_test, actions_num):
@@ -138,7 +145,8 @@ class HandGestureClassifierCNN:
     def train_model(self):
 
         start_train = time.time()
-        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=200, batch_size=64, verbose=2)
+        print(self.X_train.shape, self.y_train.shape, self.X_test.shape, self.y_test.shape, self.input_shape)
+        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=20, batch_size=64, verbose=2)
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
         self.plot_training_progress()
     
@@ -260,6 +268,82 @@ class HandGestureClassifierLSTM:
 
 
 
+
+
+class HandGestureClassifierRNN:
+    def __init__(self, X_train, y_train, X_test, y_test, actions_num):
+        self.X_train = np.array(X_train)
+        self.y_train = np.array(y_train)
+        self.X_test = np.array(X_test)
+        self.y_test = np.array(y_test)
+        self.learning_rate = 0.001
+
+        self.input_shape = self.X_train.shape[1:3]  # (Timesteps, Features)
+        self.actions_num = actions_num
+        self.model = self.build_model()
+        self.train_model()
+        self.save_model()
+        self.test_model()
+
+
+    def build_model(self):
+
+        model = Sequential([
+            LSTM(64, return_sequences=True, input_shape=self.input_shape),
+            TimeDistributed(Dense(self.actions_num, activation='sigmoid')),
+            LSTM(32, return_sequences=False),
+            Dense(128, activation='relu'),
+            Dense(self.actions_num, activation='softmax')
+        ])
+
+        optimizer = Adam(lr=self.learning_rate)
+        model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
+
+        model.summary()
+        return model
+
+
+    def train_model(self):
+        start_train = time.time()
+        print(self.X_train.shape, self.y_train.shape, self.X_test.shape, self.y_test.shape, self.input_shape)
+        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=20, batch_size=64, verbose=2)
+        print('Training model: {:2.2f} s'.format(time.time() - start_train))
+        self.plot_training_progress()
+    
+    def plot_training_progress(self):
+        # Plot training and validation accuracy
+        plt.plot(self.history.history['accuracy'], label='train_accuracy')
+        plt.plot(self.history.history['val_accuracy'], label='test_accuracy')
+        plt.xlabel('Epoch')
+        plt.ylabel('Accuracy')
+        plt.title('Training and Test Accuracy RNN')
+        plt.legend()
+        plt.show()
+
+        # Plot training and validation loss
+        plt.plot(self.history.history['loss'], label='train_loss')
+        plt.plot(self.history.history['val_loss'], label='test_loss')
+        plt.xlabel('Epoch')
+        plt.ylabel('Loss')
+        plt.title('Training and Test Loss RNN')
+        plt.legend()
+        plt.show()
+
+    def save_model(self):
+        self.model.save('models/RNN(200).h5')
+
+    def test_model(self):
+        test_loss, test_acc = self.model.evaluate(self.X_test, self.y_test)
+        print('Test accuracy: {:2.2f}%'.format(test_acc*100))
+        print('Test loss: {:2.2f}%'.format(test_loss*100))
+        predictions = self.model.predict(self.X_test)
+        y_pred = (predictions > 0.5).astype(int)
+        report = classification_report(self.y_test, y_pred)
+        print(report)
+
+# Example usage:
+# Replace X_train, y_train, X_test, y_test, and actions_num with your actual data
+# classifier = HandGestureClassifierRNN(X_train, y_train, X_test, y_test, actions_num)
 
 
 
