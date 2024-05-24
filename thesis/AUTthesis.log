@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  23 MAY 2024 11:26
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  24 MAY 2024 15:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1799,16 +1799,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-Missing character: There is no C (U+0043) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no N (U+004E) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no N (U+004E) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no L (U+004C) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no S (U+0053) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no T (U+0054) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no M (U+004D) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no M (U+004D) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no L (U+004C) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no P (U+0050) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+
+LaTeX Warning: Reference `footdir@159' on page 42 undefined on input line 17.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1818,10 +1811,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [42]
 
-LaTeX Warning: Reference `footdir@159' on page 43 undefined on input line 60.
-
-)
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1829,6 +1818,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [43]
+./chapter3.tex:55: Undefined control sequence.
+l.55 \سعذس
+          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+File: textchart.png Graphic file (type bmp)
+<textchart.png>
+File: CNN.png Graphic file (type bmp)
+<CNN.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1837,131 +1842,77 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [44]
-\openout2 = `chapter4.aux'.
+./chapter3.tex:110: Missing = inserted for \ifdim.
+<to be read again> 
+                   \protect 
+l.110 ...\\ [2.5ex     \lr{CNN} & 7 & 8 \\ [2.5ex]
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
 
- (./chapter4.tex
-فصل 5.
-[45
+./chapter3.tex:110: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.110 ...\\ [2.5ex     \lr{CNN} & 7 & 8 \\ [2.5ex]
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
+./chapter3.tex:110: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.110 ...\\ [2.5ex     \lr{CNN} & 7 & 8 \\ [2.5ex]
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
+./chapter3.tex:110: Incomplete \ifdim; all text was ignored after line 110.
+<inserted text> 
+                \fi 
+l.110 ...\\ [2.5ex     \lr{CNN} & 7 & 8 \\ [2.5ex]
+                                                  
+A forbidden control sequence occurred in skipped text.
+This kind of error happens when you say `\if...' and forget
+the matching `\fi'. I've inserted a `\fi'; this might work.
 
+./chapter3.tex:110: Missing } inserted.
+<inserted text> 
+                }
+l.110 ...\\ [2.5ex     \lr{CNN} & 7 & 8 \\ [2.5ex]
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-]
-Overfull \hbox (12.04762pt too wide) in paragraph at lines 9--17
-[]\TU/BNazanin(0)/m/n/12 در مورد پهپادهای منبع‌باز، محدودیت‌های متفاوتی وجود دارد. این پهپادها ممکن است دارای سخت‌افزارهای[]
- []
+./chapter3.tex:110: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.110 ...\\ [2.5ex     \lr{CNN} & 7 & 8 \\ [2.5ex]
+                                                  
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
 
+./chapter3.tex:111: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.111      \lr{LSTM} & 5 & 8 \\ [2.5ex]
+                                       
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[46]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[47]
-File: multi_boxes.png Graphic file (type bmp)
-<multi_boxes.png>
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 44.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[48]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 72--74
-[][]
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[50])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[51] (./AUTthesis.bbl
-LaTeX Font Info:    Font shape `TU/BNazanin(0)/m/n' will be
-(Font)              scaled to size 29.85593pt on input line 4.
- [52
-
-
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[53]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[54])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[55] (./AUTthesis.aux (./chapter0.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux))
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
- ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `AUTthesis.out' has not changed.
-(rerunfilecheck)             Checksum: 22A0D2883C89CD9D3ECA071533B871C6;19158.
- ) 
-Here is how much of TeX's memory you used:
- 32764 strings out of 474773
- 664131 string characters out of 5757724
- 1939839 words of memory out of 5000000
- 54152 multiletter control sequences out of 15000+600000
- 569069 words of font info for 146 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 117i,18n,121p,2462b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on AUTthesis.xdv (70 pages, 937244 bytes).
+Runaway argument?
+2.5ex\advance \@tempdima \dp \@arstrutbox \vrule \@height \z@ \@depth \ETC.
+./chapter3.tex:117: Paragraph ended before \@argtabularcr was complete.
+<to be read again> 
+                   \par 
+l.117 
+      
+I suspect you've forgotten a `}', caus
