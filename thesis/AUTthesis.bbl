@@ -130,15 +130,6 @@ Fang, Yikai, Wang, Kongqiao, Cheng, Jian, and Lu, Hanqing.
 
 \begin{LTRbibitems}
 \resetlatinfont
-\bibitem{sharma2020hand}
-Sharma, Ashish, Mittal, Anmol, Singh, Savitoj, and Awatramani, Vasudev.
-\newblock Hand gesture recognition using image processing and feature extraction techniques.
-\newblock {\em Procedia Computer Science}, 173:181--190, 2020.
-
-\end{LTRbibitems}
-
-\begin{LTRbibitems}
-\resetlatinfont
 \bibitem{perera2018uav}
 Perera, Asanka~G, Wei~Law, Yee, and Chahl, Javaan.
 \newblock Uav-gesture: A dataset for uav control and gesture recognition.
@@ -242,6 +233,60 @@ Harris, Moh, Agoes, Ali~Suryaperdana, et~al.
 Bhujbal, Kunal and Barahate, Sachin.
 \newblock Custom object detection based on regional convolutional neural network \& yolov3 with dji tello programmable drone.
 \newblock  in {\em 7th International Conference on Innovation \& Research in Technology \& Engineering (ICIRTE)}, 2022.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{rios2013hand}
+Rios-Soria, David~J, Schaeffer, Satu~E, and Garza-Villarreal, Sara~E.
+\newblock Hand-gesture recognition using computer-vision techniques.
+\newblock 2013.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{sharma2020hand}
+Sharma, Ashish, Mittal, Anmol, Singh, Savitoj, and Awatramani, Vasudev.
+\newblock Hand gesture recognition using image processing and feature extraction techniques.
+\newblock {\em Procedia Computer Science}, 173:181--190, 2020.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{trigueiros2015hand}
+Trigueiros, Paulo, Ribeiro, Fernando, and Reis, Lu{\'\i}s~Paulo.
+\newblock Hand gesture recognition system based in computer vision and machine learning.
+\newblock {\em Developments in medical image processing and computational vision},  pp. 355--377, 2015.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{min1997hand}
+Min, Byung-Woo, Yoon, Ho-Sub, Soh, Jung, Yang, Yun-Mo, and Ejima, Toshiaki.
+\newblock Hand gesture recognition using hidden markov models.
+\newblock  in {\em 1997 IEEE International Conference on Systems, Man, and Cybernetics. Computational Cybernetics and Simulation},  vol.~5,  pp. 4232--4235. IEEE, 1997.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{li2012hand}
+Li, Yi.
+\newblock Hand gesture recognition using kinect.
+\newblock  in {\em 2012 IEEE International Conference on Computer Science and Automation Engineering},  pp. 196--199. IEEE, 2012.
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{murthy2010hand}
+Murthy, GRS and Jadon, RS.
+\newblock Hand gesture recognition using neural networks.
+\newblock  in {\em 2010 IEEE 2nd international advance computing conference (IACC)},  pp. 134--138. IEEE, 2010.
 
 \end{LTRbibitems}
 
