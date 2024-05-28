@@ -12,6 +12,7 @@ from collections import Counter
 from colorama import Fore, Back, Style
 import time
 from google.protobuf.json_format import MessageToDict
+from control_drone import ControlDrone
 
 """
 In 
@@ -32,6 +33,7 @@ class HandDetector:
         self.detector = self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
         self.mp_drawing = mp.solutions.drawing_utils
         self.read_gesture_file()
+        drone = ControlDrone()
         self.capture_image()
         
 
