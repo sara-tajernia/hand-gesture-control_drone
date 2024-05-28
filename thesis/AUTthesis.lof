@@ -20,10 +20,14 @@
 \contentsline {figure}{\numberline {3-8}{\ignorespaces پیدا کردن مستطیل حاوی دست}}{35}{figure.caption.39}%
 \contentsline {figure}{\numberline {3-9}{\ignorespaces معماری مدل نقطه عطف دست. این مدل دارای سه خروجی است که یک استخراج کننده ویژگی را به اشتراک می گذارند. هر سر توسط مجموعه داده های مربوطه که با همان رنگ مشخص شده اند آموزش داده می شود.}}{37}{figure.caption.40}%
 \contentsline {figure}{\numberline {3-10}{\ignorespaces موقعیت ۲۱ نقطه کلیدی در ناحیه دست}}{37}{figure.caption.41}%
+\contentsline {figure}{\numberline {3-11}{\ignorespaces نمونه ای از پرسپترون‌های چند لایه دارای دو لایه پنهان}}{39}{figure.caption.42}%
+\contentsline {figure}{\numberline {3-12}{\ignorespaces نمونه معماری شبکه عصبی کانولوشنال}}{40}{figure.caption.43}%
+\contentsline {figure}{\numberline {3-13}{\ignorespaces نمونه معماری شبکه عصبی بازگشتی}}{40}{figure.caption.44}%
+\contentsline {figure}{\numberline {3-14}{\ignorespaces نمونه معماری شبکه‌ حافظه کوتاه مدت بلند مدت}}{41}{figure.caption.45}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces معیارهای ارزیابی برای تشخیص ژست دست در مدل \lr {MLP}}}{44}{figure.caption.43}%
-\contentsline {figure}{\numberline {4-2}{\ignorespaces منحنی‌های کم‌برازش، بهینه و بیش‌برازش}}{44}{figure.caption.44}%
-\contentsline {figure}{\numberline {4-3}{\ignorespaces نمودار روند دقت و خطا بر حسب دوره در داده‌های آموزش و تست در مدل \lr {CNN}}}{45}{figure.caption.45}%
+\contentsline {figure}{\numberline {4-1}{\ignorespaces معیارهای ارزیابی برای تشخیص ژست دست در مدل \lr {MLP}}}{48}{figure.caption.47}%
+\contentsline {figure}{\numberline {4-2}{\ignorespaces منحنی‌های کم‌برازش، بهینه و بیش‌برازش}}{48}{figure.caption.48}%
+\contentsline {figure}{\numberline {4-3}{\ignorespaces نمودار روند دقت و خطا بر حسب دوره در داده‌های آموزش و تست در مدل \lr {CNN}}}{49}{figure.caption.49}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5-1}{\ignorespaces شناسایی یک دست دو مرتبه}}{51}{figure.caption.49}%
+\contentsline {figure}{\numberline {5-1}{\ignorespaces شناسایی یک دست دو مرتبه}}{55}{figure.caption.53}%
 \contentsfinish 
