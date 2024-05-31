@@ -9,6 +9,8 @@ from keras.layers import TimeDistributed
 import numpy as np
 import time
 import cv2
+import itertools
+import seaborn as sns
 import tensorflow as tf
 # from keras.models import Model
 from keras.models import load_model
@@ -120,6 +122,7 @@ class HandGestureClassifierCNN:
         self.train_model()
         self.save_model()
         self.test_model()
+        # self.plot_confusion_matrix()
 
 
     def build_model(self):
@@ -146,7 +149,7 @@ class HandGestureClassifierCNN:
 
         start_train = time.time()
         print(self.X_train.shape, self.y_train.shape, self.X_test.shape, self.y_test.shape, self.input_shape)
-        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=20, batch_size=64, verbose=2)
+        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=200, batch_size=64, verbose=2)
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
         self.plot_training_progress()
     
@@ -171,7 +174,7 @@ class HandGestureClassifierCNN:
 
     
     def save_model(self):
-        self.model.save('models/CNN(200).h5')
+        self.model.save('models/CNN(20).h5')
         # self.model.save('models/weights_CNN_100.h5')
 
     def test_model(self):
@@ -182,6 +185,53 @@ class HandGestureClassifierCNN:
         y_pred = (predictions > 0.5).astype(int)
         report = classification_report(self.y_test, y_pred)
         print(report)
+
+        cm = confusion_matrix(self.y_test.argmax(axis=1), y_pred.argmax(axis=1))
+        self.plot_confusion_matrix(cm, classes=[str(i) for i in range(self.actions_num)])
+
+    def plot_confusion_matrix(self, cm, classes, normalize=False, title='Confusion matrix', cmap=plt.cm.Blues):
+        """
+        This function prints and plots the confusion matrix.
+        Normalization can be applied by setting `normalize=True`.
+        """
+        if normalize:
+            cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+            print("Normalized confusion matrix")
+        else:
+            print('Confusion matrix, without normalization')
+
+        # print(cm)
+
+        plt.figure(figsize=(10, 7))
+        plt.imshow(cm, interpolation='nearest', cmap=cmap)
+        plt.title(title)
+        plt.colorbar()
+        tick_marks = np.arange(len(classes))
+        plt.xticks(tick_marks, classes, rotation=45)
+        plt.yticks(tick_marks, classes)
+
+        thresh = cm.max() / 2.
+        for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
+            plt.text(j, i, format(cm[i, j], '.2f' if normalize else 'd'),
+                     horizontalalignment="center",
+                     color="white" if cm[i, j] > thresh else "black")
+
+        plt.tight_layout()
+        plt.ylabel('True label')
+        plt.xlabel('Predicted label')
+        plt.show()
+
+
+    
+
+
+    # def plot_confusion_matrix(self, cm, classes):
+    #     plt.figure(figsize=(10, 7))
+    #     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=classes, yticklabels=classes, annot_kws={"size": 12})
+    #     plt.xlabel('Predicted')
+    #     plt.ylabel('True')
+    #     plt.title('Confusion Matrix')
+    #     plt.show()
 
 
 

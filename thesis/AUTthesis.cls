@@ -95,7 +95,8 @@
 \@department
 \else
 \if@bscthesis
-پایان نامه کارشناسی
+گزارش پروژه کارشناسی
+% پایان نامه کارشناسی
 \vspace{-.8cm}
 
 \@department

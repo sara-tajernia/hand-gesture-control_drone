@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {2-2-1}مقاله \lr {Hand Gesture Controlled Drones: An Open Source Library}}{9}{subsection.2.2.1}%
 \contentsline {subsubsection}{روش‌شناسی}{9}{section*.4}%
 \contentsline {subsubsection}{نتیجه بدست آمده}{10}{section*.7}%
-\contentsline {subsection}{\numberline {2-2-2}مقاله \lr {A real-time hand gesture recognition method}}{10}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2-2-2}مقاله \lr {A Real-Time Hand Gesture Recognition Method}}{10}{subsection.2.2.2}%
 \contentsline {subsubsection}{روش‌شناسی}{11}{section*.8}%
 \contentsline {subsubsection}{نتیجه}{12}{section*.10}%
 \contentsline {section}{\numberline {2-3}مقالات مربوط به ورودی تصویر دست به مدل}{12}{section.2.3}%
@@ -27,23 +27,23 @@
 \contentsline {subsubsection}{روش‌شناسی}{13}{section*.14}%
 \contentsline {subsubsection}{نتیجه}{14}{section*.15}%
 \contentsline {section}{\numberline {2-4}مقالات مربوط به نقاط کلیدی دست}{14}{section.2.4}%
-\contentsline {subsection}{\numberline {2-4-1}مقاله \lr {Hand Gesture Recognition system for Real-Time Application}}{15}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2-4-1}مقاله \lr {Hand Gesture Recognition System for Real-Time Application}}{15}{subsection.2.4.1}%
 \contentsline {subsubsection}{روش‌شناسی}{15}{section*.16}%
 \contentsline {subsubsection}{نتیجه}{15}{section*.18}%
-\contentsline {subsection}{\numberline {2-4-2}مقاله \lr {An improved hand gesture recognition system using keypoints and hand bounding boxes}}{16}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2-4-2}مقاله \lr {An Improved Hand Gesture Recognition System Using Keypoints and Hand Bounding Boxes}}{16}{subsection.2.4.2}%
 \contentsline {subsubsection}{روش‌شناسی}{16}{section*.19}%
 \contentsline {subsubsection}{نتیجه}{17}{section*.21}%
-\contentsline {subsection}{\numberline {2-4-3}مقاله \lr {Visual gesture recognition based on hand key points}}{17}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2-4-3}مقاله \lr {Visual Gesture Recognition Based On Hand Key Points}}{17}{subsection.2.4.3}%
 \contentsline {subsubsection}{روش‌شناسی}{17}{section*.22}%
 \contentsline {subsubsection}{نتیجه}{17}{section*.24}%
-\contentsline {subsection}{\numberline {2-4-4}مقاله \lr {MediaPipe Hands: On-device Real-time Hand Tracking}}{18}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2-4-4}مقاله \lr {MediaPipe Hands: On-Device Real-time Hand Tracking}}{18}{subsection.2.4.4}%
 \contentsline {subsubsection}{روش‌شناسی}{18}{section*.25}%
 \contentsline {subsubsection}{نتیجه}{18}{section*.26}%
 \contentsline {section}{\numberline {2-5}مقالات مربوط به اجرای مدل‌های بینایی کامپیوتر روی پهپاد}{19}{section.2.5}%
-\contentsline {subsection}{\numberline {2-5-1}مقاله \lr {Modeling relation among implementing AI-based drones and sustainable construction project success}}{19}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2-5-1}مقاله \lr {Modeling Relation Among Implementing AI-Based drones and Sustainable Construction Project Success}}{19}{subsection.2.5.1}%
 \contentsline {subsubsection}{روش‌شناسی}{19}{section*.27}%
 \contentsline {subsubsection}{نتیجه}{20}{section*.28}%
-\contentsline {subsection}{\numberline {2-5-2}مقاله \lr {Use of a DJI Tello Drone as an Educational Platform in the Field of Control Engineering}}{20}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2-5-2}مقاله \lr {Use of A DJI Tello Drone as An Educational Platform in the Field of Control Engineering}}{20}{subsection.2.5.2}%
 \contentsline {subsubsection}{روش‌شناسی}{20}{section*.29}%
 \contentsline {subsubsection}{نتیجه}{21}{section*.31}%
 \contentsline {section}{\numberline {2-6}جمع‌بندی}{21}{section.2.6}%
@@ -56,24 +56,24 @@
 \contentsline {section}{\numberline {3-6}ابزار ها و نرم افزار های مورد استفاده}{26}{section.3.6}%
 \contentsline {subsection}{\numberline {3-6-1}زبان برنامه‌نویسی پایتون}{27}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3-6-2}کتابخانه \lr {Scikit-learn}}{27}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3-6-3}رابط برنامه‌نویسی \lr {Keras}}{28}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3-6-3}رابط برنامه‌نویسی \lr {Keras}}{27}{subsection.3.6.3}%
 \contentsline {subsection}{\numberline {3-6-4}کتابخانه‌های\lr {MediaPipe}}{28}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3-6-5}کتابخانه \lr {NumPy}}{29}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3-6-5}کتابخانه \lr {NumPy}}{28}{subsection.3.6.5}%
 \contentsline {subsection}{\numberline {3-6-6}کتابخانه \lr {Matplotlib}}{29}{subsection.3.6.6}%
 \contentsline {subsection}{\numberline {3-6-7}کتابخانه \lr {OpenCV}}{30}{subsection.3.6.7}%
 \contentsline {subsection}{\numberline {3-6-8}پهپاد \lr {DJI Tello}}{30}{subsection.3.6.8}%
 \contentsline {section}{\numberline {3-7}مدیاپایپ}{31}{section.3.7}%
-\contentsline {subsection}{\numberline {3-7-1}محدود کننده جریان زمان واقعی \LTRfootnote {Real Time Flow Limiter}}{32}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3-7-1}محدود کننده جریان زمان واقعی \LTRfootnote {Real Time Flow Limiter}}{31}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3-7-2}تشخیص دست \LTRfootnote {Hand Detection}}{33}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3-7-3}تشخیص به مستطیل \LTRfootnote {Detection To Rectangle}}{35}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3-7-3}تشخیص به مستطیل \LTRfootnote {Detection To Rectangle}}{34}{subsection.3.7.3}%
 \contentsline {subsection}{\numberline {3-7-4}برش تصویر \LTRfootnote {Image Cropping}}{35}{subsection.3.7.4}%
-\contentsline {subsection}{\numberline {3-7-5}تشخیص نقاط عطف دست \LTRfootnote {Hand Landmark}}{36}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3-7-5}تشخیص نقاط عطف دست \LTRfootnote {Hand Landmark}}{35}{subsection.3.7.5}%
 \contentsline {subsection}{\numberline {3-7-6}نقاط عطف یه مستطیل \LTRfootnote {Landmarks To Rectangle}}{36}{subsection.3.7.6}%
-\contentsline {subsection}{\numberline {3-7-7}ارائه کننده حاشیه نویسی \LTRfootnote {AnnotationRenderer}}{37}{subsection.3.7.7}%
+\contentsline {subsection}{\numberline {3-7-7}ارائه کننده حاشیه نویسی \LTRfootnote {Annotation Renderer}}{37}{subsection.3.7.7}%
 \contentsline {subsection}{\numberline {3-7-8}مدل‌های کلاس‌بندی برای تعیین ژست دست}{38}{subsection.3.7.8}%
 \contentsline {subsection}{\numberline {3-7-9}شبکه پرسپترون چند لایه}{38}{subsection.3.7.9}%
-\contentsline {subsection}{\numberline {3-7-10}شبکه عصبی کانولوشنال}{38}{subsection.3.7.10}%
-\contentsline {subsection}{\numberline {3-7-11}شبکه عصبی بازگشتی}{39}{subsection.3.7.11}%
+\contentsline {subsection}{\numberline {3-7-10}شبکه عصبی کانولوشنال}{39}{subsection.3.7.10}%
+\contentsline {subsection}{\numberline {3-7-11}شبکه عصبی بازگشتی}{40}{subsection.3.7.11}%
 \contentsline {subsection}{\numberline {3-7-12}شبکه‌های حافظه کوتاه مدت بلند مدت}{40}{subsection.3.7.12}%
 \contentsline {section}{\numberline {3-8}پیش‌پردازش}{41}{section.3.8}%
 \contentsline {section}{\numberline {3-9}پس‌پردازش}{42}{section.3.9}%
@@ -96,7 +96,7 @@
 \contentsline {section}{\numberline {5-2}محدودیت وجود پهپاد‌های منبع‌باز}{53}{section.5.2}%
 \contentsline {section}{\numberline {5-3}وجود چندین دست در تصویر}{54}{section.5.3}%
 \contentsline {section}{\numberline {5-4}شناسایی یک دست در دو مستطیل در نتیجه دو خروجی دست}{54}{section.5.4}%
-\contentsline {section}{\numberline {5-5}اجرا روی کارت گرافیکی \LTRfootnote {GPU}}{55}{section.5.5}%
+\contentsline {section}{\numberline {5-5}اجرا روی کارت گرافیکی \LTRfootnote {Graphics Processing Units}}{55}{section.5.5}%
 \contentsline {section}{\numberline {5-6}اجرای پروژه با برنامه \lr {C++}}{56}{section.5.6}%
 \contentsline {section}{\numberline {5-7}استفاده از مدل‌های موازی برای تشخیص ژست دست}{57}{section.5.7}%
 \contentsline {section}{\numberline {5-8}توسعه برنامه با استفاده از سایر قسمت‌های بدن انسان}{57}{section.5.8}%

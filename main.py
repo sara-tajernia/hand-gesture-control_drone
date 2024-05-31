@@ -27,18 +27,18 @@ if __name__ == "__main__":
 
 
     # model = HandGestureClassifierMLP(X_train, y_train, X_test, y_test, actions_num).model
-    # model = HandGestureClassifierCNN(X_train, y_train, X_test, y_test, actions_num).model
+    model = HandGestureClassifierCNN(X_train, y_train, X_test, y_test, actions_num).model
     # model = HandGestureClassifierLSTM(X_train, y_train, X_test, y_test, actions_num).model
     # model = HandGestureClassifierRNN(X_train, y_train, X_test, y_test, actions_num).model
 
 
 
     # Uncomment if you want het orders for drone
-    hand_detector = HandDetector()
+    # hand_detector = HandDetector()
 
 
     #Uncomment if if you want to see the accuracy of 20% of data
-    # TestModel(X_test, y_test, 'models/RNN(200).h5')
+    # TestModel(X_test, y_test, 'models/CNN(200).h5')
 
 
     #Uncomment if you want to collect data to add to dataset

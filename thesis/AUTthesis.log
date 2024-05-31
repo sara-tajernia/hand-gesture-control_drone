@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  28 MAY 2024 15:09
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  31 MAY 2024 18:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1303,6 +1303,11 @@ Overfull \hbox (18.84433pt too wide) in paragraph at lines 26--26
  [][][] [][][][][][][]\TU/BNazanin(0)/m/n/12 مقاله []\TU/TimesNewRoman(0)/m/n/12 UAV-GESTURE: A Dataset for UAV Control and Gesture Recognition[][][][][][][] [] [] 
  []
 
+
+Overfull \hbox (1.16739pt too wide) in paragraph at lines 43--43
+ [][][] [][][][][][][]\TU/BNazanin(0)/m/n/12 مقاله []\TU/TimesNewRoman(0)/m/n/12 Modeling Relation Among Implementing AI-Based drones and[][][][][][] 
+ []
+
 [3
 
 ]
@@ -1497,8 +1502,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13]
-Overfull \hbox (15.13425pt too wide) in paragraph at lines 159--159
-[][]\TU/BNazanin(0)/b/n/14.4 مقاله []\TU/TimesNewRoman(0)/b/n/14.4 Hand Gesture Recognition system for Real-Time Application[] []
+Overfull \hbox (17.53894pt too wide) in paragraph at lines 160--160
+[][]\TU/BNazanin(0)/b/n/14.4 مقاله []\TU/TimesNewRoman(0)/b/n/14.4 Hand Gesture Recognition System for Real-Time Application[] []
  []
 
 
@@ -1545,6 +1550,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
+Overfull \hbox (0.81343pt too wide) in paragraph at lines 257--257
+[][]\TU/BNazanin(0)/b/n/14.4 مقاله []\TU/TimesNewRoman(0)/b/n/14.4 Modeling Relation Among Implementing AI-Based drones[][]
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1658,6 +1667,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [29]
+File: table.png Graphic file (type bmp)
+<table.png>
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1666,11 +1678,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [30]
-File: table.png Graphic file (type bmp)
-<table.png>
+
+LaTeX Warning: Reference `Chart' on page 31 undefined on input line 156.
+
 File: hand_chart.png Graphic file (type bmp)
 <hand_chart.png>
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1698,18 +1710,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 175.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[33]
 File: mediapipe.png Graphic file (type bmp)
 <mediapipe.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: hand_detector.png Graphic file (type bmp)
 <hand_detector.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1722,10 +1731,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[34]
+[33]
 File: bounding_box.jpeg Graphic file (type bmp)
 <bounding_box.jpeg>
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 214.
@@ -1745,12 +1762,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [35]
 File: landmark.png Graphic file (type bmp)
 <landmark.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: hand-landmarks.png Graphic file (type bmp)
 <hand-landmarks.png>
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1782,9 +1796,6 @@ File: MLP.png Graphic file (type bmp)
 <MLP.png>
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1794,9 +1805,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [38]
 File: CNN_arch.jpeg Graphic file (type bmp)
 <CNN_arch.jpeg>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1866,7 +1874,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [45]
 
-LaTeX Warning: Reference `footdir@182' on page 46 undefined on input line 31.
+LaTeX Warning: Reference `footdir@179' on page 46 undefined on input line 31.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2065,15 +2073,15 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `AUTthesis.out' has not changed.
-(rerunfilecheck)             Checksum: 225E06A40537FDF6CE779062593ACBB0;20440.
+(rerunfilecheck)             Checksum: CC0CF2F460D8EAD8290C8A755DA273C6;20564.
  ) 
 Here is how much of TeX's memory you used:
- 32947 strings out of 474773
- 667068 string characters out of 5757724
+ 32937 strings out of 474773
+ 666925 string characters out of 5757724
  1941839 words of memory out of 5000000
- 54323 multiletter control sequences out of 15000+600000
+ 54313 multiletter control sequences out of 15000+600000
  569069 words of font info for 146 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,18n,121p,2462b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on AUTthesis.xdv (79 pages, 1085036 bytes).
+Output written on AUTthesis.xdv (79 pages, 1083660 bytes).
