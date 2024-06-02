@@ -104,14 +104,13 @@ class HandDetector:
                             action = ten_y.count(most_action)
                             # print(prediction_index)
                             if self.vote <= action / self.windows and most_action != 9:
-                                print(self.status)
                                 if not self.status:      
                                     if most_action == 2:       
                                         self.status = True
-                                        print(Fore.LIGHTCYAN_EX + f"Starting {self.gestures[most_action]}")
-                                        # self.drone.start()
+                                        # print(Fore.LIGHTCYAN_EX + f"Starting {self.gestures[most_action]}")
+                                        self.drone.follow_order(most_action)
                                 else:
-                                    print(Fore.LIGHTCYAN_EX + f"DO THE ACTION {self.gestures[most_action]}")
+                                    # print(Fore.LIGHTCYAN_EX + f"DO THE ACTION {self.gestures[most_action]}")
                                     self.drone.follow_order(most_action)
 
                             ten_y.pop(0)

@@ -1,9 +1,8 @@
 from djitellopy import Tello
 import time
-
+from colorama import Fore, Back, Style
 
 class ControlDrone:
-
     def __init__(self):
         self.tello = Tello()
         self.info_drone()
@@ -26,34 +25,34 @@ class ControlDrone:
 
     def follow_order(self, order):
         if order == 0: #Forward
-            print('Forward')
+            print(Fore.LIGHTMAGENTA_EX ,"DO THE ACTION Forward")
 
         elif order == 1:   #Stop
-            print('Stop')
+            print(Fore.LIGHTBLUE_EX ," DO THE ACTION Stop")
 
         elif order == 2:  #Up
-            print('Up')
+            print(Fore.LIGHTBLUE_EX ," DO THE ACTION Up")
 
         elif order == 3:  #Land
-            print('Land')
+            print(Fore.LIGHTBLUE_EX ," DO THE ACTION Land")
 
         elif order == 4:  #Down
-            print('Down')
+            print(Fore.LIGHTBLUE_EX ," DO THE ACTION Down")
 
         elif order == 5:  #Back
-            print('Back')
+            print(Fore.LIGHTBLUE_EX ," DO THE ACTION Back")
 
         elif order == 6:  #Left
-            print('Left')
+            print(Fore.LIGHTBLUE_EX ," DO THE ACTION Left")
 
         elif order == 7:  #Right
-            print('Right')
+            print(Fore.LIGHTBLUE_EX ," DO THE ACTION Right")
 
         elif order == 8:  #Piece
-            print('Take a Picture')
+            print(Fore.LIGHTBLUE_EX ," DO THE ACTION Take a Picture")
 
-        elif order == 9:    # Take a Picture
-            print('NONE')
+        elif order == 9:    #None
+            print(Fore.LIGHTBLUE_EX ," DO NOTHING")
 
         # if order == 0: #Forward
         #     self.tello.move_forward(10)
