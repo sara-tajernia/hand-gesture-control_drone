@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  31 MAY 2024 18:55
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  2 JUN 2024 23:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1303,11 +1303,6 @@ Overfull \hbox (18.84433pt too wide) in paragraph at lines 26--26
  [][][] [][][][][][][]\TU/BNazanin(0)/m/n/12 مقاله []\TU/TimesNewRoman(0)/m/n/12 UAV-GESTURE: A Dataset for UAV Control and Gesture Recognition[][][][][][][] [] [] 
  []
 
-
-Overfull \hbox (1.16739pt too wide) in paragraph at lines 43--43
- [][][] [][][][][][][]\TU/BNazanin(0)/m/n/12 مقاله []\TU/TimesNewRoman(0)/m/n/12 Modeling Relation Among Implementing AI-Based drones and[][][][][][] 
- []
-
 [3
 
 ]
@@ -1447,9 +1442,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [8]
-Overfull \hbox (6.5191pt too wide) in paragraph at lines 30--30
+Overfull \hbox (6.5191pt too wide) in paragraph at lines 27--27
 [][]\TU/BNazanin(0)/b/n/14.4 مقاله []\TU/TimesNewRoman(0)/b/n/14.4 Hand Gesture Controlled Drones: An Open Source Library[] []
  []
+
+File: Haar3.png Graphic file (type bmp)
+<Haar3.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--45
+[][]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1461,8 +1466,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [9]
 File: Haar2.png Graphic file (type bmp)
 <Haar2.png>
-File: Haar3.png Graphic file (type bmp)
-<Haar3.png>
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1502,10 +1505,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13]
-Overfull \hbox (17.53894pt too wide) in paragraph at lines 160--160
-[][]\TU/BNazanin(0)/b/n/14.4 مقاله []\TU/TimesNewRoman(0)/b/n/14.4 Hand Gesture Recognition System for Real-Time Application[] []
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1514,9 +1513,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14]
+Overfull \hbox (17.53894pt too wide) in paragraph at lines 153--153
+[][]\TU/BNazanin(0)/b/n/14.4 مقاله []\TU/TimesNewRoman(0)/b/n/14.4 Hand Gesture Recognition System for Real-Time Application[] []
+ []
+
 File: SIFT.png Graphic file (type bmp)
 <SIFT.png>
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1527,6 +1529,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [15]
 File: keypoints_boundingBox.png Graphic file (type bmp)
 <keypoints_boundingBox.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1550,8 +1555,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-Overfull \hbox (0.81343pt too wide) in paragraph at lines 257--257
-[][]\TU/BNazanin(0)/b/n/14.4 مقاله []\TU/TimesNewRoman(0)/b/n/14.4 Modeling Relation Among Implementing AI-Based drones[][]
+Overfull \hbox (3.20406pt too wide) in paragraph at lines 250--250
+[][]\TU/BNazanin(0)/b/n/14.4 مقاله []\TU/TimesNewRoman(0)/b/n/14.4 Modeling Relation Among Implementing AI-Based Drones[][]
  []
 
 
@@ -1580,7 +1585,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20]
 File: tello.png Graphic file (type bmp)
 <tello.png>
-)
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1588,12 +1593,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21]
+[21])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22]
 \openout2 = `chapter2.aux'.
 
  (./chapter2.tex
 فصل 3.
-[22
+[23
 
 
 
@@ -1609,18 +1622,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[23]
+[24]
 File: gestures.png Graphic file (type bmp)
 <gestures.png>
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1645,12 +1650,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [27]
-File: mediapipe2.png Graphic file (type bmp)
-<mediapipe2.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1659,6 +1658,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [28]
+File: mediapipe2.png Graphic file (type bmp)
+<mediapipe2.png>
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1667,9 +1669,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [29]
-File: table.png Graphic file (type bmp)
-<table.png>
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1679,18 +1678,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [30]
 
-LaTeX Warning: Reference `Chart' on page 31 undefined on input line 156.
-
-File: hand_chart.png Graphic file (type bmp)
-<hand_chart.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 165.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1698,6 +1685,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [31]
+File: table.png Graphic file (type bmp)
+<table.png>
+File: flowchart.png Graphic file (type bmp)
+<flowchart.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 215.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1707,24 +1706,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [32]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 175.
-
-File: mediapipe.png Graphic file (type bmp)
-<mediapipe.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: hand_detector.png Graphic file (type bmp)
-<hand_detector.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 202.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1732,8 +1713,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [33]
-File: bounding_box.jpeg Graphic file (type bmp)
-<bounding_box.jpeg>
+File: mediapipe.png Graphic file (type bmp)
+<mediapipe.png>
+File: hand_detector.png Graphic file (type bmp)
+<hand_detector.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 242.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1743,15 +1733,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [34]
+File: landmark.png Graphic file (type bmp)
+<landmark.png>
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 214.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 221.
+File: hand-landmarks.png Graphic file (type bmp)
+<hand-landmarks.png>
 
-Missing character: There is no z (U+007A) in font B Nazanin/OT:language=dflt;script=arab;mapping=persian-tex-text;!
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1760,17 +1752,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [35]
-File: landmark.png Graphic file (type bmp)
-<landmark.png>
-File: hand-landmarks.png Graphic file (type bmp)
-<hand-landmarks.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 250.
+(hyperref)                removing `\@ifnextchar' on input line 273.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1782,7 +1766,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [36]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 257.
+(hyperref)                removing `\@ifnextchar' on input line 280.
+
+File: bounding_box.jpeg Graphic file (type bmp)
+<bounding_box.jpeg>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 291.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1792,8 +1785,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [37]
-File: MLP.png Graphic file (type bmp)
-<MLP.png>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 298.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1803,9 +1797,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [38]
-File: CNN_arch.jpeg Graphic file (type bmp)
-<CNN_arch.jpeg>
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 304.
+
+File: MLP.png Graphic file (type bmp)
+<MLP.png>
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1814,9 +1811,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [39]
-File: RNN.png Graphic file (type bmp)
-<RNN.png>
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1825,8 +1819,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [40]
-File: LSTM.png Graphic file (type bmp)
-<LSTM.png>
+File: CNN_arch.jpeg Graphic file (type bmp)
+<CNN_arch.jpeg>
+File: RNN.png Graphic file (type bmp)
+<RNN.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1836,8 +1835,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [41]
+File: LSTM.png Graphic file (type bmp)
+<LSTM.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42]
 LaTeX Font Info:    Font shape `TU/BNazanin(0)/m/n' will be
-(Font)              scaled to size 7.19998pt on input line 353.
+(Font)              scaled to size 7.19998pt on input line 392.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1846,7 +1859,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[42])
+[43])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1854,12 +1867,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[43]
+[44]
 \openout2 = `chapter3.aux'.
 
  (./chapter3.tex
 فصل 4.
-[44
+[45
 
 
 
@@ -1872,9 +1885,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[45]
+[46]
 
-LaTeX Warning: Reference `footdir@179' on page 46 undefined on input line 31.
+LaTeX Warning: Reference `footdir@188' on page 47 undefined on input line 31.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1883,7 +1896,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[46]
+[47]
 File: textchart.png Graphic file (type bmp)
 <textchart.png>
 
@@ -1897,7 +1910,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[47]
+[48]
 File: fitting.png Graphic file (type bmp)
 <fitting.png>
 File: CNN.png Graphic file (type bmp)
@@ -1913,7 +1926,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[48]
+[49]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1921,7 +1934,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[49]
+[50]
 Overfull \hbox (13.14719pt too wide) in paragraph at lines 153--175
  [][][][] 
  []
@@ -1937,7 +1950,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50]
+[51]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1945,12 +1958,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
+[52]
 \openout2 = `chapter4.aux'.
 
  (./chapter4.tex
 فصل 5.
-[52
+[53
 
 
 
@@ -1967,7 +1980,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[53]
+[54]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1975,7 +1988,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[54]
+[55]
 File: multi_boxes.png Graphic file (type bmp)
 <multi_boxes.png>
 
@@ -1990,7 +2003,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[55]
+[56]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1998,7 +2011,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[56]
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 72--74
 [][]
  []
@@ -2010,7 +2023,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[57])
+[58])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2018,22 +2031,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[58] (./AUTthesis.bbl
+[59] (./AUTthesis.bbl
 LaTeX Font Info:    Font shape `TU/BNazanin(0)/m/n' will be
 (Font)              scaled to size 29.85593pt on input line 4.
- [59
+ [60
 
 
 
 ]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[60]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2049,7 +2054,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[62])
+[62]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2057,7 +2062,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[63] (./AUTthesis.aux (./chapter0.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux))
+[63])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[64] (./AUTthesis.aux (./chapter0.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -2073,15 +2086,15 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `AUTthesis.out' has not changed.
-(rerunfilecheck)             Checksum: CC0CF2F460D8EAD8290C8A755DA273C6;20564.
+(rerunfilecheck)             Checksum: 0744619C55EAD47E0BDADC6CC2F71139;20853.
  ) 
 Here is how much of TeX's memory you used:
- 32937 strings out of 474773
- 666925 string characters out of 5757724
+ 32973 strings out of 474773
+ 667622 string characters out of 5757724
  1941839 words of memory out of 5000000
- 54313 multiletter control sequences out of 15000+600000
- 569069 words of font info for 146 fonts, out of 8000000 for 9000
+ 54347 multiletter control sequences out of 15000+600000
+ 569077 words of font info for 147 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,18n,121p,2462b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on AUTthesis.xdv (79 pages, 1083660 bytes).
+Output written on AUTthesis.xdv (80 pages, 1109976 bytes).
