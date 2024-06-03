@@ -53,7 +53,7 @@
 \contentsline {section}{\numberline {3-3}دیتاست}{26}{section.3.3}%
 \contentsline {section}{\numberline {3-4}اهمیت ژست دست}{26}{section.3.4}%
 \contentsline {section}{\numberline {3-5}کنترل پهپاد}{27}{section.3.5}%
-\contentsline {section}{\numberline {3-6}ابزار ها و نرم افزار های مورد استفاده}{28}{section.3.6}%
+\contentsline {section}{\numberline {3-6}ابزار‌ها و نرم افزار های مورد استفاده}{28}{section.3.6}%
 \contentsline {subsection}{\numberline {3-6-1}کتابخانه \lr {TensorFlow}}{28}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3-6-2}کتابخانه \lr {Scikit-learn}}{28}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3-6-3}رابط برنامه‌نویسی \lr {Keras}}{29}{subsection.3.6.3}%
@@ -87,22 +87,25 @@
 \contentsline {subsection}{\numberline {4-2-3}فراخوانی}{48}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4-2-4}امتیاز \lr {F1}}{48}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4-2-5}گزارش معیارهای ارزیابی در مدل‌ها}{48}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4-3}نمودار‌های دقت و خطا بر حسب دوره}{48}{section.4.3}%
-\contentsline {section}{\numberline {4-4}سرعت اجرای برنامه}{50}{section.4.4}%
-\contentsline {section}{\numberline {4-5}سخت‌افزار مورد نیاز}{50}{section.4.5}%
-\contentsline {section}{\numberline {4-6}مقایسه دقت پروژه ما با کارهای مشابه}{51}{section.4.6}%
-\contentsline {section}{\numberline {4-7}جمع‌بندی}{51}{section.4.7}%
-\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{53}{chapter.5}%
-\contentsline {section}{\numberline {5-1}مقدمه}{54}{section.5.1}%
-\contentsline {section}{\numberline {5-2}محدودیت وجود پهپاد‌های منبع‌باز}{54}{section.5.2}%
-\contentsline {section}{\numberline {5-3}وجود چندین دست در تصویر}{55}{section.5.3}%
-\contentsline {section}{\numberline {5-4}شناسایی یک دست در دو مستطیل در نتیجه دو خروجی دست}{55}{section.5.4}%
-\contentsline {section}{\numberline {5-5}اجرا روی کارت گرافیکی \LTRfootnote {Graphics Processing Units}}{56}{section.5.5}%
-\contentsline {section}{\numberline {5-6}اجرای پروژه با برنامه \lr {C++}}{57}{section.5.6}%
-\contentsline {section}{\numberline {5-7}استفاده از مدل‌های موازی برای تشخیص ژست دست}{58}{section.5.7}%
-\contentsline {section}{\numberline {5-8}توسعه برنامه با استفاده از سایر قسمت‌های بدن انسان}{58}{section.5.8}%
-\contentsline {subsection}{\numberline {5-8-1}کنترل پهپاد با حرکات چشم}{58}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5-8-2}کنترل پهپاد با حرکات سر}{59}{subsection.5.8.2}%
-\contentsline {section}{\numberline {5-9}جمع‌بندی}{59}{section.5.9}%
-\contentsline {chapter}{کتاب‌نامه}{60}{appendix*.54}%
+\contentsline {subsection}{\numberline {4-2-6}ماتریس درهم‌ریختگی\LTRfootnote {Confusion Matrix}}{49}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4-3}نمودار‌های دقت و خطا بر حسب دوره}{49}{section.4.3}%
+\contentsline {section}{\numberline {4-4}سرعت اجرای برنامه}{51}{section.4.4}%
+\contentsline {section}{\numberline {4-5}سخت‌افزار مورد نیاز}{52}{section.4.5}%
+\contentsline {section}{\numberline {4-6}مقایسه دقت پروژه ما با کارهای مشابه}{52}{section.4.6}%
+\contentsline {section}{\numberline {4-7}جمع‌بندی}{52}{section.4.7}%
+\contentsline {chapter}{\numberline {5}نتیجه گیری و پیشنهادات}{55}{chapter.5}%
+\contentsline {section}{\numberline {5-1}مقدمه}{56}{section.5.1}%
+\contentsline {section}{\numberline {5-2}نتیجه‌گیری}{56}{section.5.2}%
+\contentsline {section}{\numberline {5-3}پیشنهادات}{56}{section.5.3}%
+\contentsline {subsection}{\numberline {5-3-1}محدودیت وجود پهپاد‌های منبع‌باز}{56}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5-3-2}وجود چندین دست در تصویر}{57}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5-3-3}شناسایی یک دست در دو مستطیل در نتیجه دو خروجی دست}{58}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5-3-4}اجرا روی کارت گرافیکی \LTRfootnote {Graphics Processing Units}}{58}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5-3-5}اجرای پروژه با برنامه \lr {C++}}{59}{subsection.5.3.5}%
+\contentsline {subsection}{\numberline {5-3-6}استفاده از مدل‌های موازی برای تشخیص ژست دست}{60}{subsection.5.3.6}%
+\contentsline {subsection}{\numberline {5-3-7}توسعه برنامه با استفاده از سایر قسمت‌های بدن انسان}{60}{subsection.5.3.7}%
+\contentsline {subsubsection}{کنترل پهپاد با حرکات چشم}{60}{section*.55}%
+\contentsline {subsubsection}{کنترل پهپاد با حرکات سر}{61}{section*.56}%
+\contentsline {section}{\numberline {5-4}جمع‌بندی}{61}{section.5.4}%
+\contentsline {chapter}{کتاب‌نامه}{63}{appendix*.57}%
 \contentsfinish 

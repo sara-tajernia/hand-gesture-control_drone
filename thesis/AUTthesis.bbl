@@ -292,6 +292,51 @@ Bhujbal, Kunal and Barahate, Sachin.
 
 \begin{LTRbibitems}
 \resetlatinfont
+\bibitem{Accuracy53:online}
+Accuracy vs. precision vs. recall in machine learning: what's the difference?
+\newblock \url{https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall#:~:text=Accuracy%20is%20a%20metric%20that,often%20the%20model%20is%20right%3F}.
+\newblock (Accessed on 06/03/2024).
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{Precisio82:online}
+Precision.
+\newblock \url{https://c3.ai/glossary/machine-learning/precision/#:~:text=Precision%20is%20one%20indicator%20of,the%20number%20of%20false%20positives).}
+\newblock (Accessed on 06/03/2024).
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{Understa37:online}
+Understanding precision, recall, f1-score, and support in machine learning evaluation | by nirajan acharya | medium.
+\newblock \url{https://medium.com/@nirajan.acharya777/understanding-precision-recall-f1-score-and-support-in-machine-learning-evaluation-7ec935e8512e}.
+\newblock (Accessed on 06/03/2024).
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{F1scorei14:online}
+F1-score in machinaal leren - geeksforgeeks.
+\newblock \url{https://www.geeksforgeeks.org/f1-score-in-machine-learning/}.
+\newblock (Accessed on 06/03/2024).
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
+\bibitem{Confusio72:online}
+Confusion matrix - an overview | sciencedirect topics.
+\newblock \url{https://www.sciencedirect.com/topics/engineering/confusion-matrix}.
+\newblock (Accessed on 06/03/2024).
+
+\end{LTRbibitems}
+
+\begin{LTRbibitems}
+\resetlatinfont
 \bibitem{rios2013hand}
 Rios-Soria, David~J, Schaeffer, Satu~E, and Garza-Villarreal, Sara~E.
 \newblock Hand-gesture recognition using computer-vision techniques.

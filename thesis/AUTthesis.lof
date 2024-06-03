@@ -26,8 +26,9 @@
 \contentsline {figure}{\numberline {3-14}{\ignorespaces نمونه معماری شبکه‌ حافظه کوتاه مدت بلند مدت}}{43}{figure.caption.45}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4-1}{\ignorespaces معیارهای ارزیابی برای تشخیص ژست دست در مدل \lr {MLP}}}{49}{figure.caption.47}%
-\contentsline {figure}{\numberline {4-2}{\ignorespaces منحنی‌های کم‌برازش، بهینه و بیش‌برازش}}{49}{figure.caption.48}%
-\contentsline {figure}{\numberline {4-3}{\ignorespaces نمودار روند دقت و خطا بر حسب دوره در داده‌های آموزش و تست در مدل \lr {CNN}}}{50}{figure.caption.49}%
+\contentsline {figure}{\numberline {4-2}{\ignorespaces ماتریس درهم‌ریختگی در مدل \lr {MLP}}}{50}{figure.caption.48}%
+\contentsline {figure}{\numberline {4-3}{\ignorespaces منحنی‌های کم‌برازش، بهینه و بیش‌برازش}}{51}{figure.caption.49}%
+\contentsline {figure}{\numberline {4-4}{\ignorespaces نمودار روند دقت و خطا بر حسب دوره در داده‌های آموزش و تست در مدل \lr {CNN}}}{51}{figure.caption.50}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5-1}{\ignorespaces شناسایی یک دست دو مرتبه}}{56}{figure.caption.53}%
+\contentsline {figure}{\numberline {5-1}{\ignorespaces شناسایی یک دست دو مرتبه}}{58}{figure.caption.54}%
 \contentsfinish 

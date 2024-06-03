@@ -174,7 +174,7 @@ class HandGestureClassifierCNN:
 
     
     def save_model(self):
-        self.model.save('models/CNN(20).h5')
+        self.model.save('models/CNN_right.h5')
         # self.model.save('models/weights_CNN_100.h5')
 
     def test_model(self):

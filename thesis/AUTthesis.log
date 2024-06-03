@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  2 JUN 2024 23:14
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.13)  3 JUN 2024 14:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1887,7 +1887,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [46]
 
-LaTeX Warning: Reference `footdir@188' on page 47 undefined on input line 31.
+LaTeX Warning: Reference `footdir@190' on page 47 undefined on input line 30.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1904,6 +1904,15 @@ File: textchart.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 74.
+
+
+Overfull \hbox (4.7351pt too wide) in paragraph at lines 75--78
+[]\TU/BNazanin(0)/m/n/12 ماتریس درهم‌ریختگی یک ابزار مهم در ارزیابی عملکرد مدل‌های طبقه‌بندی است. این ماتریس نشان‌دهنده[]
+ []
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1911,10 +1920,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [48]
-File: fitting.png Graphic file (type bmp)
-<fitting.png>
-File: CNN.png Graphic file (type bmp)
-<CNN.png>
+File: confusion_mlp.png Graphic file (type bmp)
+<confusion_mlp.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1927,6 +1934,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [49]
+File: fitting.png Graphic file (type bmp)
+<fitting.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: CNN.png Graphic file (type bmp)
+<CNN.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1935,7 +1953,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [50]
-Overfull \hbox (13.14719pt too wide) in paragraph at lines 153--175
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[51]
+Overfull \hbox (13.14719pt too wide) in paragraph at lines 172--194
  [][][][] 
  []
 
@@ -1950,7 +1976,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
+[52]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1958,21 +1984,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[52]
-\openout2 = `chapter4.aux'.
-
- (./chapter4.tex
-فصل 5.
-[53
-
-
-
-
-]
-Overfull \hbox (12.04762pt too wide) in paragraph at lines 9--17
-[]\TU/BNazanin(0)/m/n/12 در مورد پهپادهای منبع‌باز، محدودیت‌های متفاوتی وجود دارد. این پهپادها ممکن است دارای سخت‌افزارهای[]
- []
-
+[53]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1981,20 +1993,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [54]
+\openout2 = `chapter4.aux'.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[55]
-File: multi_boxes.png Graphic file (type bmp)
-<multi_boxes.png>
+ (./chapter4.tex
+فصل 5.
+[55
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 44.
+
+
+]
+Overfull \hbox (12.04762pt too wide) in paragraph at lines 19--27
+[]\TU/BNazanin(0)/m/n/12 در مورد پهپادهای منبع‌باز، محدودیت‌های متفاوتی وجود دارد. این پهپادها ممکن است دارای سخت‌افزارهای[]
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2012,7 +2023,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [57]
-Underfull \hbox (badness 10000) in paragraph at lines 72--74
+File: multi_boxes.png Graphic file (type bmp)
+<multi_boxes.png>
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 54.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[58]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
 [][]
  []
 
@@ -2023,22 +2057,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[58])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[59] (./AUTthesis.bbl
-LaTeX Font Info:    Font shape `TU/BNazanin(0)/m/n' will be
-(Font)              scaled to size 29.85593pt on input line 4.
- [60
-
-
-
-]
+[60])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2054,7 +2073,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[62]
+[62] (./AUTthesis.bbl
+LaTeX Font Info:    Font shape `TU/BNazanin(0)/m/n' will be
+(Font)              scaled to size 29.85593pt on input line 4.
+ [63
+
+
+
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2062,7 +2088,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[63])
+[64]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2070,7 +2096,69 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[64] (./AUTthesis.aux (./chapter0.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux))
+[65]
+Underfull \hbox (badness 7221) in paragraph at lines 296--299
+[][]\TU/TimesNewRoman(0)/m/n/12 Accuracy vs. precision vs. recall in machine learning: what’s the differ-[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
+[]\TU/TimesNewRoman(0)/m/n/12 ence?  [][][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
+[][]$[][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] [] [] [][][][] [] [][][][][][][][] [] [][][][] [] [][][] [] [][][][][][][][] []$[][]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[66]
+Underfull \hbox (badness 10000) in paragraph at lines 305--308
+[][]\TU/TimesNewRoman(0)/m/n/12 Precision.  [][][]$[][][][][] [] [] [] [][] [] [][] [] [][][][][][][][] [] [][][][][][][][][][][][][][][][][] [] [][][][][][][][][] [] [] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--308
+[][]$[] [] [][][][] [] [][][][][][][][][] [] [][][][] [] [][][][][] [] [][][][][][][][][][][] [] [][][][] [][] [][][] [] [][][][][][][][] [] [][][][] []$[][]
+ []
+
+
+Overfull \hbox (183.06952pt too wide) in paragraph at lines 314--317
+[][]$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$[][][]\TU/TimesNewRoman(0)/m/n/12 .[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--335
+[][]\TU/TimesNewRoman(0)/m/n/12 Confusion matrix - an overview | sciencedirect topics.  [][][]$[][][][][] [] [] [] [][][] []$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--335
+[][]$[][][][][][][][][][][][][] [] [][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][][][][][][][][][][]$[][][]\TU/TimesNewRoman(0)/m/n/12 .  (Accessed[]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[67])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[68] (./AUTthesis.aux (./chapter0.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -2086,15 +2174,15 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `AUTthesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0744619C55EAD47E0BDADC6CC2F71139;20853.
+(rerunfilecheck)             Checksum: 7DD4AACD9B2EFC0D771500A3887557D1;20953.
  ) 
 Here is how much of TeX's memory you used:
- 32973 strings out of 474773
- 667622 string characters out of 5757724
- 1941839 words of memory out of 5000000
- 54347 multiletter control sequences out of 15000+600000
- 569077 words of font info for 147 fonts, out of 8000000 for 9000
+ 32998 strings out of 474773
+ 668136 string characters out of 5757724
+ 1942839 words of memory out of 5000000
+ 54373 multiletter control sequences out of 15000+600000
+ 567523 words of font info for 140 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,18n,121p,2462b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on AUTthesis.xdv (80 pages, 1109976 bytes).
+Output written on AUTthesis.xdv (84 pages, 1150852 bytes).

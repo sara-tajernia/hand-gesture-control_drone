@@ -17,6 +17,7 @@ import numpy as np
 import os
 import csv
 import cv2
+from collections import Counter
 # from google.colab.patches import cv2_imshow
 
 
@@ -48,6 +49,7 @@ HANDEDNESS_TEXT_COLOR = (88, 205, 54) # vibrant green
 class Dataset:
     def __init__(self):
         self.capture_image()
+        # self.infos()
 
     def pre_process_landmark(self, landmark):
         hands, final = [], []
@@ -113,9 +115,8 @@ class Dataset:
 
         detector = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
-
         # Open CSV file
-        with open('./dataset/dataset_1hand(10).csv', 'a', newline='') as csvfile:
+        with open('./dataset/right_hand.csv', 'a', newline='') as csvfile:
             csvwriter = csv.writer(csvfile)
 
             while cap.isOpened():
@@ -124,7 +125,7 @@ class Dataset:
                     break
 
                 frame_count += 1
-                cv2.imshow("Frame", frame)
+                # cv2.imshow("Frame", frame)
 
                 if frame_count % save_interval == 0:
                     # Convert the frame to RGB format
@@ -157,6 +158,7 @@ class Dataset:
                                     csvwriter.writerow(row_data)
                                     print(f"Saved a list for {chr(key)}\n")
 
+                cv2.imshow("Frame", frame)
                 # Exit when 'q' is pressed
                 if cv2.waitKey(1) & 0xFF == ord('q'):
                     break
@@ -164,3 +166,24 @@ class Dataset:
         # Release the camera and close the CSV file
         cap.release()
         cv2.destroyAllWindows()
+
+
+    def infos(self):
+        counter = Counter()
+
+        # Open the CSV file
+        with open('./dataset/dataset_1hand(10).csv', 'r') as csvfile:
+            csvreader = csv.reader(csvfile)
+            
+            # Iterate through each row in the CSV file
+            for row in csvreader:
+                # Get the first index (the first value in each row)
+                first_index = row[0]
+                
+                # Increment the counter for this first index
+                counter[first_index] += 1
+
+        # Print the count of each unique value in the first index
+        for key, value in counter.items():
+            print(f'Index {key}: {value} occurrences')
+

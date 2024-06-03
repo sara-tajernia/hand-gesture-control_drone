@@ -23,7 +23,7 @@ class HandDetector:
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/CNN(200).h5')
+        self.model = load_model('models/CNN_right.h5')
         self.mp_hands = mp.solutions.hands
         self.detector = self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
         self.mp_drawing = mp.solutions.drawing_utils
@@ -70,6 +70,9 @@ class HandDetector:
         os.makedirs(self.output_folder, exist_ok=True)
         ten_y = []
 
+        # while True:
+        #     frame = self.drone.get_frame()
+
         while cap.isOpened():
             ret, frame = cap.read()
             if not ret:
@@ -82,7 +85,7 @@ class HandDetector:
                 # Convert the frame to RGB format
                 frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 detection_result = self.detector.process(frame_rgb)
-
+                text = "None"
                 if detection_result.multi_hand_landmarks:
                     # Draw landmarks on the frame
                     annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Left')
@@ -107,15 +110,25 @@ class HandDetector:
                                 if not self.status:      
                                     if most_action == 2:       
                                         self.status = True
-                                        # print(Fore.LIGHTCYAN_EX + f"Starting {self.gestures[most_action]}")
-                                        self.drone.follow_order(most_action)
+                                        print(Fore.LIGHTCYAN_EX + f"Starting {self.gestures[most_action]}")
+                                        text = self.gestures[most_action][0]
+                                        # self.drone.follow_order(most_action)
                                 else:
-                                    # print(Fore.LIGHTCYAN_EX + f"DO THE ACTION {self.gestures[most_action]}")
-                                    self.drone.follow_order(most_action)
+                                    print(Fore.LIGHTCYAN_EX + f"DO THE ACTION {self.gestures[most_action]}")
+                                    text = self.gestures[most_action][0]
+                                    # self.drone.follow_order(most_action)
 
                             ten_y.pop(0)
 
                 # Display the original frame
+                # text = "Hello, OpenCV!"  
+                font = cv2.FONT_HERSHEY_SIMPLEX  
+                fontScale = 1 
+                color = (255, 255, 255) 
+                thickness = 2  
+
+                # Put the text on top of the frame
+                cv2.putText(frame, text, (10, 50), font, fontScale, color, thickness)
                 cv2.imshow("Frame", frame)
                 # print('all things: {:2.2f} s'.format(time.time() - time1))
 

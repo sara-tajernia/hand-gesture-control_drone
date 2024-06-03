@@ -17,45 +17,45 @@ Warning--can't use both volume and number fields in chen2021visual
 Warning--empty journal in rios2013hand
 
 Done.
-You've used 38 entries,
+You've used 43 entries,
             2198 wiz_defined-function locations,
-            782 strings with 12213 characters,
-and the built_in function-call counts, 10430 in all, are:
-= -- 880
-> -- 445
+            803 strings with 13282 characters,
+and the built_in function-call counts, 11040 in all, are:
+= -- 930
+> -- 450
 < -- 17
-+ -- 164
++ -- 169
 - -- 126
 * -- 590
-:= -- 1434
-add.period$ -- 124
-call.type$ -- 38
-change.case$ -- 38
+:= -- 1489
+add.period$ -- 139
+call.type$ -- 43
+change.case$ -- 43
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 470
-empty$ -- 948
+cite$ -- 48
+duplicate$ -- 495
+empty$ -- 1038
 format.name$ -- 126
-if$ -- 2545
+if$ -- 2710
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 168
-newline$ -- 347
+int.to.str$ -- 43
+missing$ -- 178
+newline$ -- 392
 num.names$ -- 32
-pop$ -- 171
+pop$ -- 211
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 271
+skip$ -- 286
 stack$ -- 0
 substring$ -- 566
-swap$ -- 171
+swap$ -- 176
 text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 4
 type$ -- 0
 warning$ -- 5
 while$ -- 85
-width$ -- 40
-write$ -- 526
+width$ -- 45
+write$ -- 586
 (There were 5 warnings)
