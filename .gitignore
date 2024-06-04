@@ -6,3 +6,20 @@
 *.mp4
 
 *.h5
+**/__pycache__/** 
+__pycache__/** 
+__pycache__** 
+**/__pycache__
+/.vs_code/**
+**/.vs_code
+
+
+
+
+
+
+
+
+
+
+
