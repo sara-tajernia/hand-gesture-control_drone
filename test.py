@@ -18,17 +18,17 @@ from google.protobuf.json_format import MessageToDict
 
 
 mp_drawing = mp.solutions.drawing_utils
-model = load_model('models/CNN(200).h5')
+model = load_model('models/CNN_right.h5')
 mp_hands = mp.solutions.hands
 detector = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
 
 
 def frame_video():
-  vidcap = cv2.VideoCapture('vote.mov')
+  vidcap = cv2.VideoCapture('vote/right_hand_vote.mov')
   success,image = vidcap.read()
   count = 1
   while success:
-    cv2.imwrite("vote/frame%d.jpg" % count, image)     # save frame as JPEG file      
+    cv2.imwrite("vote/right_hand_vote/frame%d.jpg" % count, image)     # save frame as JPEG file      
     success,image = vidcap.read()
     print('Read a new frame: ', success)
     count += 1
@@ -98,6 +98,7 @@ def pre_process_landmark(landmark):
 
 
 
+
 def capture_image():
   
     ten_y = []
@@ -109,73 +110,118 @@ def capture_image():
     gestures = df.values.tolist()
     windows = 10
     vote = 0.7
-    vidcap = cv2.VideoCapture('vote.mov')
+    vidcap = cv2.VideoCapture('vote/right_hand_vote2.mov')
     success, frame = vidcap.read()
-    frame_count = 0
+    frame_count = 1
     while success:
-      # cv2.imwrite("vote/frame%d.jpg" % frame_count, frame) 
-      success,frame = vidcap.read()
-      frame_count += 1
-      # frame = image
-      if frame_count % save_interval == 0:
+    #   cv2.imwrite("vote/right_hand_vote/frame%d.jpg" % frame_count, frame) 
+        success,frame = vidcap.read()
+        # frame = image
+        if frame_count % save_interval == 0:
 
-        frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-        # Detect hand landmarks in the image
-        detection_result = detector.process(frame_rgb)
+            # Detect hand landmarks in the image
+            detection_result = detector.process(frame_rgb)
 
-        if detection_result.multi_hand_landmarks:
-            # Draw landmarks on the frame
-            annotated_image, landmark_coords = draw_landmarks_on_image(frame, detection_result, 'Left')
-            cv2.imwrite(os.path.join(f"vote/annotated_frame_{frame_count}.jpg"), annotated_image)
-            process_landmark = pre_process_landmark(np.array(landmark_coords))
-            if process_landmark != []:
+            if detection_result.multi_hand_landmarks:
+                # Draw landmarks on the frame
+                annotated_image, landmark_coords = draw_landmarks_on_image(frame, detection_result, 'Left')
+                # cv2.imwrite(os.path.join(f"vote/right_hand_vote2/annotated_frame_{frame_count}.jpg"), annotated_image)
+                process_landmark = pre_process_landmark(np.array(landmark_coords))
+                if process_landmark != []:
 
-                process_landmark_array = np.array(process_landmark).reshape(1, 21, 2)
-                time2 = time.time()
-                prediction = model.predict(process_landmark_array, verbose=0)
-                # print('only predict: {:2.2f} s'.format(time.time() - time2))
-                prediction_index = np.argmax(prediction)
-                # write_pre(prediction_index, 'vote/prediction.csv')
-                print(frame_count, gestures[prediction_index])
-                ten_y.append(prediction_index)
-                if len(ten_y) == windows:
-                    most_action = max(set(ten_y), key=ten_y.count)
-                    action = ten_y.count(most_action)
-                    # print(prediction_index)
-                    if vote <= action / windows and most_action != 9:
-                        print(Fore.LIGHTCYAN_EX + f"DO THE ACTION {gestures[most_action]}")
-                        write_pre(most_action, 'vote/window.csv')
-                        print(Style.RESET_ALL)
-                    ten_y.pop(0)
+                    process_landmark_array = np.array(process_landmark).reshape(1, 21, 2)
+                    time2 = time.time()
+                    prediction = model.predict(process_landmark_array, verbose=0)
+                    # print('only predict: {:2.2f} s'.format(time.time() - time2))
+                    prediction_index = np.argmax(prediction)
+                    write_pre(prediction_index, 'vote/right_hand_vote2/prediction.csv')
+                    print(frame_count, gestures[prediction_index])
+                    ten_y.append(prediction_index)
+                    if len(ten_y) == windows:
+                        most_action = max(set(ten_y), key=ten_y.count)
+                        action = ten_y.count(most_action)
+                        # print(prediction_index)
+                        if vote <= action / windows and most_action != 9:
+                            print(Fore.LIGHTCYAN_EX + f"DO THE ACTION {gestures[most_action]}")
+                            write_pre(most_action, 'vote/right_hand_vote2/window.csv')
+                            print(Style.RESET_ALL)
+                        else:
+                            write_pre(9, 'vote/right_hand_vote2/window.csv')
+                        ten_y.pop(0)
+                else:
+                    write_pre(9, 'vote/right_hand_vote2/prediction.csv')
+                    write_pre(9, 'vote/right_hand_vote2/window.csv')
+            else:
+                write_pre(9, 'vote/right_hand_vote2/prediction.csv')
+                write_pre(9, 'vote/right_hand_vote2/window.csv')
+                # cv2.imwrite(os.path.join(f"vote/right_hand_vote2/annotated_frame_{frame_count}.jpg"), frame)
+                print('NOOO Hand')
+
+        frame_count += 1
 
 
 
 def find_accuracy():
-  filename = 'vote/label.csv'
-  df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
-  label = df.values.tolist()
+    filename = 'vote/right_hand_vote2/label.csv'
+    df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
+    label = df.values.tolist()
 
 
-  filename = 'vote/prediction.csv'
-  df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
-  prediction = df.values.tolist()
+    filename = 'vote/right_hand_vote2/prediction.csv'
+    df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
+    prediction = df.values.tolist()
 
-  print(len(prediction), len(label))
+    print(len(prediction), len(label))
 
 
-  trues = 0
-  for i in range (len(prediction)):
-    if prediction[i] == label[i]:
-        trues += 1
-  
-  print('accuracy is ', trues/len(label))
+    trues = 0
+    for i in range (len(prediction)):
+        if prediction[i] == label[i]:
+            trues += 1
+    
+    print('accuracy is ', trues/len(label))
+
+def find_window_accuracy():
+    filename = 'vote/right_hand_vote2/label.csv'
+    df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
+    label = df.values.tolist()
+    unique_label = [label[0]] if label else []  # Initialize with the first element if the list is not empty
+    for i in range(1, len(label)):
+        if label[i] != label[i - 1]:
+            unique_label.append(label[i])
+
+    print(unique_label)
     
 
+    filename = 'vote/right_hand_vote2/window.csv'
+    df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
+    window = df.values.tolist()
+    unique_window = [window[0]] if window else []  # Initialize with the first element if the list is not empty
+    for i in range(1, len(window)):
+        if window[i] != window[i - 1]:
+            unique_window.append(window[i])
+    print(unique_window)
+
+    trues = 0
+    for i in range (len(unique_window)):
+        if unique_window[i] == unique_label[i]:
+            trues += 1
+    
+    print('accuracy is ', trues/len(unique_label))
 
 
-capture_image()
-# find_accuracy()
+
+        
+
+
+
+
+# frame_video()
+# capture_image()
+find_accuracy()
+find_window_accuracy()
 
 
 
