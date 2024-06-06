@@ -16,10 +16,18 @@ __pycache__**
 
 *.aux
 *.log
+*.fls
 
-
-
-
+*.idx
+*.blg
+*.ind
+*.lof
+*.out
+*.xdv
+*.ilg
+*.lot
+*.toc
+*.fdb_latexmk
 
 
 
