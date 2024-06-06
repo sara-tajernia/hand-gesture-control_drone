@@ -8,7 +8,7 @@ class ControlDrone:
     def __init__(self):
         self.tello = Tello()
         # self.info_drone()
-        # self.start()
+        self.start()
 
 
     def start(self):
@@ -45,28 +45,28 @@ class ControlDrone:
 
     def follow_order(self, order):
         if order == 0: #Forward
-            print(Fore.LIGHTMAGENTA_EX ,"DO THE ACTION Forward")
+            print(Fore.LIGHTMAGENTA_EX ,"DO THE ACTION UP")
 
         elif order == 1:   #Stop
-            print(Fore.LIGHTBLUE_EX ," DO THE ACTION Stop")
+            print(Fore.LIGHTBLUE_EX ," DO THE ACTION Donw")
 
         elif order == 2:  #Up
-            print(Fore.LIGHTCYAN_EX ," DO THE ACTION Up")
+            print(Fore.LIGHTCYAN_EX ," DO THE ACTION Forward")
 
         elif order == 3:  #Land
-            print(Fore.LIGHTWHITE_EX ," DO THE ACTION Land")
+            print(Fore.LIGHTWHITE_EX ," DO THE ACTION Back")
 
         elif order == 4:  #Down
-            print(Fore.LIGHTYELLOW_EX ," DO THE ACTION Down")
+            print(Fore.LIGHTYELLOW_EX ," DO THE ACTION Right")
 
         elif order == 5:  #Back
-            print(Fore.LIGHTGREEN_EX ," DO THE ACTION Back")
+            print(Fore.LIGHTGREEN_EX ," DO THE ACTION Left")
 
         elif order == 6:  #Left
-            print(Fore.LIGHTRED_EX ," DO THE ACTION Left")
+            print(Fore.LIGHTRED_EX ," DO THE ACTION Rotate 360 degree")
 
         elif order == 7:  #Right
-            print(Fore.LIGHTBLACK_EX ," DO THE ACTION Right")
+            print(Fore.LIGHTBLACK_EX ," DO THE ACTION Land")
 
         elif order == 8:  #Piece
             print(Fore.MAGENTA ," DO THE ACTION Take a Picture")
