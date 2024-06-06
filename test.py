@@ -21,7 +21,11 @@ mp_drawing = mp.solutions.drawing_utils
 model = load_model('models/CNN_right.h5')
 mp_hands = mp.solutions.hands
 detector = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
-
+vidcap = cv2.VideoCapture('vote/right_hand_vote.mov')
+window_path = 'vote/right_hand_vote/window.csv'
+label_path = 'vote/right_hand_vote/label.csv'
+prediction_path = 'vote/right_hand_vote/prediction.csv'
+label_window_path = 'vote/right_hand_vote/label_window.csv'
 
 def frame_video():
   vidcap = cv2.VideoCapture('vote/right_hand_vote.mov')
@@ -103,15 +107,12 @@ def capture_image():
     ten_y = []
     save_interval = 1  # frame
     output_folder = "./gestures/test/"
-    window_path = 'vote/right_hand_vote2/window.csv'
-    prediction_path = 'vote/right_hand_vote2/prediction.csv'
     gestures = []
     filename = './dataset/keypoint_classifier_label.csv'
     df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
     gestures = df.values.tolist()
     windows = 10
     vote = 0.7
-    vidcap = cv2.VideoCapture('vote/right_hand_vote2.mov')
     success, frame = vidcap.read()
     frame_count = 1
     while success:
@@ -164,14 +165,12 @@ def capture_image():
 
 
 
-def find_accuracy():
-    filename = 'vote/right_hand_vote2/label.csv'
-    df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
+def find_accuracy(path1, path2):
+    df = pd.read_csv(path1, header=None)  # Read CSV file into a DataFrame without header
     label = df.values.tolist()
 
 
-    filename = 'vote/right_hand_vote2/prediction.csv'
-    df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
+    df = pd.read_csv(path2, header=None)  # Read CSV file into a DataFrame without header
     prediction = df.values.tolist()
 
     print(len(prediction), len(label))
@@ -185,45 +184,46 @@ def find_accuracy():
     print('accuracy is ', trues/len(label))
 
 def find_window_accuracy():
-    filename = 'vote/right_hand_vote2/label.csv'
-    df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
-    label = df.values.tolist()
-    unique_label = [label[0]] if label else []  # Initialize with the first element if the list is not empty
-    for i in range(1, len(label)):
-        if label[i] != label[i - 1]:
-            unique_label.append(label[i])
+    df = pd.read_csv(label_path, header=None)  # Read CSV file into a DataFrame without header
+    label1 = df.values.tolist()
 
-    print(unique_label)
+    # df = pd.read_csv(window_path, header=None)  # Read CSV file into a DataFrame without header
+    # window1 = df.values.tolist()
+    # print(len(window1))
+
+
+    window_size = 10
+
+    vote_threshold = 0.7
+    n = len(label1)
     
-
-    filename = 'vote/right_hand_vote2/window.csv'
-    df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
-    window = df.values.tolist()
-    unique_window = [window[0]] if window else []  # Initialize with the first element if the list is not empty
-    for i in range(1, len(window)):
-        if window[i] != window[i - 1]:
-            unique_window.append(window[i])
-    print(unique_window)
-
-    trues = 0
-    for i in range (len(unique_window)):
-        if unique_window[i] == unique_label[i]:
-            trues += 1
-    
-    print('accuracy is ', trues/len(unique_label))
-
-
-
+    print(n - window_size + 1)
+    # Iterate over the list with a sliding window
+    for i in range(n - window_size + 1):
+        # Extract the current window and flatten it to a list of integers
+        window = [elem[0] for elem in label1[i:i + window_size]]
         
-
-
+        # Count occurrences of each number in the window
+        counts = {}
+        for num in window:
+            counts[num] = counts.get(num, 0) + 1
+        
+        # Find the number with the highest count
+        most_common_num = max(counts, key=counts.get)
+        most_common_count = counts[most_common_num]
+        
+        # Check if the most common number meets the vote threshold
+        if most_common_count >= vote_threshold * window_size:
+            write_pre(most_common_num, label_window_path)
+        else:
+            write_pre(9, label_window_path)
 
 
 # frame_video()
-capture_image()
-# find_accuracy()
-# find_window_accuracy()
-
+# capture_image()
+find_window_accuracy()
+find_accuracy(label_path, prediction_path)
+find_accuracy(label_window_path, window_path)
 
 
 
