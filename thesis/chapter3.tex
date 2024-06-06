@@ -78,17 +78,10 @@
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{confusion_mlp.png}
+    \includegraphics[width=1\textwidth]{confusion_mlp.png}
     \caption{ ماتریس درهم‌ریختگی در مدل \lr{MLP}}
 \end{figure}
 
-
-% \section{نمودار‌های دقت و خطا بر حسب دوره}
-% یک دوره زمانی است که کل مجموعه داده تنها یک بار از طریق شبکه عصبی به جلو و عقب منتقل می‌شود. از آنجایی که یک دوره آنقدر بزرگ است که نمی‌توان آن را به یکباره به سیستم وارد کرد، آن را به چند دسته کوچکتر تحت عنوان دوره 
-% تقسیم می‌کنیم.  انتقال کل مجموعه داده از طریق یک شبکه عصبی کافی نبوده و باید مجموعه داده را چندین بار به یک شبکه عصبی ارسال کرد. ما برای این پروژه از یک مجموعه داده محدود استفاده می‌کنیم و برای بهینه سازی یادگیری آن از گرادیان کاهشی استفاده می‌کنیم. 
-% \\
-% تعیین تعداد درست دوره از اهمیت بالایی برخوردار است. با افزایش تعداد دوره‌ها،‌ تعداد دفعات تغییر وزن در شبکه عصبی بیشتر می‌شود و منحنی از کم‌برازش\LTRfootnote{Underfitting} به منحنی بهینه\LTRfootnote{Optimal} و بعد به 
-% منحنی بیش‌برازش \LTRfootnote{Overfitting} می‌رود. میزان دوره‌ها باید به گونه‌ای تعیین شوند که متعادل عمل کنند و بتوان منحنی را به بهینه ترین حالت ممکن رساند.
 
 \section{نمودار‌های دقت و خطا بر حسب دوره}
 یک دوره زمانی است که کل مجموعه داده تنها یک بار از طریق شبکه عصبی به جلو و عقب منتقل می‌شود. از آنجایی که یک دوره ممکن است بسیار بزرگ باشد و نتوان آن را به یکباره به سیستم وارد کرد، به چند دسته کوچکتر تحت عنوان "دسته\LTRfootnote{Batch}" تقسیم می‌شود. انتقال کل مجموعه داده از طریق یک شبکه عصبی به تنهایی کافی نیست و باید مجموعه داده را چندین بار به شبکه ارسال کرد. در این پروژه، از یک مجموعه داده محدود استفاده شده و برای بهینه‌سازی یادگیری آن از الگوریتم گرادیان کاهشی استفاده می‌کنیم.
@@ -110,6 +103,28 @@
     \includegraphics[width=1\textwidth]{CNN.png}
     \caption{نمودار روند دقت و خطا بر حسب دوره در داده‌های آموزش و تست در مدل \lr{CNN}}
 \end{figure}
+
+
+\section{تاثیر پس‌پردازش رأی‌گیری پنجره‌ای بر دقت}
+به طور کلی با توجه به جدول نشان داده شده دقت ما پس از پیاده‌سازی رأی‌گیری پنجره‌ای کاهش پیدا کرده است. اما لزوم این الگوریتم برای ما از اهمیت ویژه‌ای برخوردار ایت چرا که در بیشتر مواردی که دقت به درستی بیان نشده است در زمانی است که ژست دست کاربر نمادی را نشان داده اما پهپاد از آن پیروی نمیکند. این موضوع می‌تواند سبب ناخوشایندی کاربر شود، اما این الگوریتم سبب شده است تا بسیاری از
+ مواردی ژست دست در یک یا تعداد کمی از فریم‌ها به توسط سیستم اشتباه برداشت شده‌است، یا حتی کاربر در مدت کوتاهی به اشتباه هدف خود را بیان کند، انجام نشود تا پهپاد دچار مشکل نشود.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{||c c c||}
+     \hline
+     \rule{0pt}{3ex} معماری مدل & دقت مدل بدون رأی‌گیری پنچره‌ای & دقت مدل همراه با رأی‌گیری پنچره‌ای \\ [1.5ex]
+     \hline
+     \hline
+     \rule{0pt}{0.5ex} & & \\  
+     \lr{MLP} & 6 & 7 \\ [2.5ex]
+     \lr{CNN} & 7 & 8 \\ [2.5ex]
+     \lr{LSTM} & 5 & 8 \\ [2.5ex]
+     \hline
+    \end{tabular}
+    \caption{جدول ارزیابی تاثبر دقت در رأی‌گیری پنجره‌ای}
+    % \label{table:2}
+\end{table}
 
 
 \section{سرعت اجرای برنامه}
@@ -159,7 +174,7 @@
      \hline
     \end{tabular}
     \caption{جدول ارزیابی سخت‌افزار موردنیاز مدل‌ها}
-    \label{table:1}
+    \label{table:4}
 \end{table}
 
 
@@ -175,20 +190,20 @@
      \hline
      \rule{0pt}{0.5ex} & & \\  
      برنامه ما & 9 & 6 \\ [2.5ex]
-     \lr{Hand Gesture Controlled Drones: An Open Source Library\cite{natarajan2018hand}} & 5 & ۴۷۱.۹۷ \\ [2.5ex]
-     \lr{A Real-Time Hand Gesture Recognition Method\cite{fang2007real}} & 6 & 8.93 \\ [2.5ex]
-     \lr{Hand Gestures For Drone Control Using Deep Learning\cite{hadri2018hand}} & 9 & 3.83  \\ [2.5ex]
-     \lr{UAV-GESTURE: A Dataset for UAV Control and Gesture Recognition\cite{perera2018uav}} & 13 & 9.91 \\ [2.5ex]
-     \lr{Hand Gesture Recognition system for Real-Time Application\cite{murugeswari2014hand}} & 6 & 8.90 \\ [2.5ex]
-     \lr{An Improved Hand Gesture Recognition System Using Keypoints and Hand Bounding Boxes\cite{dang2022improved}} & 6 & 94 \\ [2.5ex]
-     \lr{Hand-Gesture Recognition Using Computer-Vision Techniques\cite{rios2013hand}} & 6 & 1.93 \\ [2.5ex]
-     \lr{Hand Gesture Recognition using Image Processing and Feature Extraction Techniques\cite{sharma2020hand}} & 28 & 54.89 \\ [2.5ex]
-     \lr{Applying Hand Gesture Recognition for User Guide Application Using MediaPipe\cite{harris2021applying}} & 10 & 95 \\ [2.5ex]
-     \lr{MediaPipe Hands: On-device Real-time Hand Tracking\cite{zhang2020mediapipe}} & 8 & 7.94 \\ [2.5ex]
-     \lr{Hand Gesture Recognition System based in Computer Vision and Machine Learning\cite{trigueiros2015hand}} & 28 & 72.93 \\ [2.5ex]
-     \lr{Hand Gesture Recogrution Using Hidden Markov Models\cite{min1997hand}} & 5 & 1.92 \\ [2.5ex]
-     \lr{Hand Gesture Recognition Using Kinect\cite{li2012hand}} & 38 & 84 \\ [2.5ex]
-     \lr{Hand Gesture Recognition Using Neural Networks\cite{murthy2010hand}} & 10 & 89 \\ [2.5ex]
+     پهپادهاي كنترل شده با علائم دست به صورت متن باز\cite{natarajan2018hand} & 5 & ۴۷۱.۹۷ \\ [2.5ex]
+     روشهاي تشخيص علائم دست به صورت بيدرنگ\cite{fang2007real} & 6 & 8.93 \\ [2.5ex]
+     تشخيص علائم دست براي كنترل پهپاد با استفاده از ياديگيري عميق\cite{hadri2018hand} & 9 & 3.83  \\ [2.5ex]
+     علائم يوايوي: مجموعداده براي يوايوي كنترل و تشخيص علائم\cite{perera2018uav} & 13 & 9.91 \\ [2.5ex]
+     تشخيص علائم دست براي استفادههاي بيدرنگ\cite{murugeswari2014hand} & 6 & 8.90 \\ [2.5ex]
+     روشي بهبود يافته براي تشخيص علائم دست با استفاده از نقاط كليدي و جعبه مرزي\cite{dang2022improved} & 6 & 94 \\ [2.5ex]
+     تشخیص حرکت دست با استفاده از تکنیک های بینایی کامپیوتری\cite{rios2013hand} & 6 & 1.93 \\ [2.5ex]
+     تشخیص ژست دست با استفاده از تکنیک‌های پردازش تصویر و استخراج ویژگی\cite{sharma2020hand} & 28 & 54.89 \\ [2.5ex]
+     استفاده از تشخیص حرکت دست برای برنامه راهنمای کاربر با استفاده از مدیاپایپ\cite{harris2021applying} & 10 & 95 \\ [2.5ex]
+     دست‌هاي مدياپايپ: تشخيص بي درتگ دست بر روي دستگاه‌ها\cite{zhang2020mediapipe} & 8 & 7.94 \\ [2.5ex]
+     سیستم تشخیص حرکت دست مبتنی بر بینایی کامپیوتر و یادگیری ماشین\cite{trigueiros2015hand} & 28 & 72.93 \\ [2.5ex]
+     تشخیص ژست دست با استفاده از مدل های پنهان مارکوف\cite{min1997hand} & 5 & 1.92 \\ [2.5ex]
+     تشخیص ژست دست با استفاده از کینکت\cite{li2012hand} & 38 & 84 \\ [2.5ex]
+     تشخیص ژست دست با استفاده از شبکه های عصبی\cite{murthy2010hand} & 10 & 89 \\ [2.5ex]
      \hline
     \end{tabular}
     \caption{جدول مقایسه پروژه با کارهای مشابه}
