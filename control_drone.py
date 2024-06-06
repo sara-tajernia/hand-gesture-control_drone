@@ -8,7 +8,7 @@ class ControlDrone:
     def __init__(self):
         self.tello = Tello()
         # self.info_drone()
-        self.start()
+        # self.start()
 
 
     def start(self):
