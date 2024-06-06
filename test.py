@@ -100,10 +100,11 @@ def pre_process_landmark(landmark):
 
 
 def capture_image():
-  
     ten_y = []
     save_interval = 1  # frame
     output_folder = "./gestures/test/"
+    window_path = 'vote/right_hand_vote2/window.csv'
+    prediction_path = 'vote/right_hand_vote2/prediction.csv'
     gestures = []
     filename = './dataset/keypoint_classifier_label.csv'
     df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
@@ -136,7 +137,7 @@ def capture_image():
                     prediction = model.predict(process_landmark_array, verbose=0)
                     # print('only predict: {:2.2f} s'.format(time.time() - time2))
                     prediction_index = np.argmax(prediction)
-                    write_pre(prediction_index, 'vote/right_hand_vote2/prediction.csv')
+                    write_pre(prediction_index, prediction_path)
                     print(frame_count, gestures[prediction_index])
                     ten_y.append(prediction_index)
                     if len(ten_y) == windows:
@@ -145,17 +146,17 @@ def capture_image():
                         # print(prediction_index)
                         if vote <= action / windows and most_action != 9:
                             print(Fore.LIGHTCYAN_EX + f"DO THE ACTION {gestures[most_action]}")
-                            write_pre(most_action, 'vote/right_hand_vote2/window.csv')
+                            write_pre(most_action, window_path)
                             print(Style.RESET_ALL)
                         else:
-                            write_pre(9, 'vote/right_hand_vote2/window.csv')
+                            write_pre(9, window_path)
                         ten_y.pop(0)
                 else:
-                    write_pre(9, 'vote/right_hand_vote2/prediction.csv')
-                    write_pre(9, 'vote/right_hand_vote2/window.csv')
+                    write_pre(9, prediction_path)
+                    write_pre(9, window_path)
             else:
-                write_pre(9, 'vote/right_hand_vote2/prediction.csv')
-                write_pre(9, 'vote/right_hand_vote2/window.csv')
+                write_pre(9, prediction_path)
+                write_pre(9, window_path)
                 # cv2.imwrite(os.path.join(f"vote/right_hand_vote2/annotated_frame_{frame_count}.jpg"), frame)
                 print('NOOO Hand')
 
@@ -219,9 +220,9 @@ def find_window_accuracy():
 
 
 # frame_video()
-# capture_image()
-find_accuracy()
-find_window_accuracy()
+capture_image()
+# find_accuracy()
+# find_window_accuracy()
 
 
 

@@ -23,7 +23,7 @@ class HandDetector:
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/CNN_right.h5')
+        self.model = load_model('models/CNN_left.h5')
         self.mp_hands = mp.solutions.hands
         self.detector = self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
         self.mp_drawing = mp.solutions.drawing_utils
@@ -71,7 +71,7 @@ class HandDetector:
         ten_y = []
 
         # while True:
-            # frame = self.drone.get_frame()
+        #     frame = self.drone.get_frame()
 
         while cap.isOpened():
             ret, frame = cap.read()
@@ -88,7 +88,7 @@ class HandDetector:
                 text = "None"
                 if detection_result.multi_hand_landmarks:
                     # Draw landmarks on the frame
-                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Left')
+                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Right')
 
                     # Write the frame with landmarks to disk
                     cv2.imwrite(os.path.join(f"./gestures/test/annotated_frame_{frame_count}.jpg"), annotated_image)
@@ -134,7 +134,7 @@ class HandDetector:
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                # self.drone.land()
+                self.drone.land()
                 break
 
         cap.release()
