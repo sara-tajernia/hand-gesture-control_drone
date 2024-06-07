@@ -22,12 +22,12 @@ class ControlDrone:
             print(f'Error connecting to the drone: {e}')
             raise
 
-        # try:
-        #     self.tello.takeoff()
-        #     print('Takeoff successful')
-        # except Exception as e:
-        #     print(f'Error during takeoff: {e}')
-        #     raise
+        try:
+            self.tello.takeoff()
+            print('Takeoff successful')
+        except Exception as e:
+            print(f'Error during takeoff: {e}')
+            raise
 
     def get_frame(self):
         try:
@@ -44,64 +44,52 @@ class ControlDrone:
 
 
     def follow_order(self, order):
-        if order == 0: #Forward
+        if order == 0: #UP
             print(Fore.LIGHTMAGENTA_EX ,"DO THE ACTION UP")
+            self.tello.move_up(2)
 
-        elif order == 1:   #Stop
+        elif order == 1:   #Down
             print(Fore.LIGHTBLUE_EX ," DO THE ACTION Donw")
+            self.tello.move_down(2)
 
-        elif order == 2:  #Up
+        elif order == 2:  #Forward
             print(Fore.LIGHTCYAN_EX ," DO THE ACTION Forward")
+            self.tello.move_forward(2)
 
-        elif order == 3:  #Land
+        elif order == 3:  #Back
             print(Fore.LIGHTWHITE_EX ," DO THE ACTION Back")
+            self.tello.move_back(2)
 
-        elif order == 4:  #Down
+        elif order == 4:  #Right
             print(Fore.LIGHTYELLOW_EX ," DO THE ACTION Right")
+            self.tello.move_right(2)
 
-        elif order == 5:  #Back
+        elif order == 5:  #Left
             print(Fore.LIGHTGREEN_EX ," DO THE ACTION Left")
+            self.tello.move_left(2)
 
-        elif order == 6:  #Left
+        elif order == 6:  #Rotate 360 degree
             print(Fore.LIGHTRED_EX ," DO THE ACTION Rotate 360 degree")
+            self.tello.rotate_counter_clockwise(2)
 
-        elif order == 7:  #Right
+        elif order == 7:  #Land
             print(Fore.LIGHTBLACK_EX ," DO THE ACTION Land")
+            # self.tello.land()
+            # self.tello.end()
+            self.tello.land()
+            self.tello.streamoff()
+            self.tello.end()
+            cv2.destroyAllWindows()
 
-        elif order == 8:  #Piece
+        elif order == 8:  #Take Picture
             print(Fore.MAGENTA ," DO THE ACTION Take a Picture")
+            t_end = time.time() + 5
+            while time.time() < t_end:
+                self.tello.get_frame_read()
 
         elif order == 9:    #None
             print(Fore.BLUE ," DO NOTHING")
-
-        # if order == 0: #Forward
-        #     self.tello.move_forward(10)
-        # if order == 0: #Forward
-        #     self.tello.move_forward(10)
-        # elif order == 1:   #Back
-        #     self.tello.move_back(10)
-        # elif order == 2:  
-        #     self.tello.move_right(10)
-        # elif order == 3:  
-        #     self.tello.move_left(10)
-        # elif order == 4:  
-        #     self.tello.move_up(10)
-        # elif order == 5:  
-        #     self.tello.move_down(10)
-        # elif order == 6:  
-        #     self.tello.rotate_clockwise(10)
-        # elif order == 7:  
-        #     self.tello.rotate_counter_clockwise(10)
-        # elif order == 8:  
-        #     self.tello.land()
-        #     self.tello.end()
-        # elif order == 9:     # Take a Picture
-        #     t_end = time.time() + 5
-        #     while time.time() < t_end:
-        #         self.tello.get_frame_read()
-
-
-    
+            self.tello.send_rc_control(0, 0, 0, 0)
 
     def info_drone(self):
         # print('Battery: ', self.tello.get_battery(), '%')

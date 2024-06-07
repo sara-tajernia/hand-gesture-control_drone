@@ -23,7 +23,7 @@ class HandDetector:
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/CNN_left.h5')
+        self.model = load_model('models/CNN_right.h5')
         self.mp_hands = mp.solutions.hands
         self.detector = self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
         self.mp_drawing = mp.solutions.drawing_utils
@@ -65,18 +65,18 @@ class HandDetector:
 
 
     def capture_image(self):
-        cap = cv2.VideoCapture(0)
+        # cap = cv2.VideoCapture(0)
         frame_count = 0
         os.makedirs(self.output_folder, exist_ok=True)
         ten_y = []
 
-        # while True:
-        #     frame = self.drone.get_frame()
+        while True:
+            frame = self.drone.get_frame()
 
-        while cap.isOpened():
-            ret, frame = cap.read()
-            if not ret:
-                break
+        # while cap.isOpened():
+        #     ret, frame = cap.read()
+        #     if not ret:
+        #         break
 
             frame_count += 1
             if frame_count % self.save_interval == 0:
@@ -88,7 +88,7 @@ class HandDetector:
                 text = "None"
                 if detection_result.multi_hand_landmarks:
                     # Draw landmarks on the frame
-                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Right')
+                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Left')
 
                     # Write the frame with landmarks to disk
                     cv2.imwrite(os.path.join(f"./gestures/test/annotated_frame_{frame_count}.jpg"), annotated_image)
@@ -107,16 +107,16 @@ class HandDetector:
                             action = ten_y.count(most_action)
                             # print(prediction_index)
                             if self.vote <= action / self.windows and most_action != 9:
-                                # if not self.status:      
-                                    # if most_action == 0:       
-                                        # self.status = True
-                                        # print(Fore.LIGHTCYAN_EX + f"Starting {self.gestures[most_action]}")
-                                    text = self.gestures[most_action][0]
-                                    self.drone.follow_order(most_action)
-                                    # else:
-                                        # # print(Fore.LIGHTCYAN_EX + f"DO THE ACTION {self.gestures[most_action]}")
+                                if not self.status:      
+                                    if most_action == 0:       
+                                        self.status = True
+                                        print(Fore.LIGHTCYAN_EX + f"Starting {self.gestures[most_action]}")
                                         # text = self.gestures[most_action][0]
-                                        # self.drone.follow_order(most_action)
+                                        self.drone.follow_order(most_action)
+                                else:
+                                    # print(Fore.LIGHTCYAN_EX + f"DO THE ACTION {self.gestures[most_action]}")
+                                    # text = self.gestures[most_action][0]
+                                    self.drone.follow_order(most_action)
 
                             ten_y.pop(0)
 
@@ -134,10 +134,11 @@ class HandDetector:
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                self.drone.land()
+                # self.drone.land()
+                self.drone.follow_order(7)
                 break
 
-        cap.release()
+        # cap.release()
         cv2.destroyAllWindows()
 
 
