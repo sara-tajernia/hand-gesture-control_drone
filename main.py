@@ -1,5 +1,5 @@
 import numpy as np
-from model import HandGestureClassifierMLP, HandGestureClassifierCNN, HandGestureClassifierYolo, HandGestureClassifierLSTM, HandGestureClassifierRNN
+from model import HandGestureClassifierMLP, HandGestureClassifierCNN, HandGestureClassifierLSTM, HandGestureClassifierRNN
 import time
 from test_model import TestModel
 from preprocess_data import Preprocess
@@ -12,7 +12,7 @@ from dataset import Dataset
 
 if __name__ == "__main__":
 
-    # Train
+    # # Train
     # actions_num = 10
     # dataset = "./dataset/left_hand.csv"
     # # dataset = "./dataset/keypoint.csv"

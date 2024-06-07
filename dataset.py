@@ -116,7 +116,7 @@ class Dataset:
         detector = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
         # Open CSV file
-        with open('./dataset/right_hand.csv', 'a', newline='') as csvfile:
+        with open('./dataset/left_hand.csv', 'a', newline='') as csvfile:
             csvwriter = csv.writer(csvfile)
 
             while cap.isOpened():

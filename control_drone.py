@@ -46,31 +46,31 @@ class ControlDrone:
     def follow_order(self, order):
         if order == 0: #UP
             print(Fore.LIGHTMAGENTA_EX ,"DO THE ACTION UP")
-            self.tello.move_up(2)
+            self.tello.move_up(20)
 
         elif order == 1:   #Down
             print(Fore.LIGHTBLUE_EX ," DO THE ACTION Donw")
-            self.tello.move_down(2)
+            self.tello.move_down(20)
 
         elif order == 2:  #Forward
             print(Fore.LIGHTCYAN_EX ," DO THE ACTION Forward")
-            self.tello.move_forward(2)
+            self.tello.move_forward(20)
 
         elif order == 3:  #Back
             print(Fore.LIGHTWHITE_EX ," DO THE ACTION Back")
-            self.tello.move_back(2)
+            self.tello.move_back(20)
 
         elif order == 4:  #Right
             print(Fore.LIGHTYELLOW_EX ," DO THE ACTION Right")
-            self.tello.move_right(2)
+            self.tello.move_right(20)
 
         elif order == 5:  #Left
             print(Fore.LIGHTGREEN_EX ," DO THE ACTION Left")
-            self.tello.move_left(2)
+            self.tello.move_left(20)
 
         elif order == 6:  #Rotate 360 degree
             print(Fore.LIGHTRED_EX ," DO THE ACTION Rotate 360 degree")
-            self.tello.rotate_counter_clockwise(2)
+            self.tello.rotate_counter_clockwise(10)
 
         elif order == 7:  #Land
             print(Fore.LIGHTBLACK_EX ," DO THE ACTION Land")
@@ -89,7 +89,7 @@ class ControlDrone:
 
         elif order == 9:    #None
             print(Fore.BLUE ," DO NOTHING")
-            self.tello.send_rc_control(0, 0, 0, 0)
+            # self.tello.send_rc_control(0, 0, 0, 0)
 
     def info_drone(self):
         # print('Battery: ', self.tello.get_battery(), '%')
