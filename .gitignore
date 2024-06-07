@@ -20,6 +20,10 @@ __pycache__**
 
 *.idx
 *.blg
+*.bbl
+*.synctex
+*.gz
+
 *.ind
 *.lof
 *.out
