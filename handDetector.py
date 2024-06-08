@@ -23,7 +23,7 @@ class HandDetector:
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/LSTM_right(7150).h5')
+        self.model = load_model('models/CNN_right(7150).h5')
         self.mp_hands = mp.solutions.hands
         self.detector = self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
         self.mp_drawing = mp.solutions.drawing_utils
@@ -65,19 +65,13 @@ class HandDetector:
 
 
     def capture_image(self):
-        cap = cv2.VideoCapture(0)
         frame_count = 0
         os.makedirs(self.output_folder, exist_ok=True)
         ten_y = []
+        self.drone.start()
 
-        # while True:
-        #     frame = self.drone.get_frame()
-
-        while cap.isOpened():
-            ret, frame = cap.read()
-            if not ret:
-                break
-
+        while True:
+            frame = self.drone.get_frame()
             frame_count += 1
             if frame_count % self.save_interval == 0:
                 time1 = time.time()
@@ -108,7 +102,7 @@ class HandDetector:
                             action = ten_y.count(most_action)
                             if self.vote <= action / self.windows and most_action != 9:
                                 print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
-                                # self.drone.follow_order(most_action)
+                                self.drone.follow_order(most_action)
 
                             ten_y.pop(0)
 
@@ -119,16 +113,12 @@ class HandDetector:
 
                 # Put the text on top of the frame
                 cv2.putText(frame, text, (10, 50), font, fontScale, color, thickness)
-                cv2.imshow("Frame", frame)
-                # print('all things: {:2.2f} s'.format(time.time() - time1))
-                # process = psutil.Process()
-                # print(process.memory_info().rss) 
-                print(tracemalloc.get_traced_memory())
-                tracemalloc.stop()
+            cv2.imshow("Frame", frame)
+            tracemalloc.stop()
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                # self.drone.follow_order(7)
+                self.drone.follow_order(7)
                 break
 
         # cap.release()
