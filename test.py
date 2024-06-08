@@ -18,14 +18,19 @@ from google.protobuf.json_format import MessageToDict
 
 
 mp_drawing = mp.solutions.drawing_utils
-model = load_model('models/CNN_right.h5')
+model = load_model('models/CNN_Left(7150).h5')
 mp_hands = mp.solutions.hands
 detector = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
-vidcap = cv2.VideoCapture('vote/right_hand_vote.mov')
-window_path = 'vote/right_hand_vote/window.csv'
-label_path = 'vote/right_hand_vote/label.csv'
-prediction_path = 'vote/right_hand_vote/prediction.csv'
-label_window_path = 'vote/right_hand_vote/label_window.csv'
+vidcap = cv2.VideoCapture('vote/left_hand_vote.mov')
+window_path = 'vote/all_window.csv'
+label_path = 'vote/all_label.csv'
+prediction_path = 'vote/all_prediction.csv'
+label_window_path = 'vote/all_label_window.csv'
+
+# window_path = 'vote/right_hand_vote/window.csv'
+# label_path = 'vote/right_hand_vote/label.csv'
+# prediction_path = 'vote/right_hand_vote/prediction.csv'
+# label_window_path = 'vote/right_hand_vote/label_window.csv'
 
 def frame_video():
   vidcap = cv2.VideoCapture('vote/right_hand_vote.mov')
@@ -128,7 +133,7 @@ def capture_image():
 
             if detection_result.multi_hand_landmarks:
                 # Draw landmarks on the frame
-                annotated_image, landmark_coords = draw_landmarks_on_image(frame, detection_result, 'Left')
+                annotated_image, landmark_coords = draw_landmarks_on_image(frame, detection_result, 'Right')
                 # cv2.imwrite(os.path.join(f"vote/right_hand_vote2/annotated_frame_{frame_count}.jpg"), annotated_image)
                 process_landmark = pre_process_landmark(np.array(landmark_coords))
                 if process_landmark != []:
@@ -159,7 +164,7 @@ def capture_image():
                 write_pre(9, prediction_path)
                 write_pre(9, window_path)
                 # cv2.imwrite(os.path.join(f"vote/right_hand_vote2/annotated_frame_{frame_count}.jpg"), frame)
-                print('NOOO Hand')
+                # print('NOOO Hand')
 
         frame_count += 1
 
@@ -186,10 +191,6 @@ def find_accuracy(path1, path2):
 def find_window_accuracy():
     df = pd.read_csv(label_path, header=None)  # Read CSV file into a DataFrame without header
     label1 = df.values.tolist()
-
-    # df = pd.read_csv(window_path, header=None)  # Read CSV file into a DataFrame without header
-    # window1 = df.values.tolist()
-    # print(len(window1))
 
 
     window_size = 10
@@ -221,7 +222,7 @@ def find_window_accuracy():
 
 # frame_video()
 # capture_image()
-find_window_accuracy()
+# find_window_accuracy()
 find_accuracy(label_path, prediction_path)
 find_accuracy(label_window_path, window_path)
 
