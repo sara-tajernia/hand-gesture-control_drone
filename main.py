@@ -3,7 +3,7 @@ from model import HandGestureClassifierMLP, HandGestureClassifierCNN, HandGestur
 import time
 from test_model import TestModel
 from preprocess_data import Preprocess
-from handDetector import HandDetector
+from handDetector2 import HandDetector
 
 from dataset import Dataset
 

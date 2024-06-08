@@ -29,7 +29,7 @@ class HandDetector:
         self.mp_drawing = mp.solutions.drawing_utils
         self.read_gesture_file()
         self.status = False
-        self.drone = ControlDrone()
+        # self.drone = ControlDrone()
         self.capture_image()
         
 
