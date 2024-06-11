@@ -15,7 +15,7 @@ class ControlDrone:
         self.up_down_velocity = 0
         self.left_right_velocity = 0
         self.yaw_velocity = 0
-        self.tello.set_speed(80)
+        # self.tello.set_speed(100)
 
 
         # self.start()
@@ -55,6 +55,7 @@ class ControlDrone:
 
 
     def follow_order(self, order):
+        t_rotate = time.time()
         if not self._is_landing:
             if order == 0: #UP
                 print(Fore.LIGHTMAGENTA_EX ,"DO THE ACTION UP")
@@ -88,7 +89,11 @@ class ControlDrone:
 
             elif order == 6:  #Rotate 360 degree
                 print(Fore.LIGHTRED_EX ," DO THE ACTION Rotate 360 degree")
-                self.tello.rotate_counter_clockwise(10)
+                self.tello.rotate_counter_clockwise(360)
+                t_rotate = time.time() + 1
+                # while time.time() < t_end:
+                #     print('whiiiiiile')
+
 
             elif order == 7:  #Land
                 print(Fore.LIGHTBLACK_EX ," DO THE ACTION Land")
@@ -99,26 +104,31 @@ class ControlDrone:
 
                 # self.tello.land()
                 # self.tello.streamoff()
-                # self.tello.end()
+                self.tello.end()
                 # cv2.destroyAllWindows()
 
             elif order == 8:  #Take Picture
                 print(Fore.MAGENTA ," DO THE ACTION Take a Picture")
-                t_end = time.time() + 5
+                t_end = time.time() + 1
                 while time.time() < t_end:
                     frame_read = self.tello.get_frame_read()
-                    frame_rgb = cv2.cvtColor(frame_read, cv2.COLOR_BGR2RGB)
-                    cv2.imwrite("picture.png", frame_rgb.frame)
+                    # cv2.imwrite("picture.png", frame_read) 
+
+                    frame_rgb = cv2.cvtColor(frame_read.frame, cv2.COLOR_BGR2RGB)
+                    cv2.imwrite("picture.png", frame_rgb)
 
             elif order == 9:    #None
                 print(Fore.BLUE ," DO NOTHING")
                 self.forw_back_velocity = self.up_down_velocity = \
                     self.left_right_velocity = self.yaw_velocity = 0
-                # self.tello.send_rc_control(0, 0, 0, 0)
+                self.tello.send_rc_control(0, 0, 0, 0)
 
             # print('hiiii', self.tello.get_speed)
             self.tello.send_rc_control(self.left_right_velocity, self.forw_back_velocity,
                                        self.up_down_velocity, self.yaw_velocity)
+            
+
+        return t_rotate
 
     def info_drone(self):
         # print('Battery: ', self.tello.get_battery(), '%')

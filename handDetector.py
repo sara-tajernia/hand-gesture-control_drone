@@ -67,8 +67,9 @@ class HandDetector:
     def capture_image(self):
         frame_count = 0
         os.makedirs(self.output_folder, exist_ok=True)
-        ten_y = []
+        ten_y = [9,9,9,9,9,9,9,9,9]
         self.drone.start()
+        t_rotate = time.time() - 1
 
         while True:
             frame = self.drone.get_frame()
@@ -97,19 +98,34 @@ class HandDetector:
                         # print('only predict: {:2.8f} s'.format(time.time() - time2))
                         prediction_index = np.argmax(prediction)
                         ten_y.append(prediction_index)
-                        if len(ten_y) == self.windows:
+
+                        print('t_rotate', t_rotate)
+                        print('time.time()', time.time())
+                        print(t_rotate <= time.time())
+                        print(len(ten_y) == self.windows, ten_y, self.windows)
+                        if len(ten_y) == self.windows and t_rotate <= time.time() :
                             most_action = max(set(ten_y), key=ten_y.count)
                             action = ten_y.count(most_action)
-                            if self.vote <= action / self.windows and most_action != 9:
+                            if self.vote <= action / self.windows:
                                 print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
-                                self.drone.follow_order(most_action)
-
+                                print(frame_count)
+                                t_rotate = self.drone.follow_order(most_action)
                             ten_y.pop(0)
+                        else:
+                            print('NOOOOO')
+                            ten_y.pop(0)
+
+                       
+                    #t_rotate = self.drone.follow_order(9)
+                else:
+                    print(',jashdgcwjdgcksbd')
+                    t_rotate = self.drone.follow_order(9)
 
                 font = cv2.FONT_HERSHEY_SIMPLEX  
                 fontScale = 1 
                 color = (255, 255, 255) 
                 thickness = 2  
+                # self.drone.follow_order(9)
 
                 # Put the text on top of the frame
                 cv2.putText(frame, text, (10, 50), font, fontScale, color, thickness)
@@ -118,7 +134,7 @@ class HandDetector:
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                self.drone.follow_order(7)
+                t_rotate = self.drone.follow_order(7)
                 break
 
         # cap.release()
