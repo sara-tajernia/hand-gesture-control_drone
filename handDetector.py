@@ -109,7 +109,8 @@ class HandDetector:
                             if self.vote <= action / self.windows:
                                 print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
                                 print(frame_count)
-                                t_rotate = self.drone.follow_order(most_action)
+                                if not t_rotate:
+                                    t_rotate = self.drone.follow_order(most_action)
                             else:
                                 t_rotate = self.drone.follow_order(9)
                             ten_y.pop(0)
@@ -121,7 +122,7 @@ class HandDetector:
                        
                     #t_rotate = self.drone.follow_order(9)
                 else:
-                    print(',jashdgcwjdgcksbd')
+                    # print(',jashdgcwjdgcksbd')
                     t_rotate = self.drone.follow_order(9)
 
                 font = cv2.FONT_HERSHEY_SIMPLEX  

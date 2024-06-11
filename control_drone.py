@@ -55,7 +55,8 @@ class ControlDrone:
 
 
     def follow_order(self, order):
-        t_rotate = time.time()
+        # t_rotate = time.time()
+        rotation = False
         if not self._is_landing:
             if order == 0: #UP
                 print(Fore.LIGHTMAGENTA_EX ,"DO THE ACTION UP")
@@ -90,7 +91,8 @@ class ControlDrone:
             elif order == 6:  #Rotate 360 degree
                 print(Fore.LIGHTRED_EX ," DO THE ACTION Rotate 360 degree")
                 self.tello.rotate_counter_clockwise(360)
-                t_rotate = time.time() + 1
+                rotation = True
+                # t_rotate = time.time() + 1
                 # while time.time() < t_end:
                 #     print('whiiiiiile')
 
@@ -105,13 +107,13 @@ class ControlDrone:
 
             elif order == 8:  #Take Picture
                 print(Fore.MAGENTA ," DO THE ACTION Take a Picture")
-                t_end = time.time() + 3
+                t_end = time.time() + 1
                 while time.time() < t_end:
                     frame_read = self.tello.get_frame_read()
                     # cv2.imwrite("picture.png", frame_read) 
-
                     frame_rgb = cv2.cvtColor(frame_read.frame, cv2.COLOR_BGR2RGB)
                     cv2.imwrite("picture.png", frame_rgb)
+                rotation = True
 
             elif order == 9:    #None
                 print(Fore.BLUE ," DO NOTHING")
@@ -124,7 +126,7 @@ class ControlDrone:
                                        self.up_down_velocity, self.yaw_velocity)
             
 
-        return t_rotate
+        return rotation
 
     def info_drone(self):
         # print('Battery: ', self.tello.get_battery(), '%')
