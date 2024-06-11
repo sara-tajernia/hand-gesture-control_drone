@@ -99,10 +99,10 @@ class HandDetector:
                         prediction_index = np.argmax(prediction)
                         ten_y.append(prediction_index)
 
-                        print('t_rotate', t_rotate)
-                        print('time.time()', time.time())
-                        print(t_rotate <= time.time())
-                        print(len(ten_y) == self.windows, ten_y, self.windows)
+                        # print('t_rotate', t_rotate)
+                        # print('time.time()', time.time())
+                        # print(t_rotate <= time.time())
+                        # print(len(ten_y) == self.windows, ten_y, self.windows)
                         if len(ten_y) == self.windows and t_rotate <= time.time() :
                             most_action = max(set(ten_y), key=ten_y.count)
                             action = ten_y.count(most_action)
@@ -110,10 +110,13 @@ class HandDetector:
                                 print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
                                 print(frame_count)
                                 t_rotate = self.drone.follow_order(most_action)
+                            else:
+                                t_rotate = self.drone.follow_order(9)
                             ten_y.pop(0)
                         else:
                             print('NOOOOO')
                             ten_y.pop(0)
+                            t_rotate = self.drone.follow_order(9)
 
                        
                     #t_rotate = self.drone.follow_order(9)

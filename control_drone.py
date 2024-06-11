@@ -101,15 +101,11 @@ class ControlDrone:
                 self.forw_back_velocity = self.up_down_velocity = \
                 self.left_right_velocity = self.yaw_velocity = 0
                 self.tello.land()
-
-                # self.tello.land()
-                # self.tello.streamoff()
                 self.tello.end()
-                # cv2.destroyAllWindows()
 
             elif order == 8:  #Take Picture
                 print(Fore.MAGENTA ," DO THE ACTION Take a Picture")
-                t_end = time.time() + 1
+                t_end = time.time() + 3
                 while time.time() < t_end:
                     frame_read = self.tello.get_frame_read()
                     # cv2.imwrite("picture.png", frame_read) 
