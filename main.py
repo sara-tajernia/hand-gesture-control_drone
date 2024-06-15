@@ -9,12 +9,11 @@ from dataset import Dataset
 
 
 
-
 if __name__ == "__main__":
 
-    # # Train
+    # Train
     # actions_num = 10
-    # dataset = "./dataset/left_hand.csv"
+    # dataset = "./dataset/me_left.csv"
     # # dataset = "./dataset/keypoint.csv"
     # X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
     # y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))

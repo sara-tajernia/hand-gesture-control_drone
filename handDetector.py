@@ -23,7 +23,7 @@ class HandDetector:
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/CNN_right(7150).h5')
+        self.model = load_model('models/me_right.h5')
         self.mp_hands = mp.solutions.hands
         self.detector = self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
         self.mp_drawing = mp.solutions.drawing_utils
@@ -69,15 +69,12 @@ class HandDetector:
         os.makedirs(self.output_folder, exist_ok=True)
         ten_y = [9,9,9,9,9,9,9,9,9]
         self.drone.start()
-        t_rotate = time.time() - 1
+        last_orders = []
 
         while True:
             frame = self.drone.get_frame()
             frame_count += 1
             if frame_count % self.save_interval == 0:
-                time1 = time.time()
-                tracemalloc.start()
-
                 # Convert the frame to RGB format
                 frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 detection_result = self.detector.process(frame_rgb)
@@ -99,31 +96,42 @@ class HandDetector:
                         prediction_index = np.argmax(prediction)
                         ten_y.append(prediction_index)
 
-                        # print('t_rotate', t_rotate)
-                        # print('time.time()', time.time())
-                        # print(t_rotate <= time.time())
-                        # print(len(ten_y) == self.windows, ten_y, self.windows)
-                        if len(ten_y) == self.windows and t_rotate <= time.time() :
+                        if len(ten_y) == self.windows:
                             most_action = max(set(ten_y), key=ten_y.count)
                             action = ten_y.count(most_action)
                             if self.vote <= action / self.windows:
                                 print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
                                 print(frame_count)
-                                if not t_rotate:
-                                    t_rotate = self.drone.follow_order(most_action)
+                                print(most_action, last_orders, most_action not in last_orders)
+                                text = self.gestures[most_action][0]
+
+
+                                if most_action == 6 or most_action == 8:
+                                    if most_action not in last_orders:
+                                        self.drone.follow_order(most_action)
+                                    else:
+                                        self.drone.follow_order(9)
+                                else:
+                                    self.drone.follow_order(most_action)
+                                last_orders.append(most_action)
+                       
                             else:
-                                t_rotate = self.drone.follow_order(9)
+                                self.drone.follow_order(9)
+                                last_orders.append(9)
+
                             ten_y.pop(0)
                         else:
                             print('NOOOOO')
                             ten_y.pop(0)
-                            t_rotate = self.drone.follow_order(9)
+                            self.drone.follow_order(9)
+                            last_orders.append(most_action)
+                            
 
                        
                     #t_rotate = self.drone.follow_order(9)
                 else:
                     # print(',jashdgcwjdgcksbd')
-                    t_rotate = self.drone.follow_order(9)
+                    self.drone.follow_order(9)
 
                 font = cv2.FONT_HERSHEY_SIMPLEX  
                 fontScale = 1 
@@ -135,15 +143,17 @@ class HandDetector:
                 cv2.putText(frame, text, (10, 50), font, fontScale, color, thickness)
             cv2.imshow("Frame", frame)
             tracemalloc.stop()
+            if 20 < len(last_orders):
+                last_orders.pop(0)
+            print('last_orders', last_orders)
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                t_rotate = self.drone.follow_order(7)
+                self.drone.follow_order(7)
                 break
 
         # cap.release()
         cv2.destroyAllWindows()
-
 
 
     def read_gesture_file(self):

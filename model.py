@@ -178,7 +178,7 @@ class HandGestureClassifierCNN:
 
         start_train = time.time()
         print(self.X_train.shape, self.y_train.shape, self.X_test.shape, self.y_test.shape, self.input_shape)
-        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=150, batch_size=64, verbose=2)
+        self.history = self.model.fit(self.X_train, self.y_train, validation_data=(self.X_test, self.y_test), epochs=200, batch_size=64, verbose=2)
         print('Training model: {:2.2f} s'.format(time.time() - start_train))
         self.plot_training_progress()
     
@@ -205,7 +205,7 @@ class HandGestureClassifierCNN:
 
     
     def save_model(self):
-        self.model.save('models/CNN_Left(7150).h5')
+        self.model.save('models/me_left.h5')
         # self.model.save('models/weights_CNN_100.h5')
 
     def test_model(self):

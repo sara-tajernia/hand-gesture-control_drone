@@ -12,7 +12,7 @@ from collections import Counter
 from colorama import Fore, Back, Style
 import time
 from google.protobuf.json_format import MessageToDict
-from control_drone import ControlDrone
+from control_drone2 import ControlDrone
 import psutil
 import tracemalloc
 
@@ -23,13 +23,13 @@ class HandDetector:
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/CNN_right(7150).h5')
+        self.model = load_model('models/me_right.h5')
         self.mp_hands = mp.solutions.hands
         self.detector = self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
         self.mp_drawing = mp.solutions.drawing_utils
         self.read_gesture_file()
         self.status = False
-        # self.drone = ControlDrone()
+        self.drone = ControlDrone()
         self.capture_image()
         
 
@@ -65,10 +65,18 @@ class HandDetector:
 
 
     def capture_image(self):
+        last_orders = []
         cap = cv2.VideoCapture(0)
         frame_count = 0
         os.makedirs(self.output_folder, exist_ok=True)
         ten_y = []
+        frame_count = 0
+        os.makedirs(self.output_folder, exist_ok=True)
+        ten_y = [9,9,9,9,9,9,9,9,9]
+        # self.drone.start()
+        rotation = False
+        picture = False
+        pre_time_rotation, pre_time_picture = time.time(), time.time()
 
         # while True:
         #     frame = self.drone.get_frame()
@@ -77,11 +85,8 @@ class HandDetector:
             ret, frame = cap.read()
             if not ret:
                 break
-
             frame_count += 1
             if frame_count % self.save_interval == 0:
-                time1 = time.time()
-                tracemalloc.start()
 
                 # Convert the frame to RGB format
                 frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -103,36 +108,116 @@ class HandDetector:
                         # print('only predict: {:2.8f} s'.format(time.time() - time2))
                         prediction_index = np.argmax(prediction)
                         ten_y.append(prediction_index)
+
                         if len(ten_y) == self.windows:
                             most_action = max(set(ten_y), key=ten_y.count)
                             action = ten_y.count(most_action)
-                            if self.vote <= action / self.windows and most_action != 9:
+                            if self.vote <= action / self.windows:
                                 print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
-                                # self.drone.follow_order(most_action)
+                                print(frame_count)
+                                print(most_action, last_orders, most_action not in last_orders)
 
+
+                                if most_action == 6 or most_action == 8:
+                                    if most_action not in last_orders:
+                                        self.drone.follow_order(most_action)
+                                    else:
+                                        self.drone.follow_order(9)
+                                else:
+                                    self.drone.follow_order(most_action)
+                                last_orders.append(most_action)
+                       
+                            else:
+                                self.drone.follow_order(9)
                             ten_y.pop(0)
+                        else:
+                            print('NOOOOO')
+                            ten_y.pop(0)
+                            self.drone.follow_order(9)
+
+                       
+                    #t_rotate = self.drone.follow_order(9)
+                else:
+                    # print(',jashdgcwjdgcksbd')
+                    self.drone.follow_order(9)
 
                 font = cv2.FONT_HERSHEY_SIMPLEX  
                 fontScale = 1 
                 color = (255, 255, 255) 
                 thickness = 2  
+                # self.drone.follow_order(9)
 
                 # Put the text on top of the frame
                 cv2.putText(frame, text, (10, 50), font, fontScale, color, thickness)
-                cv2.imshow("Frame", frame)
-                # print('all things: {:2.2f} s'.format(time.time() - time1))
-                # process = psutil.Process()
-                # print(process.memory_info().rss) 
-                # print(tracemalloc.get_traced_memory())
-                tracemalloc.stop()
+            cv2.imshow("Frame", frame)
+            tracemalloc.stop()
+            if 20 < len(last_orders):
+                last_orders.pop(0)
+            print('last_orders', last_orders)
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                # self.drone.follow_order(7)
+                self.drone.follow_order(7)
                 break
 
         # cap.release()
         cv2.destroyAllWindows()
+
+        #     frame_count += 1
+        #     if frame_count % self.save_interval == 0:
+        #         time1 = time.time()
+        #         tracemalloc.start()
+
+        #         # Convert the frame to RGB format
+        #         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        #         detection_result = self.detector.process(frame_rgb)
+        #         text = "None"
+        #         if detection_result.multi_hand_landmarks:
+        #             # Draw landmarks on the frame
+        #             annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Left')
+
+        #             # Write the frame with landmarks to disk
+        #             cv2.imwrite(os.path.join(f"./gestures/test/annotated_frame_{frame_count}.jpg"), annotated_image)
+        #             process_landmark = self.pre_process_landmark(np.array(landmark_coords))
+
+        #             if process_landmark != []:
+
+        #                 process_landmark_array = np.array(process_landmark).reshape(1, 21, 2)
+        #                 time2 = time.time()
+        #                 prediction = self.model.predict(process_landmark_array, verbose=0)
+        #                 # print('only predict: {:2.8f} s'.format(time.time() - time2))
+        #                 prediction_index = np.argmax(prediction)
+        #                 ten_y.append(prediction_index)
+        #                 if len(ten_y) == self.windows:
+        #                     most_action = max(set(ten_y), key=ten_y.count)
+        #                     action = ten_y.count(most_action)
+        #                     if self.vote <= action / self.windows and most_action != 9:
+        #                         print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
+        #                         # self.drone.follow_order(most_action)
+
+        #                     ten_y.pop(0)
+
+        #         font = cv2.FONT_HERSHEY_SIMPLEX  
+        #         fontScale = 1 
+        #         color = (255, 255, 255) 
+        #         thickness = 2  
+
+        #         # Put the text on top of the frame
+        #         cv2.putText(frame, text, (10, 50), font, fontScale, color, thickness)
+        #         cv2.imshow("Frame", frame)
+        #         # print('all things: {:2.2f} s'.format(time.time() - time1))
+        #         # process = psutil.Process()
+        #         # print(process.memory_info().rss) 
+        #         # print(tracemalloc.get_traced_memory())
+        #         tracemalloc.stop()
+
+        #     # Exit when 'q' is pressed
+        #     if cv2.waitKey(1) & 0xFF == ord('q'):
+        #         # self.drone.follow_order(7)
+        #         break
+
+        # # cap.release()
+        # cv2.destroyAllWindows()
 
 
 
