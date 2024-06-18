@@ -51,24 +51,43 @@ pip3 install -r requirements.txt
  <img width="60%" alt="flowchart" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/86605a9c-a743-4c73-8a77-0e7569c4ff2a">
 </p>
 
+
+### علائم دست مناسب براي كنترل پهپاد 
+<p align="center">
+<img width="420" alt="gestures" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/db147232-99ac-4070-ab6b-2618fb62c5ee">
+</p>
+
+
 ### مدل تشخیص کف دست
-
-
+<p align="left">
+<img width="20%" alt="hand_detector" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/c8aabcc9-e2ec-4a3a-98d9-081d133cced1">
+و
 
 ### مدل نشخیص نقاط عطف دست
 <p align="center">
-<img width="1073" alt="hand-landmarks" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/1709cbbc-6a18-435d-952f-bfdebea73b3b">
+<img width="70%" alt="hand-landmarks" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/1709cbbc-6a18-435d-952f-bfdebea73b3b">
+</p>
+
+### پیش‌پردازش داده‌ها
+<p align="center">
+<img width="75%" alt="preprocess" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/eb6a7708-a6d7-469f-b8eb-a5dfab7602bb">
 </p>
 
 ### تشخیص علامت دست 
 
 <p align="center">
-<img width="1073" alt="hand-landmarks" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/5189b6ff-8463-4368-b92e-1444243bd466">
+<img width="60%" alt="hand-landmarks" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/5189b6ff-8463-4368-b92e-1444243bd466">
 </p>
 
+### رأی گیری پنجره‌ای
+<p align="center">
+<img width="80%" alt="window" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/f5daafba-054b-4b7f-a56d-7ad17f2b05c2">
+</p>
+
+
 ### قابلیت‌های برنامه
-### توانایی اضافه کردن داده جدید به مجموعه داده با تنها یک دکمه برای اضافه کردن علامت دست جدید
-### قابلیت انتخاب کنترل پهپاد با دست راست پا چپ
+توانایی اضافه کردن داده جدید به مجموعه داده با تنها یک دکمه برای اضافه کردن علامت دست جدید
+قابلیت انتخاب کنترل پهپاد با دست راست پا چپ
 
 ## نویسنده
 سارا تاجرنیا (https://github.com/sara-tajernia)
