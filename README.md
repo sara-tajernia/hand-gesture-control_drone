@@ -19,11 +19,6 @@
  <img width="40%" alt="flowchart" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/c349e013-3049-4832-a11b-3c9681464b4a">
 </p>
 
-## روند اجرای پروژه 
-<p align="center">
- <img width="60%" alt="flowchart" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/86605a9c-a743-4c73-8a77-0e7569c4ff2a">
-</p>
-
 
 ## پیاده‌سازی
 
@@ -46,10 +41,34 @@ pip3 install -r requirements.txt
 
 ### روشن کردن پهپاد و وصل شدن به آن از طریق وای فای
 
-<p align="center">
+<p align="left">
 <img width="30%" alt="110932822-a7b30f00-8334-11eb-9759-864c3dce652d-2" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/7efe5c6b-6518-40ff-9b1f-2a810b7774c7">
 </p>
 
+
+## روند اجرای پروژه 
+<p align="center">
+ <img width="60%" alt="flowchart" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/86605a9c-a743-4c73-8a77-0e7569c4ff2a">
+</p>
+
+### مدل تشخیص کف دست
+
+
+
+### مدل نشخیص نقاط عطف دست
+<p align="center">
+<img width="1073" alt="hand-landmarks" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/1709cbbc-6a18-435d-952f-bfdebea73b3b">
+</p>
+
+### تشخیص علامت دست 
+
+<p align="center">
+<img width="1073" alt="hand-landmarks" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/5189b6ff-8463-4368-b92e-1444243bd466">
+</p>
+
+### قابلیت‌های برنامه
+### توانایی اضافه کردن داده جدید به مجموعه داده با تنها یک دکمه برای اضافه کردن علامت دست جدید
+### قابلیت انتخاب کنترل پهپاد با دست راست پا چپ
 
 ## نویسنده
 سارا تاجرنیا (https://github.com/sara-tajernia)
