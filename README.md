@@ -26,12 +26,14 @@
 برای اجرای این برنامه باسد از پایتون 3.7 به بالا استفاده کرد.
 List of packages
 ```sh
-ConfigArgParse == 1.2.3
-djitellopy == 1.5
-numpy == 1.19.3
-opencv_python == 4.5.1.48
-tensorflow == 2.4.1
-mediapipe == 0.8.2
+ConfigArgParse==1.2.3
+djitellopy==1.5
+numpy==1.23.3
+opencv-python==4.8.0.76
+tensorflow==2.10.0
+mediapipe==0.10.9
+keras==2.10.0
+matplotlib==3.8.3
 ```
 
 Install
