@@ -12,10 +12,10 @@ https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/8b8a
 
 موارد مورد نیاز برای اجرای پروژه:
 
-![111294166-b65e3680-8652-11eb-8225-c1fb1e5b867d](https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/c349e013-3049-4832-a11b-3c9681464b4a)
+ <img width="60%" alt="flowchart" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/c349e013-3049-4832-a11b-3c9681464b4a">
 
 ## روند اجرای پروژه 
-<img width="567" alt="flowchart" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/86605a9c-a743-4c73-8a77-0e7569c4ff2a">
+ <img width="60%" alt="flowchart" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/86605a9c-a743-4c73-8a77-0e7569c4ff2a">
 
 ## پیاده‌سازی
 
@@ -37,7 +37,7 @@ pip3 install -r requirements.txt
 ```
 
 ### روشن کردن پهپاد و وصل شدن به آن از طریق وای فای
-<img width="346" alt="110932822-a7b30f00-8334-11eb-9759-864c3dce652d-2" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/7efe5c6b-6518-40ff-9b1f-2a810b7774c7">
+<img width="30%" alt="110932822-a7b30f00-8334-11eb-9759-864c3dce652d-2" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/7efe5c6b-6518-40ff-9b1f-2a810b7774c7">
 
 
 
