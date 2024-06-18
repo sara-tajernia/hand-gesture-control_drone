@@ -53,33 +53,40 @@ pip3 install -r requirements.txt
 
 
 ### علائم دست مناسب براي كنترل پهپاد 
+انتخاب علائم مناسب براي هر يك از حركات پهپاد از اهميت ويژهاي برخوردار است، زيرا علائم كه از لحاظ مفهومي به عملكرد پهپاد شبيه هستند، راحتتر به خاطر سپرده ميشوند و تجربه كاربري دلپذيرتري را ايجاد ميكنند. ۹ حرکت برگزیرده شده برای کنترل پهپاد به شرح زیر است:
+.
 <p align="center">
 <img width="55%" alt="gestures" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/db147232-99ac-4070-ab6b-2618fb62c5ee">
 </p>
 
 
-### مدل تشخیص کف دست
+### مدل تشخیص کف دست 
+اين ماژول قادر است بهصورت دقيق و كارآمد موقعيت دستها را شناسايي كند و نواحي مربوطه را براي پردازشهاي بعدي فراهم كند.
+
 <p align="center">
 <img width="40%" alt="hand_detector" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/c8aabcc9-e2ec-4a3a-98d9-081d133cced1">
 و
 
 ### مدل نشخیص نقاط عطف دست
+اين ماژول براي تشخيص و رديابي نقاط كليدي دست استفاده می‌شود.
 <p align="center">
 <img width="70%" alt="hand-landmarks" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/1709cbbc-6a18-435d-952f-bfdebea73b3b">
 </p>
 
 ### پیش‌پردازش داده‌ها
+سبي و نرمالسازي کردن داده‌ها 
 <p align="center">
 <img width="55%" alt="preprocess" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/eb6a7708-a6d7-469f-b8eb-a5dfab7602bb">
 </p>
 
 ### تشخیص علامت دست 
-
+پیاده‌سازی مدل کم حجم شبكه عصبي پيچشي برای کلاس بندی ۹ مدل ژست دست
 <p align="center">
 <img width="60%" alt="hand-landmarks" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/5189b6ff-8463-4368-b92e-1444243bd466">
 </p>
 
 ### رأی گیری پنجره‌ای
+ نمونه رأي‌گيري پنجره‌اي موفق و ناموفق برای بالا بردن دقت پرنامه
 <p align="center">
 <img width="80%" alt="window" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/f5daafba-054b-4b7f-a56d-7ad17f2b05c2">
 </p>
