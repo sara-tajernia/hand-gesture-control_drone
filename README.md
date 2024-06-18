@@ -54,13 +54,13 @@ pip3 install -r requirements.txt
 
 ### علائم دست مناسب براي كنترل پهپاد 
 <p align="center">
-<img width="420" alt="gestures" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/db147232-99ac-4070-ab6b-2618fb62c5ee">
+<img width="55%" alt="gestures" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/db147232-99ac-4070-ab6b-2618fb62c5ee">
 </p>
 
 
 ### مدل تشخیص کف دست
-<p align="left">
-<img width="20%" alt="hand_detector" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/c8aabcc9-e2ec-4a3a-98d9-081d133cced1">
+<p align="center">
+<img width="40%" alt="hand_detector" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/c8aabcc9-e2ec-4a3a-98d9-081d133cced1">
 و
 
 ### مدل نشخیص نقاط عطف دست
@@ -70,7 +70,7 @@ pip3 install -r requirements.txt
 
 ### پیش‌پردازش داده‌ها
 <p align="center">
-<img width="75%" alt="preprocess" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/eb6a7708-a6d7-469f-b8eb-a5dfab7602bb">
+<img width="55%" alt="preprocess" src="https://github.com/sara-tajernia/hand-gesture-control_drone/assets/61985583/eb6a7708-a6d7-469f-b8eb-a5dfab7602bb">
 </p>
 
 ### تشخیص علامت دست 
