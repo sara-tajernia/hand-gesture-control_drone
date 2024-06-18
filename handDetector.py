@@ -3,18 +3,12 @@ import mediapipe as mp
 import os
 from keras.models import load_model
 import numpy as np
-import csv
 import pandas as pd
 import copy
 import itertools
-from preprocess_data import Preprocess
-from collections import Counter
 from colorama import Fore, Back, Style
 import time
-from google.protobuf.json_format import MessageToDict
 from control_drone import ControlDrone
-import psutil
-import tracemalloc
 
 class HandDetector:
     def __init__(self):
@@ -100,9 +94,9 @@ class HandDetector:
                             most_action = max(set(ten_y), key=ten_y.count)
                             action = ten_y.count(most_action)
                             if self.vote <= action / self.windows:
-                                print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
-                                print(frame_count)
-                                print(most_action, last_orders, most_action not in last_orders)
+                                # print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
+                                # print(frame_count)
+                                # print(most_action, last_orders, most_action not in last_orders)
                                 text = self.gestures[most_action][0]
 
 
@@ -121,7 +115,7 @@ class HandDetector:
 
                             ten_y.pop(0)
                         else:
-                            print('NOOOOO')
+                            # print('NOOOOO')
                             ten_y.pop(0)
                             self.drone.follow_order(9)
                             last_orders.append(most_action)
@@ -142,10 +136,10 @@ class HandDetector:
                 # Put the text on top of the frame
                 cv2.putText(frame, text, (10, 50), font, fontScale, color, thickness)
             cv2.imshow("Frame", frame)
-            tracemalloc.stop()
+            # tracemalloc.stop()
             if 20 < len(last_orders):
                 last_orders.pop(0)
-            print('last_orders', last_orders)
+            # print('last_orders', last_orders)
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):

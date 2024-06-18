@@ -376,7 +376,7 @@
 
 \begin{figure}[h]
     \centering
-    \includegraphics[height=9cm,width=0.9\textwidth]{LSTM.png}
+    \includegraphics[width=0.9\textwidth]{LSTM.png}
     \caption[نمونه معماری شبکه‌ حافظه طولانی کوتاه مدت]{نمونه معماری شبکه‌ حافظه طولانی کوتاه مدت \cite{s21165625}}
 \end{figure}
 
@@ -408,6 +408,11 @@
 در انتها این این مختصات را به عنوان ورودی به شبکه تعیین علائم دست می‌دهیم. با توجه به اینکه معماری هیچ یک از مدل‌ها تغییر نکرده است و تنها داده‌های مختصات به روز رسانی شده‌اند، 
 دقت نهایی مدل به ۹۷ درصد افزایش پیدا کرده است و پیش‌پردازش تاثیر به‌سزایی در افزایش دقت پروژه داشته است.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{preprocess.png}
+    \caption{نمونه پیش‌وردازش داده‌ها}
+\end{figure}
 
 \subsection{رأی‌گیری پنجره‌ای}
 % \subsection{پس‌پردازش}
@@ -436,7 +441,7 @@
 
 \begin{table}[h!]
     \centering
-    \begin{tabular}{||>{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{11.5cm}||}
+    \begin{tabular}{||>{\centering\arraybackslash}p{3.5cm} >{\centering\arraybackslash}p{11.5cm}||}
      \hline
     \rule{0pt}{3ex} حرکت پهپاد & دستورالعمل \\ [1.5ex]
     \hline
@@ -444,8 +449,8 @@
      وصل شدن به پهپاد & \text{\lr{connect()}} \\ [2.5ex]
      روشن کردن دوربین & \text{\lr{streamon()}} \\ [2.5ex]
      بلند شدن & \text{\lr{takeoff()}} \\ [2.5ex]
-     گرفتن فریم‌ها از دوربین & \text{\lr{get\text{\_}frame\text{\_}read()}} \\ [2.5ex]
-     حرکت به ۶ جهت اصلی & \text{\lr{send\text{\_}rc\text{\_}control(left\text{\_}right, forward\text{\_}backward, up\text{\_}down, yaw)}} \\ [2.5ex]
+     گرفتن تصاویر دوربین & \text{\lr{get\text{\_}frame\text{\_}read()}} \\ [2.5ex]
+     حرکت به ۶ جهت & \text{\lr{send\text{\_}rc\text{\_}control(left\text{\_}right, forward\text{\_}backward, up\text{\_}down, yaw)}} \\ [2.5ex]
      چرخش ساعتگرد & \text{\lr{rotate\text{\_}counter\text{\_}clockwise(degree)}} \\ [2.5ex]
      فرود آمدن & \text{\lr{land()}} \\ [2.5ex]
      خاموش کردن دوربین & \text{\lr{streamoff()}} \\ [2.5ex]

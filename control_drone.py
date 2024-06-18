@@ -1,6 +1,6 @@
 from djitellopy import Tello, TelloException
 import time
-from colorama import Fore, Back, Style
+from colorama import Fore
 
 import cv2
 
