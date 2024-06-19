@@ -17,20 +17,22 @@ import psutil
 import tracemalloc
 
 class HandDetector:
-    def __init__(self):
+    def __init__(self, hand_id, path_model):
         self.save_interval = 1  # frame
+        self.hand_id = hand_id
         self.output_folder = "./gestures/test/"
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/me_right.h5')
+        self.model = load_model(path_model)
         self.mp_hands = mp.solutions.hands
         self.detector = self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
         self.mp_drawing = mp.solutions.drawing_utils
         self.read_gesture_file()
-        self.status = False
+        # self.status = False
         self.drone = ControlDrone()
         self.capture_image()
+    
         
 
     def detect_hand_landmarks(self, image):
@@ -94,10 +96,12 @@ class HandDetector:
                 text = "None"
                 if detection_result.multi_hand_landmarks:
                     # Draw landmarks on the frame
-                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Left')
+                    # print(self.handness)
+                    cv2.imwrite(os.path.join(f"./gestures/test/annotated1_frame_{frame_count}_0.jpg"), frame)
+                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, self.hand_id)
 
                     # Write the frame with landmarks to disk
-                    cv2.imwrite(os.path.join(f"./gestures/test/annotated_frame_{frame_count}.jpg"), annotated_image)
+                    cv2.imwrite(os.path.join(f"./gestures/test/annotated_frame_{frame_count}_1.jpg"), annotated_image)
                     process_landmark = self.pre_process_landmark(np.array(landmark_coords))
 
                     if process_landmark != []:
@@ -113,9 +117,9 @@ class HandDetector:
                             most_action = max(set(ten_y), key=ten_y.count)
                             action = ten_y.count(most_action)
                             if self.vote <= action / self.windows:
-                                print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
-                                print(frame_count)
-                                print(most_action, last_orders, most_action not in last_orders)
+                                # print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
+                                # print(frame_count)
+                                # print(most_action, last_orders, most_action not in last_orders)
 
 
                                 if most_action == 6 or most_action == 8:
@@ -131,7 +135,7 @@ class HandDetector:
                                 self.drone.follow_order(9)
                             ten_y.pop(0)
                         else:
-                            print('NOOOOO')
+                            # print('NOOOOO')
                             ten_y.pop(0)
                             self.drone.follow_order(9)
 
@@ -142,9 +146,9 @@ class HandDetector:
                     self.drone.follow_order(9)
 
                 font = cv2.FONT_HERSHEY_SIMPLEX  
-                fontScale = 1 
+                fontScale = 1
                 color = (255, 255, 255) 
-                thickness = 2  
+                thickness = 3
                 # self.drone.follow_order(9)
 
                 # Put the text on top of the frame
@@ -153,7 +157,7 @@ class HandDetector:
             tracemalloc.stop()
             if 20 < len(last_orders):
                 last_orders.pop(0)
-            print('last_orders', last_orders)
+            # print('last_orders', last_orders)
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):

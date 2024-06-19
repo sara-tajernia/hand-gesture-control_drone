@@ -9,33 +9,33 @@ from collect_dataset import Dataset
 
 if __name__ == "__main__":
 
-    Train
-    actions_num = 10
-    dataset = "./dataset/me_left.csv"
-    # dataset = "./dataset/keypoint.csv"
-    X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
-    y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
+    # # Train
+    # actions_num = 10
+    # dataset = "./dataset/me_left.csv"
+    # # dataset = "./dataset/keypoint.csv"
+    # X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
+    # y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
 
-    preprocess = Preprocess(X_dataset, y_dataset, actions_num)
+    # preprocess = Preprocess(X_dataset, y_dataset, actions_num)
     
-    X_train, X_test, y_train, y_test = preprocess.split_data()
+    # X_train, X_test, y_train, y_test = preprocess.split_data()
 
 
 
 
-    model = HandGestureClassifierMLP(X_train, y_train, X_test, y_test, actions_num).model
-    model = HandGestureClassifierCNN(X_train, y_train, X_test, y_test, actions_num).model
-    model = HandGestureClassifierLSTM(X_train, y_train, X_test, y_test, actions_num).model
-    model = HandGestureClassifierRNN(X_train, y_train, X_test, y_test, actions_num).model
+    # model = HandGestureClassifierMLP(X_train, y_train, X_test, y_test, actions_num).model
+    # model = HandGestureClassifierCNN(X_train, y_train, X_test, y_test, actions_num).model
+    # model = HandGestureClassifierLSTM(X_train, y_train, X_test, y_test, actions_num).model
+    # model = HandGestureClassifierRNN(X_train, y_train, X_test, y_test, actions_num).model
 
 
 
     # Uncomment if you want het orders for drone
-    hand_detector = HandDetector()
+    hand_detector = HandDetector('Left', 'models/me_right.h5')
 
 
 
     #Uncomment if you want to collect data to add to dataset
-    Dataset()
+    # Dataset()
 
 

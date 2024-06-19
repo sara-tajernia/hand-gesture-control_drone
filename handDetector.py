@@ -11,18 +11,18 @@ import time
 from control_drone import ControlDrone
 
 class HandDetector:
-    def __init__(self):
+    def __init__(self, hand_id, path_model):
         self.save_interval = 1  # frame
+        self.hand_id = hand_id
         self.output_folder = "./gestures/test/"
         self.gestures = []
         self.windows = 10
         self.vote = 0.7
-        self.model = load_model('models/me_right.h5')
+        self.model = load_model(path_model)
         self.mp_hands = mp.solutions.hands
         self.detector = self.mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=2)
         self.mp_drawing = mp.solutions.drawing_utils
         self.read_gesture_file()
-        self.status = False
         self.drone = ControlDrone()
         self.capture_image()
         
@@ -75,18 +75,15 @@ class HandDetector:
                 text = "None"
                 if detection_result.multi_hand_landmarks:
                     # Draw landmarks on the frame
-                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, 'Left')
+                    annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result, self.hand_id)
 
                     # Write the frame with landmarks to disk
                     cv2.imwrite(os.path.join(f"./gestures/test/annotated_frame_{frame_count}.jpg"), annotated_image)
                     process_landmark = self.pre_process_landmark(np.array(landmark_coords))
 
                     if process_landmark != []:
-
                         process_landmark_array = np.array(process_landmark).reshape(1, 21, 2)
-                        time2 = time.time()
                         prediction = self.model.predict(process_landmark_array, verbose=0)
-                        # print('only predict: {:2.8f} s'.format(time.time() - time2))
                         prediction_index = np.argmax(prediction)
                         ten_y.append(prediction_index)
 
