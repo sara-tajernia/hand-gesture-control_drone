@@ -28,6 +28,7 @@ List of packages
 ```sh
 ConfigArgParse==1.2.3
 djitellopy==1.5
+scikit-learn==1.4.1.post1
 numpy==1.23.3
 opencv-python==4.8.0.76
 tensorflow==2.10.0

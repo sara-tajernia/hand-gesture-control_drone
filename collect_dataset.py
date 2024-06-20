@@ -1,24 +1,18 @@
-import cv2
-import mediapipe as mp
 import os
-import numpy as np
+import cv2
 import csv
 import copy
 import itertools
+import numpy as np
+import mediapipe as mp
+
 from collections import Counter
-
-MARGIN = 10  # pixels
-FONT_SIZE = 1
-FONT_THICKNESS = 1
-HANDEDNESS_TEXT_COLOR = (88, 205, 54) # vibrant green
-
-
 
 
 class Dataset:
-    def __init__(self):
+    def __init__(self, path_dataset):
+        self.path_dataset = path_dataset
         self.capture_image()
-        # self.infos()
 
     def pre_process_landmark(self, landmark):
         hands, final = [], []
@@ -30,7 +24,6 @@ class Dataset:
         landmark_list = np.array(hands)
 
         for landmark_list_hand in landmark_list:
-            print(1, landmark_list_hand)
             temp_landmark_list = copy.deepcopy(landmark_list_hand)
             base_x, base_y = 0, 0
             for index, landmark_point in enumerate(temp_landmark_list):
@@ -40,20 +33,17 @@ class Dataset:
                 temp_landmark_list[index][0] = temp_landmark_list[index][0] - base_x
                 temp_landmark_list[index][1] = temp_landmark_list[index][1] - base_y
 
-
             temp_landmark_list = list(
                 itertools.chain.from_iterable(temp_landmark_list))
             if temp_landmark_list != [] :
                 max_value = max(list(map(abs, temp_landmark_list)))
-            print(2, temp_landmark_list)
+
             def normalize_(n):
                 return n / max_value
             
             temp_landmark_list = list(map(normalize_, temp_landmark_list))
             final.append(temp_landmark_list)
-            print(3, final)
-
-
+        
         return final
 
 
@@ -74,21 +64,16 @@ class Dataset:
     
 
     def capture_image(self):
-        # Initialize MediaPipe Hand Landmarker
         mp_hands = mp.solutions.hands
-        mp_drawing = mp.solutions.drawing_utils
-
-        # Initialize VideoCapture
         cap = cv2.VideoCapture(0)
         frame_count = 0
-        save_interval = 1  # seconds
+        save_interval = 1  
         output_folder = "./gestures/test/"
         os.makedirs(output_folder, exist_ok=True)
 
         detector = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
-        # Open CSV file
-        with open('./dataset/left_hand.csv', 'a', newline='') as csvfile:
+        with open(self.path_dataset, 'a', newline='') as csvfile:
             csvwriter = csv.writer(csvfile)
 
             while cap.isOpened():
@@ -97,28 +82,17 @@ class Dataset:
                     break
 
                 frame_count += 1
-                # cv2.imshow("Frame", frame)
 
                 if frame_count % save_interval == 0:
-                    # Convert the frame to RGB format
                     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-                    # Convert the RGB frame to MediaPipe's image format
                     image = cv2.cvtColor(frame_rgb, cv2.COLOR_RGB2BGR)  
                     image.flags.writeable = False  
                     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  
-
-                    # Detect hand landmarks in the image
                     detection_result = detector.process(image)
 
                     if detection_result.multi_hand_landmarks:
-                        # Draw landmarks on the image
                         annotated_image, landmark_coords = self.draw_landmarks_on_image(frame, detection_result)
-
-                        # Save the annotated image
                         cv2.imwrite(os.path.join(output_folder, f"annotated_frame_{frame_count}.jpg"), annotated_image)
-
-                        # Extract coordinates from detection result
                         process_landmark = self.pre_process_landmark(np.array(landmark_coords))
 
                         # Check for key press
@@ -128,34 +102,25 @@ class Dataset:
                                 for point in process_landmark:
                                     row_data = [chr(key)] + point[:42]
                                     csvwriter.writerow(row_data)
-                                    print(f"Saved a list for {chr(key)}\n")
+                                    print(f"Save gesture {chr(key)}\n")
 
                 cv2.imshow("Frame", frame)
                 # Exit when 'q' is pressed
                 if cv2.waitKey(1) & 0xFF == ord('q'):
                     break
 
-        # Release the camera and close the CSV file
         cap.release()
         cv2.destroyAllWindows()
 
 
     def infos(self):
         counter = Counter()
-
-        # Open the CSV file
         with open('./dataset/dataset_1hand(10).csv', 'r') as csvfile:
             csvreader = csv.reader(csvfile)
-            
-            # Iterate through each row in the CSV file
             for row in csvreader:
-                # Get the first index (the first value in each row)
                 first_index = row[0]
-                
-                # Increment the counter for this first index
                 counter[first_index] += 1
 
-        # Print the count of each unique value in the first index
         for key, value in counter.items():
             print(f'Index {key}: {value} occurrences')
 

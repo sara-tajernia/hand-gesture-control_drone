@@ -1,18 +1,17 @@
-import cv2
-import mediapipe as mp
 import os
-from keras.models import load_model
-import numpy as np
-import pandas as pd
+import cv2
 import copy
 import itertools
-from colorama import Fore, Back, Style
-import time
+import numpy as np
+import pandas as pd
+import mediapipe as mp
+
+from keras.models import load_model
 from control_drone import ControlDrone
 
 class HandDetector:
     def __init__(self, hand_id, path_model):
-        self.save_interval = 1  # frame
+        self.save_interval = 1  
         self.hand_id = hand_id
         self.output_folder = "./gestures/test/"
         self.gestures = []
@@ -91,12 +90,7 @@ class HandDetector:
                             most_action = max(set(ten_y), key=ten_y.count)
                             action = ten_y.count(most_action)
                             if self.vote <= action / self.windows:
-                                # print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
-                                # print(frame_count)
-                                # print(most_action, last_orders, most_action not in last_orders)
                                 text = self.gestures[most_action][0]
-
-
                                 if most_action == 6 or most_action == 8:
                                     if most_action not in last_orders:
                                         self.drone.follow_order(most_action)
@@ -105,51 +99,39 @@ class HandDetector:
                                 else:
                                     self.drone.follow_order(most_action)
                                 last_orders.append(most_action)
-                       
                             else:
                                 self.drone.follow_order(9)
                                 last_orders.append(9)
-
                             ten_y.pop(0)
                         else:
-                            # print('NOOOOO')
                             ten_y.pop(0)
                             self.drone.follow_order(9)
                             last_orders.append(most_action)
                             
-
-                       
-                    #t_rotate = self.drone.follow_order(9)
                 else:
-                    # print(',jashdgcwjdgcksbd')
                     self.drone.follow_order(9)
 
                 font = cv2.FONT_HERSHEY_SIMPLEX  
                 fontScale = 1 
                 color = (255, 255, 255) 
                 thickness = 2  
-                # self.drone.follow_order(9)
-
-                # Put the text on top of the frame
                 cv2.putText(frame, text, (10, 50), font, fontScale, color, thickness)
+
             cv2.imshow("Frame", frame)
-            # tracemalloc.stop()
             if 20 < len(last_orders):
                 last_orders.pop(0)
-            # print('last_orders', last_orders)
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 self.drone.follow_order(7)
                 break
 
-        # cap.release()
         cv2.destroyAllWindows()
 
 
     def read_gesture_file(self):
         filename = './dataset/keypoint_classifier_label.csv'
-        df = pd.read_csv(filename, header=None)  # Read CSV file into a DataFrame without header
+        df = pd.read_csv(filename, header=None)  
         self.gestures = df.values.tolist()
 
 
@@ -163,7 +145,6 @@ class HandDetector:
 
             temp_landmark_list[index][0] = temp_landmark_list[index][0] - base_x
             temp_landmark_list[index][1] = temp_landmark_list[index][1] - base_y
-
 
         temp_landmark_list = list(
             itertools.chain.from_iterable(temp_landmark_list))
