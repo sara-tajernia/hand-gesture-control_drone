@@ -33,15 +33,15 @@ def collect_dataset():
 
 if __name__ == "__main__":
 
-    collect_dataset()
+    # collect_dataset()
 
     # path_dataset = "./dataset/me_left.csv"
     # train_model(path_dataset)
 
 
-    # hand_id = 'Right'
-    # if hand_id == 'Right':
-    #     hand_detector = HandDetector('Left', 'models/me_right.h5')
-    # elif hand_id == 'Left':
-    #     hand_detector = HandDetector('Right', 'models/me_left.h5')
+    hand_id = 'Right'
+    if hand_id == 'Right':
+        hand_detector = HandDetector('Left', 'models/me_right.h5')
+    elif hand_id == 'Left':
+        hand_detector = HandDetector('Right', 'models/me_left.h5')
 

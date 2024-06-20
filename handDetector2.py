@@ -65,6 +65,15 @@ class HandDetector:
             return image, []
 
 
+    def show_frame(self, frame, text):
+        print(text)
+        font = cv2.FONT_HERSHEY_SIMPLEX  
+        fontScale = 2
+        color = (255, 255, 255) 
+        thickness = 3
+        cv2.putText(frame, text, (20, 60), font, fontScale, color, thickness)
+        cv2.imshow("Frame", frame)
+
 
     def capture_image(self):
         last_orders = []
@@ -117,43 +126,45 @@ class HandDetector:
                             most_action = max(set(ten_y), key=ten_y.count)
                             action = ten_y.count(most_action)
                             if self.vote <= action / self.windows:
-                                # print(Fore.LIGHTCYAN_EX + f"{self.gestures[most_action]}")
-                                # print(frame_count)
-                                # print(most_action, last_orders, most_action not in last_orders)
-
 
                                 if most_action == 6 or most_action == 8:
                                     if most_action not in last_orders:
+                                        self.show_frame(frame, self.gestures[most_action][0])
                                         self.drone.follow_order(most_action)
                                     else:
+                                        self.show_frame(frame, "None")
                                         self.drone.follow_order(9)
                                 else:
+                                    self.show_frame(frame,self.gestures[most_action][0])
                                     self.drone.follow_order(most_action)
                                 last_orders.append(most_action)
                        
                             else:
+                                self.show_frame(frame,  "None")
                                 self.drone.follow_order(9)
                             ten_y.pop(0)
                         else:
                             # print('NOOOOO')
                             ten_y.pop(0)
+                            self.show_frame(frame, "None")
                             self.drone.follow_order(9)
 
                        
                     #t_rotate = self.drone.follow_order(9)
                 else:
                     # print(',jashdgcwjdgcksbd')
+                    self.show_frame(frame,  "None")
                     self.drone.follow_order(9)
 
-                font = cv2.FONT_HERSHEY_SIMPLEX  
-                fontScale = 1
-                color = (255, 255, 255) 
-                thickness = 3
-                # self.drone.follow_order(9)
+            #     font = cv2.FONT_HERSHEY_SIMPLEX  
+            #     fontScale = 1
+            #     color = (255, 255, 255) 
+            #     thickness = 5
+            #     # self.drone.follow_order(9)
 
-                # Put the text on top of the frame
-                cv2.putText(frame, text, (10, 50), font, fontScale, color, thickness)
-            cv2.imshow("Frame", frame)
+            #     # Put the text on top of the frame
+            #     cv2.putText(frame, text, (10, 50), font, fontScale, color, thickness)
+            # cv2.imshow("Frame", frame)
             tracemalloc.stop()
             if 20 < len(last_orders):
                 last_orders.pop(0)
@@ -161,6 +172,7 @@ class HandDetector:
 
             # Exit when 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
+                self.show_frame('Land')
                 self.drone.follow_order(7)
                 break
 
